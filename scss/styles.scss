@@ -240,8 +240,9 @@ nav {
   align-items: center;
   justify-content: center;
   position: relative;
+  gap: 1rem;
   &::before {
-    top: 100px;
+    top: 75px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1000px) {
       top: 50px;
@@ -249,7 +250,7 @@ nav {
     }
   }
   &::after {
-    top: 1100px;
+    top: 990px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1000px) {
       top: 1800px;
@@ -323,6 +324,7 @@ nav {
     align-items: center;
     padding: 2rem;
     margin-left: 4rem;
+    margin-bottom: 1rem;
   }
   .point__text {
     padding: 4.5rem;

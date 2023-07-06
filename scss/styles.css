@@ -671,9 +671,10 @@ nav {
   align-items: center;
   justify-content: center;
   position: relative;
+  gap: 1rem;
 }
 .features::before {
-  top: 100px;
+  top: 75px;
   content: "";
   display: block;
   position: absolute;
@@ -691,7 +692,7 @@ nav {
   }
 }
 .features::after {
-  top: 1100px;
+  top: 990px;
   content: "";
   display: block;
   position: absolute;
@@ -785,6 +786,7 @@ nav {
   align-items: center;
   padding: 2rem;
   margin-left: 4rem;
+  margin-bottom: 1rem;
 }
 .point .point__text {
   padding: 4.5rem;
