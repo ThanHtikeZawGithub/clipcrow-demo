@@ -24,13 +24,6 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 52px 12px;
-
-  @media screen and (max-width: 1000px) {
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px 16px;
-    overflow-x: hidden;
-  }
 }
 
 //==================================================
@@ -52,12 +45,12 @@ section {
     }
   }
   &.yellow-dark {
-    font-size: 28px;
+    font-size: 24px;
     margin: 3rem auto;
     @include button($c-secondary-030, $c-secondary-040, $c-neutral-100);
   }
   &.yellow-light {
-    font-size: 28px;
+    font-size: 24px;
     margin: 2rem auto;
     @include button($c-primary-040, $c-primary-080, $c-secondary-010);
   }
@@ -106,7 +99,7 @@ nav {
 /*cover section*/
 
 .kv {
-  min-height: 700px;
+  // min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -117,7 +110,7 @@ nav {
     @include bg-deco(400px, 120vw, $c-primary-050);
     top: -22vw;
     @media screen and (max-width: 1000px) {
-      top: -60vw;
+      top: -80vw;
     }
   }
 
@@ -160,6 +153,7 @@ nav {
     }
   }
   @media screen and (max-width: 1000px) {
+    padding: 85px 0 0;
     .hero {
       grid-template-columns: 1fr;
       grid-gap: 20px;
@@ -172,6 +166,10 @@ nav {
     }
     .section__download {
       padding: 2rem 1rem;
+      h4 {
+        font-size: 1rem;
+        margin-bottom: -1rem;
+      }
     }
     .google__btn {
       img {
@@ -195,38 +193,40 @@ nav {
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   position: relative;
   &::before {
     @include bg-deco(600px, 150vw, $c-secondary-099);
     @media screen and (max-width: 1000px) {
-      height: 170vh;
-      left: -6vw;
+      height: 950px;
+      width: 170vw;
+      left: -9vw;
     }
   }
   .maincont__card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin: 1rem;
+    margin: 3rem 1rem;
     @media screen and (max-width:1000px) {
       grid-template-columns: 1fr;
-      margin: 1rem;
     }
     .card {
       display: grid;
-      grid-template-rows: 0.8fr 2fr auto;
+      grid-template-rows: 1fr 2fr auto;
       justify-items: center;
-      margin-top: 2rem;
       .card__img-wrapper {
-        margin: 1rem 0;
+        margin: 2rem 0;
         img {
-          height: auto;
+          height: 100%;
           width: 100%;
         }
       }
       @media screen and (max-width: 1000px) {
-        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 1fr 0.2fr;
+        .card__img-wrapper {
+          margin: 2rem;
+        }
       }
     }
   }
@@ -243,12 +243,16 @@ nav {
   &::before {
     top: 100px;
     @include bg-deco(111px, 120vw, $c-primary-060);
+    @media screen and (max-width: 1000px) {
+      top: 50px;
+      height: 57px;
+    }
   }
   &::after {
     top: 1100px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1000px) {
-      top: 2030px;
+      top: 1800px;
       height: 57px;
     }
   }
@@ -302,7 +306,7 @@ nav {
     @include bg-deco(1000px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1000px) {
       width: 170vw;
-      height: 150vh;
+      height: 950px;
       left: -5vw;
     }
   }
@@ -339,18 +343,21 @@ nav {
     .point__top-grid {
       flex-direction: column;
       justify-content: center;
-      margin: 2rem auto;
+      padding: 2rem 0;
+      margin: 0 auto;
       .point__text {
+        padding: 1rem;
         order: 2;
       }
     }
     .point__bottom-grid {
       flex-direction: column;
       justify-content: center;
+      padding: 0.5rem 0 2rem 0;
       margin: 0 auto;
     }
     .point__text {
-      padding: 0;
+      padding: 1rem;
     }
     .point__visual {
       img {
@@ -403,8 +410,13 @@ nav {
       letter-spacing: 0.15px;
       color: $c-neutral-010;
     }
-    @media screen and (max-width: 1000px) {
-      padding: 24px auto;
+  }
+  @media screen and (max-width: 1000px) {
+    h1 {
+      margin-bottom: 12px;
+    }
+    .blog__card {
+      padding: 1rem auto;
     }
   }
 }
