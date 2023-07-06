@@ -211,22 +211,22 @@ nav {
     margin: 1rem;
     @media screen and (max-width:1000px) {
       grid-template-columns: 1fr;
-      margin: 1rem 2rem;
+      margin: 1rem;
     }
     .card {
       display: grid;
       grid-template-rows: 0.8fr 2fr auto;
-      margin: 4rem 0;
       justify-items: center;
+      margin-top: 2rem;
       .card__img-wrapper {
         margin: 1rem 0;
         img {
-          height: 100%;
-          width: auto;
+          height: auto;
+          width: 100%;
         }
       }
-      @media screen and (max-width:1000px) {
-        margin: 2rem 0;
+      @media screen and (max-width: 1000px) {
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
       }
     }
   }
@@ -285,6 +285,7 @@ nav {
     }
   }
   @media screen and (max-width: 1000px) {
+    overflow: hidden;
     .features__grid {
       grid-template-columns: 1fr;
     }

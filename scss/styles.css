@@ -633,25 +633,25 @@ nav {
 @media screen and (max-width: 1000px) {
   .maincont .maincont__card {
     grid-template-columns: 1fr;
-    margin: 1rem 2rem;
+    margin: 1rem;
   }
 }
 .maincont .maincont__card .card {
   display: grid;
   grid-template-rows: 0.8fr 2fr auto;
-  margin: 4rem 0;
   justify-items: center;
+  margin-top: 2rem;
 }
 .maincont .maincont__card .card .card__img-wrapper {
   margin: 1rem 0;
 }
 .maincont .maincont__card .card .card__img-wrapper img {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
 @media screen and (max-width: 1000px) {
   .maincont .maincont__card .card {
-    margin: 2rem 0;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
   }
 }
 
@@ -728,6 +728,9 @@ nav {
   padding: 20px;
 }
 @media screen and (max-width: 1000px) {
+  .features {
+    overflow: hidden;
+  }
   .features .features__grid {
     grid-template-columns: 1fr;
   }
