@@ -60,10 +60,10 @@ li {
     font-size: 14px;
   }
   h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
   h4 {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 /* title underline */
@@ -599,10 +599,13 @@ nav {
 /*main content section*/
 /*==================================================================================*/
 .maincont {
-  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   margin: 0 auto;
+  padding: 1rem;
+  position: relative;
 }
 .maincont::before {
   content: "";
@@ -625,6 +628,13 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  margin: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  .maincont .maincont__card {
+    grid-template-columns: 1fr;
+    margin: 1rem 2rem;
+  }
 }
 .maincont .maincont__card .card {
   display: grid;
@@ -640,16 +650,8 @@ nav {
   width: auto;
 }
 @media screen and (max-width: 1000px) {
-  .maincont .maincont__card {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    margin: 0 auto;
-    gap: 40px;
-    padding: 3rem 1rem;
-  }
   .maincont .maincont__card .card {
-    margin: 0;
-    justify-content: center;
+    margin: 2rem 0;
   }
 }
 
@@ -784,7 +786,7 @@ nav {
   .point .point__top-grid {
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin: 2rem auto;
   }
   .point .point__top-grid .point__text {
     order: 2;
