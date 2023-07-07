@@ -66,8 +66,14 @@
       position: absolute;
       background-color: $c-primary-060;
       height: 60px;
-      width: 100%;
+      width: 112%;
       z-index: -1;
+      @media screen and (max-width: 1000px) {
+        width: 110%;
+      }
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 24px;
   }
 }
 
