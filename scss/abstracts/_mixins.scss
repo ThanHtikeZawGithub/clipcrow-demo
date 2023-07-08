@@ -67,9 +67,12 @@
       background-color: $c-primary-060;
       height: 60px;
       width: 112%;
+      justify-content: center;
+      align-items: center;
       z-index: -1;
       @media screen and (max-width: 1000px) {
         width: 110%;
+        overflow-x: hidden;
       }
   }
   @media screen and (max-width: 1000px) {

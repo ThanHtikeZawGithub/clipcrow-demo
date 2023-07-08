@@ -7,7 +7,7 @@
 .title-left {
   @include features__deco();
   &::before {
-    left: -10vw;
+    margin-right: 80px;
     border-radius: 0px 10px 10px 0px;
   }
 }
@@ -15,7 +15,7 @@
 .title-right {
   @include features__deco();
   &::before {
-    right: -10vw;
+    margin-left: 100px;
     border-radius: 10px 0 0 10px;
   }
 }

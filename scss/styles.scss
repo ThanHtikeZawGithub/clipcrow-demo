@@ -3,6 +3,7 @@
 @import "abstracts/typography";
 @import "abstracts/mixins";
 @import "components/features";
+@import "components/usage-example";
 
 /* reset css */
 * {
@@ -11,10 +12,13 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   background-color: $c-neutral-100;
-  overflow-x: hidden;
 }
 
 //===============================================

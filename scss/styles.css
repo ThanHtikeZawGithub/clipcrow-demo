@@ -163,11 +163,14 @@ span {
   background-color: #ffeb87;
   height: 60px;
   width: 112%;
+  justify-content: center;
+  align-items: center;
   z-index: -1;
 }
 @media screen and (max-width: 1000px) {
   .title-left::before {
     width: 110%;
+    overflow-x: hidden;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -176,7 +179,7 @@ span {
   }
 }
 .title-left::before {
-  left: -10vw;
+  margin-right: 80px;
   border-radius: 0px 10px 10px 0px;
 }
 
@@ -195,11 +198,14 @@ span {
   background-color: #ffeb87;
   height: 60px;
   width: 112%;
+  justify-content: center;
+  align-items: center;
   z-index: -1;
 }
 @media screen and (max-width: 1000px) {
   .title-right::before {
     width: 110%;
+    overflow-x: hidden;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -208,7 +214,7 @@ span {
   }
 }
 .title-right::before {
-  right: -10vw;
+  margin-left: 100px;
   border-radius: 10px 0 0 10px;
 }
 
@@ -457,6 +463,91 @@ span {
   }
 }
 
+.num {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: -1.5rem 0 0.5rem 2rem;
+}
+
+.num__inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.step {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.figure {
+  font-size: 60px;
+  line-height: 1;
+  margin-top: -9px;
+}
+
+.title {
+  font-size: 22px;
+}
+
+.example__case {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.example__case .case {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f3dd;
+  height: 240px;
+  width: 240px;
+  margin-bottom: 2rem;
+  border-radius: 100%;
+}
+.example__case .case.last-child {
+  margin-bottom: 0;
+}
+.example__case .case.right {
+  align-self: flex-end;
+}
+.example__case .case.left {
+  align-self: flex-start;
+}
+.example__case .case p {
+  margin: 0;
+  text-align: center;
+  padding: 0 40px;
+}
+.example__case .case .roll {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.example__case .case .image {
+  font-size: 0.875rem;
+}
+.example__case .case .image img {
+  margin: 0;
+  height: auto;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.example__case .case .action {
+  font-size: 0.875rem;
+  z-index: 10;
+}
+
+.example__link p {
+  margin: 0.875rem 0;
+}
+
 /* reset css */
 * {
   margin: 0;
@@ -464,10 +555,13 @@ span {
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   background-color: #ffffff;
-  overflow-x: hidden;
 }
 
 section {
