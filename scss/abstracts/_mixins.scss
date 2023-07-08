@@ -1,3 +1,6 @@
+
+
+/* button in top page */
 @mixin button($bg-color, $hover-color, $text-color) {
     background-color: $bg-color;
     color: $text-color;
@@ -21,6 +24,9 @@
     }
   }
 
+//=============================================
+/* app download button in top page */
+
 @mixin download_button {
     display: flex;
     align-items: center;
@@ -41,6 +47,9 @@
     }
 }
 
+//======================================================
+/* background decoration in top page */
+
 @mixin bg-deco ($height, $width, $bg-color) {
   content: "";
   display: block;
@@ -52,6 +61,9 @@
   margin: 3% -10% 0 -20%;
   transform: rotate(-12deg);
 }
+
+//==========================================================
+/* step header background in features/functions page */
 
 @mixin features__deco {
   margin-bottom: 3rem;
@@ -72,7 +84,6 @@
       z-index: -1;
       @media screen and (max-width: 1000px) {
         width: 110%;
-        overflow-x: hidden;
       }
   }
   @media screen and (max-width: 1000px) {
