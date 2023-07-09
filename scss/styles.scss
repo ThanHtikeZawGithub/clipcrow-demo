@@ -117,6 +117,7 @@ nav {
     top: -22vw;
     @media screen and (max-width: 1000px) {
       top: -80vw;
+      overflow-x: hidden;
     }
   }
 
@@ -202,11 +203,10 @@ nav {
   padding: 1rem 0.5rem;
   position: relative;
   &::before {
-    @include bg-deco(600px, 150vw, $c-secondary-099);
+    @include bg-deco(600px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1000px) {
       height: 950px;
-      width: 170vw;
-      left: -9vw;
+      overflow-x: hidden;
     }
   }
   .maincont__card {
@@ -253,6 +253,7 @@ nav {
     @media screen and (max-width: 1000px) {
       top: 50px;
       height: 57px;
+      overflow-x: hidden;
     }
   }
   &::after {
@@ -261,6 +262,7 @@ nav {
     @media screen and (max-width: 1000px) {
       top: 1800px;
       height: 57px;
+      overflow-x: hidden;
     }
   }
 
@@ -315,6 +317,7 @@ nav {
       width: 170vw;
       height: 950px;
       left: -5vw;
+      overflow-x: hidden;
     }
   }
 
@@ -440,6 +443,7 @@ nav {
     @media screen and (max-width: 1000px) {
       top: 100px;
       height: 150px;
+      overflow-x: hidden;
     }
   }
 

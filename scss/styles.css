@@ -772,7 +772,13 @@ nav {
 }
 @media screen and (max-width: 1000px) {
   .kv::before {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .kv::before {
     top: -80vw;
+    overflow-x: hidden;
   }
 }
 .kv .hero {
@@ -852,7 +858,7 @@ nav {
   content: "";
   display: block;
   position: absolute;
-  width: 150vw;
+  width: 120vw;
   height: 600px;
   background-color: #faf9ed;
   z-index: -1;
@@ -861,9 +867,13 @@ nav {
 }
 @media screen and (max-width: 1000px) {
   .maincont::before {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .maincont::before {
     height: 950px;
-    width: 170vw;
-    left: -9vw;
+    overflow-x: hidden;
   }
 }
 .maincont .maincont__card {
@@ -923,8 +933,14 @@ nav {
 }
 @media screen and (max-width: 1000px) {
   .features::before {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .features::before {
     top: 50px;
     height: 57px;
+    overflow-x: hidden;
   }
 }
 .features::after {
@@ -941,8 +957,14 @@ nav {
 }
 @media screen and (max-width: 1000px) {
   .features::after {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .features::after {
     top: 1800px;
     height: 57px;
+    overflow-x: hidden;
   }
 }
 .features .features__grid {
@@ -1005,9 +1027,15 @@ nav {
 }
 @media screen and (max-width: 1000px) {
   .point::before {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .point::before {
     width: 170vw;
     height: 950px;
     left: -5vw;
+    overflow-x: hidden;
   }
 }
 .point .point__top-grid {
@@ -1129,8 +1157,14 @@ nav {
 }
 @media screen and (max-width: 1000px) {
   .info::before {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .info::before {
     top: 100px;
     height: 150px;
+    overflow-x: hidden;
   }
 }
 .info .info__text {
