@@ -571,6 +571,7 @@ html {
 body {
   font-family: "Noto Sans JP", sans-serif;
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 section {
@@ -762,17 +763,18 @@ nav {
   content: "";
   display: block;
   position: absolute;
+  overflow-x: hidden;
   width: 120vw;
   height: 400px;
   background-color: #ffe873;
   z-index: -1;
-  margin: 3% -10% 0 -20%;
+  margin: 3% -22% 0 -21%;
   transform: rotate(-12deg);
   top: -22vw;
 }
 @media screen and (max-width: 1000px) {
   .kv::before {
-    max-width: 50%;
+    width: 160%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -858,22 +860,36 @@ nav {
   content: "";
   display: block;
   position: absolute;
+  overflow-x: hidden;
   width: 120vw;
   height: 600px;
   background-color: #faf9ed;
   z-index: -1;
-  margin: 3% -10% 0 -20%;
+  margin: 3% -22% 0 -21%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .maincont::before {
-    max-width: 50%;
+    width: 160%;
   }
 }
 @media screen and (max-width: 1000px) {
   .maincont::before {
-    height: 950px;
+    content: "";
+    display: block;
+    position: absolute;
     overflow-x: hidden;
+    width: 100%;
+    height: 950px;
+    background-color: #faf9ed;
+    z-index: -1;
+    margin: 3% -22% 0 -21%;
+    transform: rotate(-12deg);
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 1000px) {
+  .maincont::before {
+    width: 160%;
   }
 }
 .maincont .maincont__card {
@@ -924,23 +940,23 @@ nav {
   content: "";
   display: block;
   position: absolute;
+  overflow-x: hidden;
   width: 120vw;
   height: 111px;
   background-color: #ffeb87;
   z-index: -1;
-  margin: 3% -10% 0 -20%;
+  margin: 3% -22% 0 -21%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .features::before {
-    max-width: 50%;
+    width: 160%;
   }
 }
 @media screen and (max-width: 1000px) {
   .features::before {
     top: 50px;
     height: 57px;
-    overflow-x: hidden;
   }
 }
 .features::after {
@@ -948,23 +964,23 @@ nav {
   content: "";
   display: block;
   position: absolute;
+  overflow-x: hidden;
   width: 120vw;
   height: 111px;
   background-color: #ffeb87;
   z-index: -1;
-  margin: 3% -10% 0 -20%;
+  margin: 3% -22% 0 -21%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .features::after {
-    max-width: 50%;
+    width: 160%;
   }
 }
 @media screen and (max-width: 1000px) {
   .features::after {
     top: 1800px;
     height: 57px;
-    overflow-x: hidden;
   }
 }
 .features .features__grid {
@@ -1000,9 +1016,6 @@ nav {
   padding: 20px;
 }
 @media screen and (max-width: 1000px) {
-  .features {
-    overflow: hidden;
-  }
   .features .features__grid {
     grid-template-columns: 1fr;
   }
@@ -1018,24 +1031,36 @@ nav {
   content: "";
   display: block;
   position: absolute;
+  overflow-x: hidden;
   width: 120vw;
   height: 1000px;
   background-color: #faf9ed;
   z-index: -1;
-  margin: 3% -10% 0 -20%;
+  margin: 3% -22% 0 -21%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .point::before {
-    max-width: 50%;
+    width: 160%;
   }
 }
 @media screen and (max-width: 1000px) {
   .point::before {
-    width: 170vw;
-    height: 950px;
-    left: -5vw;
+    content: "";
+    display: block;
+    position: absolute;
     overflow-x: hidden;
+    width: 100%;
+    height: 950px;
+    background-color: #faf9ed;
+    z-index: -1;
+    margin: 3% -22% 0 -21%;
+    transform: rotate(-12deg);
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 1000px) {
+  .point::before {
+    width: 160%;
   }
 }
 .point .point__top-grid {
@@ -1148,23 +1173,24 @@ nav {
   content: "";
   display: block;
   position: absolute;
+  overflow-x: hidden;
   width: 120vw;
   height: 111px;
   background-color: #ffeb87;
   z-index: -1;
-  margin: 3% -10% 0 -20%;
+  margin: 3% -22% 0 -21%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .info::before {
-    max-width: 50%;
+    width: 160%;
   }
 }
 @media screen and (max-width: 1000px) {
   .info::before {
     top: 100px;
     height: 150px;
-    overflow-x: hidden;
+    width: 150%;
   }
 }
 .info .info__text {

@@ -54,14 +54,15 @@
   content: "";
   display: block;
   position: absolute;
+  overflow-x: hidden;
   width: $width;
   height: $height;
   background-color: $bg-color;
   z-index: -1;
-  margin: 3% -10% 0 -20%;
+  margin: 3% -22% 0 -21%;
   transform: rotate(-12deg);
   @media screen and (max-width: 1000px) {
-    max-width: 50%;
+    width: 160%;
   }
 }
 
