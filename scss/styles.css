@@ -1072,8 +1072,12 @@ nav {
   .features .features__grid {
     grid-template-columns: 1fr;
   }
+  .features .features__grid .features__card {
+    padding: 0 2rem;
+  }
   .features .features__grid .features__card img {
     height: 165px;
+    width: 100%;
   }
 }
 

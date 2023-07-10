@@ -334,8 +334,10 @@ nav {
       grid-template-columns: 1fr;
 
       .features__card {
+        padding: 0 2rem;
         img {
           height: 165px;
+          width: 100%;
         }
       }
     }
