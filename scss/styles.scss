@@ -28,7 +28,7 @@ body {
 section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 52px 12px;
+  padding: 24px 12px;
 }
 
 
@@ -59,7 +59,7 @@ section {
   &.yellow-dark {
     font-size: 32px;
     font-weight: 700;
-    margin: 3rem auto;
+    margin: 0 auto;
     @include button($c-secondary-030, $c-secondary-040, $c-neutral-100);
   }
   &.yellow-light {
@@ -77,17 +77,6 @@ section {
 //==============================================================================
 // header
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  overflow: hidden;
-  z-index: 50;
-  transition: all 0.3s linear;
-}
-
 nav {
   display: flex;
   align-content: space-between;
@@ -95,20 +84,16 @@ nav {
 }
 
 .nav__title {
-  font-size: 80px;
-  font-weight: 700;
-  line-height: 1;
   padding: 1rem 6rem;
-  font-weight: 500;
-  span {
-    display: block;
-    font-size: 36px;
+  img {
+    width: auto;
+    height: 153px;
   }
   @media screen and (max-width: 1000px) {
-    font-size: 38px;
-    padding: 0;
-    span {
-      font-size: 20px;
+    padding: 0 1rem;
+    img {
+      height: 82px;
+      
     }
   }
 }
@@ -123,13 +108,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   position: relative;
-  padding: 160px 0 32px;
+  padding: 0 0 2rem;
   &::before {
     @include bg-deco(400px, 120vw, $c-primary-050);
-    top: -17vw;
+    top: -33vw;
     @media screen and (max-width: 1000px) {
-      top: -75vw;
-      overflow-x: hidden;
+      top: -99vw;
     }
   }
 
@@ -137,7 +121,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    margin: 0 1.8rem;
+    margin: -3rem 1.8rem;
     grid-gap: 24px;
   }
   .hero__content {
@@ -157,6 +141,7 @@ nav {
     }
   }
   .section__download {
+    margin-top: 3rem;
     h4 {
       font-size: 36px;
       font-weight: 400;
@@ -181,13 +166,14 @@ nav {
     }
   }
   @media screen and (max-width: 1000px) {
-    padding: 85px 0 0;
+    padding: 50px 0 0;
     .hero {
       grid-template-columns: 1fr;
       grid-gap: 20px;
     }
     .hero__content {
       grid-row: 2;
+      padding: 0 1rem;
       h1 {
         font-size: 36px;
       }
@@ -232,7 +218,7 @@ nav {
   padding: 1rem 0.5rem;
   position: relative;
   &::before {
-    @include bg-deco(600px, 120vw, $c-secondary-099);
+    @include bg-deco(700px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1000px) {
       height: 950px;
     }
@@ -244,6 +230,7 @@ nav {
     margin: 3rem 1rem;
     @media screen and (max-width:1000px) {
       grid-template-columns: 1fr;
+      margin: 1rem;
     }
     .card {
       display: grid;
@@ -282,15 +269,15 @@ nav {
     top: 75px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1000px) {
-      top: 50px;
+      top: 55px;
       height: 57px;
     }
   }
   &::after {
-    top: 990px;
+    top: 85vw;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1000px) {
-      top: 1800px;
+      top: 1680px;
       height: 57px;
     }
   }
@@ -319,7 +306,6 @@ nav {
       img {
         width: auto;
         height: 244px;
-        object-fit: contain;
       }
       p {
         padding: 20px;
@@ -327,14 +313,15 @@ nav {
     }
   }
   @media screen and (max-width: 1000px) {
-    .features {
-      padding: 0 2rem;
+    .features__grid-wrapper {
+      margin: 0 1rem;
     }
     .features__grid {
       grid-template-columns: 1fr;
+      margin: 0 auto;
 
       .features__card {
-        padding: 0 2rem;
+        padding: 0;
         img {
           height: 165px;
           width: 100%;
@@ -353,7 +340,7 @@ nav {
     top: 100px;
     @include bg-deco(1000px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1000px) {
-      height: 1050px;
+      height: 1150px;
     }
   }
 
@@ -393,24 +380,25 @@ nav {
       padding: 2rem 0;
       margin: 0 auto;
       .point__text {
-        padding: 1rem;
+        padding: 1rem 2rem;
         order: 2;
       }
     }
     .point__bottom-grid {
       flex-direction: column;
       justify-content: center;
-      padding: 0.5rem 0 2rem 0;
+      padding: 0.5rem 0 1rem 0;
       margin: 0 auto;
     }
     .point__text {
-      padding: 1rem;
+      padding: 1rem 2rem;
       font-size: 24px;
     }
     .point__visual {
       img {
         width: 100%;
-        padding: 0;
+        height: 347px;
+        padding: 0 1rem;
       }
     }
   }
@@ -516,27 +504,25 @@ nav {
 footer {
   background-color: $c-primary-000;
   color: $c-neutral-099;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2rem 6rem;
   z-index: -1;
+  .footer__right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10rem;
+  }
 
   .footer__left {
     align-items: flex-start;
-    h1 {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      color: $c-neutral-099;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      span {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: -5rem;
-      }
+    img {
+      height: 87px;
+      width: auto;
+      margin-bottom: 1.5rem;
     }
     p {
       color: $c-neutral-099;
@@ -549,19 +535,16 @@ footer {
   }
 
   @media screen and (max-width: 1000px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 2rem;
     .footer__left {
-      h1 {
-        font-size: 24px;
-        span {
-          font-size: 14px;
-          margin-bottom: -2.4rem;
-        }
+      margin: 0 auto;
+      img {
+        height: 51px;
       }
     }
     .footer__right {
-      align-self: flex-start;
+      grid-template-columns: 1fr;
     }
   }
 }
