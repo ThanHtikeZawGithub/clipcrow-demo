@@ -1,13 +1,14 @@
 @import "../abstracts/mixins";
 @import "../abstracts/typography";
 
+//note that -> @include properties from /abstracts/mixin.scss
 //==========================================================================
 /* title underline */
 
 .title-left {
   @include features__deco();
   &::before {
-    margin-right: 80px;
+    margin-right: 100px;
     border-radius: 0px 10px 10px 0px;
   }
 }
@@ -19,6 +20,71 @@
     border-radius: 10px 0 0 10px;
   }
 }
+
+//============================================================
+/* main images in feauture page
+  (pc-height, sp-height, pc-width, sp-width)
+*/
+
+.features__img-1 {
+  @include features__img (245px, 165px, 295px, 198px);
+}
+.features__img-2 {
+  @include features__img (241px, 136px, 516px, 291px);
+}
+.features__img-3 {
+  @include features__img (245px, 165px, 309px, 208px);
+  
+}
+.features__img-4 {
+  @include features__img (280px, 176px, 481px, 304px);
+ 
+}
+
+.extra-hover {
+  a {
+    display: block;
+    position: relative;
+    border: 1px solid $c-secondary-030;
+    line-height: 1;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 3rem;
+    color: $c-neutral-100;
+    background-color: $c-secondary-030;
+    &:hover {
+      opacity: 0.7;
+    }
+    @media screen and (max-width: 1000px) {
+      display: flex;
+      height: 34px;
+      border-radius: 60px;
+      padding: 8px, 16px, 8px, 16px;
+      align-content: center;
+      align-items: center;
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      content: "";
+      width: 0.875rem;
+      height: 0.875rem;
+      background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23ffffff%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23ffffff%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      @media screen and (max-width: 1000px) {
+        top: 0.5rem;
+      }
+    }
+  }
+
+}
+
 
 //====================================================================================================
 /* features buttons */
@@ -32,21 +98,21 @@
     padding: 1rem 1rem;
     text-decoration: none;
     font-size: 0.875rem;
+    font-weight: 700;
     border-radius: 3rem;
     color: $c-secondary-030;
     background-color: $c-neutral-100;
-    @media screen and (min-width: 1000px) {
-
-    /*extra button hover for future design */
-    //   &:hover {
-    //     color: $c-neutral-100;
-    //     background-color: $c-secondary-030;
-    //   }
-    // }
     &:hover {
       opacity: 0.7;
     }
-  }
+    @media screen and (max-width: 1000px) {
+      display: flex;
+      height: 34px;
+      border-radius: 60px;
+      padding: 8px, 16px, 8px, 16px;
+      align-content: center;
+      align-items: center;
+    }
 
     &::before {
       display: block;
@@ -59,6 +125,9 @@
       background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%237D7D76%22%2F%3E%0A%3C%2Fsvg%3E%0A");
       background-repeat: no-repeat;
       background-position: center;
+      @media screen and (max-width: 1000px) {
+        top: 0.5rem;
+      }
     }
   }
 }
@@ -125,6 +194,7 @@
     .img-ellipse__text {
       padding: 2rem 1rem 0;
       font-size: 16px;
+      line-height: 1.5rem;
     }
   }
 }
@@ -177,8 +247,8 @@
       }
     }
     .case__title {
-      font-size: 1.4rem;
-      font-weight: bold;
+      font-size: 22px;
+      font-weight: 700;
       margin-bottom: 1rem;
     }
     .case__body {
@@ -225,14 +295,21 @@
 /* features cover section */
 
 .features__kv {
+  position: relative;
+  &::before {
+    @include bg-deco(400px, 120vw, $c-primary-050);
+    top: -33vw;
+    @media screen and (max-width: 1000px) {
+      top: -99vw;
+    }
+  }
   h1 {
-    font-size: 45px;
     padding-bottom: 4rem;
     line-height: 1.2;
   }
   span {
-    font-weight: 500;
-    font-size: 28px;
+    font-weight: 400;
+    font-size: 32px;
   }
   .kv__content {
     p {

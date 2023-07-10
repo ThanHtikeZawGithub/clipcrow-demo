@@ -101,6 +101,53 @@ nav {
   }
 }
 
+//=====================================================
+/* downlaod section google/app store */
+
+.section__download {
+  h4 {
+    font-size: 36px;
+    font-weight: 400;
+  }
+  .app-download__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .google__btn {
+    img {
+      height: 75px;
+      width: auto;
+    }
+  }
+  .app-store__btn {
+    img {
+      height: 60px;
+      width: auto;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 2rem 1rem;
+      h4 {
+        font-size: 16px;        //to organized code
+        margin-bottom: -1rem;
+        font-weight: 500;
+      }
+      .google__btn {
+        img {
+          height: 60px;
+        }
+      }
+      .app-store__btn {
+        img {
+          height: 47px;
+        }
+      }
+  }
+}
+
+
 /*==================================================================================*/
 /*cover section*/
 
@@ -145,28 +192,6 @@ nav {
   }
   .section__download {
     margin-top: 3rem;
-    h4 {
-      font-size: 36px;
-      font-weight: 400;
-    }
-  }
-  .app-download__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  .google__btn {
-    img {
-      height: 75px;
-      width: auto;
-    }
-  }
-  .app-store__btn {
-    img {
-      height: 60px;
-      width: auto;
-    }
   }
   @media screen and (max-width: 1000px) {
     padding: 50px 0 0;
@@ -186,24 +211,6 @@ nav {
       img {
         height: 364px;
         width: 364px;
-      }
-    }
-    .section__download {
-      padding: 2rem 1rem;
-      h4 {
-        font-size: 16px;        //to organized code
-        margin-bottom: -1rem;
-        font-weight: 500;
-      }
-    }
-    .google__btn {
-      img {
-        height: 60px;
-      }
-    }
-    .app-store__btn {
-      img {
-        height: 47px;
       }
     }
   }

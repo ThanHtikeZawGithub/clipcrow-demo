@@ -172,14 +172,14 @@ span {
   position: absolute;
   background-color: #ffeb87;
   height: 60px;
-  width: 112%;
+  width: 109%;
   justify-content: center;
   align-items: center;
   z-index: -1;
 }
 @media screen and (max-width: 1000px) {
   .title-left::before {
-    width: 110%;
+    width: 120%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -188,7 +188,7 @@ span {
   }
 }
 .title-left::before {
-  margin-right: 80px;
+  margin-right: 100px;
   border-radius: 0px 10px 10px 0px;
 }
 
@@ -206,14 +206,14 @@ span {
   position: absolute;
   background-color: #ffeb87;
   height: 60px;
-  width: 112%;
+  width: 109%;
   justify-content: center;
   align-items: center;
   z-index: -1;
 }
 @media screen and (max-width: 1000px) {
   .title-right::before {
-    width: 110%;
+    width: 120%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -226,6 +226,97 @@ span {
   border-radius: 10px 0 0 10px;
 }
 
+/* main images in feauture page
+  (pc-height, sp-height, pc-width, sp-width)
+*/
+.features__img-1 img {
+  height: 245px;
+  width: 295px;
+}
+@media screen and (max-width: 1000px) {
+  .features__img-1 img {
+    height: 165px;
+    width: 198px;
+  }
+}
+
+.features__img-2 img {
+  height: 241px;
+  width: 516px;
+}
+@media screen and (max-width: 1000px) {
+  .features__img-2 img {
+    height: 136px;
+    width: 291px;
+  }
+}
+
+.features__img-3 img {
+  height: 245px;
+  width: 309px;
+}
+@media screen and (max-width: 1000px) {
+  .features__img-3 img {
+    height: 165px;
+    width: 208px;
+  }
+}
+
+.features__img-4 img {
+  height: 280px;
+  width: 481px;
+}
+@media screen and (max-width: 1000px) {
+  .features__img-4 img {
+    height: 176px;
+    width: 304px;
+  }
+}
+
+.extra-hover a {
+  display: block;
+  position: relative;
+  border: 1px solid #C2A731;
+  line-height: 1;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 3rem;
+  color: #ffffff;
+  background-color: #C2A731;
+}
+.extra-hover a:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 1000px) {
+  .extra-hover a {
+    display: flex;
+    height: 34px;
+    border-radius: 60px;
+    padding: 8px, 16px, 8px, 16px;
+    align-content: center;
+    align-items: center;
+  }
+}
+.extra-hover a::before {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  content: "";
+  width: 0.875rem;
+  height: 0.875rem;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23ffffff%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23ffffff%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1000px) {
+  .extra-hover a::before {
+    top: 0.5rem;
+  }
+}
+
 /* features buttons */
 .case__relation-link a {
   display: block;
@@ -235,16 +326,22 @@ span {
   padding: 1rem 1rem;
   text-decoration: none;
   font-size: 0.875rem;
+  font-weight: 700;
   border-radius: 3rem;
   color: #C2A731;
   background-color: #ffffff;
 }
-@media screen and (min-width: 1000px) {
+.case__relation-link a:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 1000px) {
   .case__relation-link a {
-    /*extra button hover for future design */
-  }
-  .case__relation-link a:hover {
-    opacity: 0.7;
+    display: flex;
+    height: 34px;
+    border-radius: 60px;
+    padding: 8px, 16px, 8px, 16px;
+    align-content: center;
+    align-items: center;
   }
 }
 .case__relation-link a::before {
@@ -258,6 +355,11 @@ span {
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%237D7D76%22%2F%3E%0A%3C%2Fsvg%3E%0A");
   background-repeat: no-repeat;
   background-position: center;
+}
+@media screen and (max-width: 1000px) {
+  .case__relation-link a::before {
+    top: 0.5rem;
+  }
 }
 
 /* image and ellipse shape */
@@ -320,6 +422,7 @@ span {
   .features__img-ellipse .img-ellipse__text {
     padding: 2rem 1rem 0;
     font-size: 16px;
+    line-height: 1.5rem;
   }
 }
 
@@ -370,8 +473,8 @@ span {
   width: 40px;
 }
 .features__case-wrapper .features__case .case__title {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 .features__case-wrapper .features__case .case__body {
@@ -413,14 +516,40 @@ span {
 }
 
 /* features cover section */
+.features__kv {
+  position: relative;
+}
+.features__kv::before {
+  content: "";
+  display: block;
+  position: absolute;
+  overflow-x: hidden;
+  width: 120vw;
+  height: 400px;
+  background-color: #ffe873;
+  z-index: -1;
+  margin: 3% -10% 0 -20%;
+  transform: rotate(-12deg);
+  top: -33vw;
+}
+@media screen and (max-width: 1000px) {
+  .features__kv::before {
+    width: 200%;
+    margin: 3% -10% 0 -35%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .features__kv::before {
+    top: -99vw;
+  }
+}
 .features__kv h1 {
-  font-size: 45px;
   padding-bottom: 4rem;
   line-height: 1.2;
 }
 .features__kv span {
-  font-weight: 500;
-  font-size: 28px;
+  font-weight: 400;
+  font-size: 32px;
 }
 .features__kv .kv__content p {
   padding: 0 21rem;
@@ -779,6 +908,42 @@ nav {
   }
 }
 
+/* downlaod section google/app store */
+.section__download h4 {
+  font-size: 36px;
+  font-weight: 400;
+}
+.section__download .app-download__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.section__download .google__btn img {
+  height: 75px;
+  width: auto;
+}
+.section__download .app-store__btn img {
+  height: 60px;
+  width: auto;
+}
+@media screen and (max-width: 1000px) {
+  .section__download {
+    padding: 2rem 1rem;
+  }
+  .section__download h4 {
+    font-size: 16px;
+    margin-bottom: -1rem;
+    font-weight: 500;
+  }
+  .section__download .google__btn img {
+    height: 60px;
+  }
+  .section__download .app-store__btn img {
+    height: 47px;
+  }
+}
+
 /*==================================================================================*/
 /*cover section*/
 .kv {
@@ -837,24 +1002,6 @@ nav {
 .kv .section__download {
   margin-top: 3rem;
 }
-.kv .section__download h4 {
-  font-size: 36px;
-  font-weight: 400;
-}
-.kv .app-download__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-.kv .google__btn img {
-  height: 75px;
-  width: auto;
-}
-.kv .app-store__btn img {
-  height: 60px;
-  width: auto;
-}
 @media screen and (max-width: 1000px) {
   .kv {
     padding: 50px 0 0;
@@ -876,20 +1023,6 @@ nav {
   .kv .hero__visual img {
     height: 364px;
     width: 364px;
-  }
-  .kv .section__download {
-    padding: 2rem 1rem;
-  }
-  .kv .section__download h4 {
-    font-size: 16px;
-    margin-bottom: -1rem;
-    font-weight: 500;
-  }
-  .kv .google__btn img {
-    height: 60px;
-  }
-  .kv .app-store__btn img {
-    height: 47px;
   }
 }
 

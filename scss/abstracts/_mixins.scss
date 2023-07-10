@@ -104,16 +104,27 @@
       position: absolute;
       background-color: $c-primary-060;
       height: 60px;
-      width: 112%;
+      width: 109%;
       justify-content: center;
       align-items: center;
       z-index: -1;
       @media screen and (max-width: 1000px) {
-        width: 110%;
+        width: 120%;
       }
   }
   @media screen and (max-width: 1000px) {
     font-size: 24px;
+  }
+}
+
+@mixin features__img ($height, $sp-height ,$width , $sp-width) {
+  img {
+    height: $height;
+    width: $width;
+    @media screen and (max-width: 1000px) {
+      height: $sp-height;
+      width: $sp-width;
+    }
   }
 }
 
