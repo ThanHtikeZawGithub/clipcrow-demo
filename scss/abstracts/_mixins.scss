@@ -31,7 +31,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
+    position: relative;
     background-color: $c-secondary-090;
     color: #333538;
     width: 568px;
@@ -40,6 +42,18 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 1.5;
+    &::before {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      content: "";
+      width: 0.875rem;
+      height: 0.875rem;
+      background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2225%22%20height%3D%2224%22%20viewBox%3D%220%200%2025%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M2.75%2024C2.15%2024%201.625%2023.775%201.175%2023.325C0.725%2022.875%200.5%2022.35%200.5%2021.75V16.3875H2.75V21.75H22.25V16.3875H24.5V21.75C24.5%2022.35%2024.275%2022.875%2023.825%2023.325C23.375%2023.775%2022.85%2024%2022.25%2024H2.75ZM12.5%2018.2625L5.2625%2011.025L6.875%209.4125L11.375%2013.9125V0H13.625V13.9125L18.125%209.4125L19.7375%2011.025L12.5%2018.2625Z%22%20fill%3D%22%23333538%22%2F%3E%0A%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
     @media screen and (max-width: 1000px) {
       font-size: 14px;
       width: 80%;
@@ -59,10 +73,11 @@
   height: $height;
   background-color: $bg-color;
   z-index: -1;
-  margin: 3% -10% 0 -35%;
+  margin: 3% -10% 0 -20%;
   transform: rotate(-12deg);
   @media screen and (max-width: 1000px) {
     width: 200%;
+    margin: 3% -10% 0 -35%;
   }
 }
 
