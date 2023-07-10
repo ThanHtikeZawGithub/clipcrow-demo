@@ -34,12 +34,20 @@
     font-size: 0.875rem;
     border-radius: 3rem;
     color: $c-secondary-030;
+    background-color: $c-neutral-100;
     @media screen and (min-width: 1000px) {
-      &:hover {
-        color: $c-neutral-100;
-        background-color: $c-secondary-030;
-      }
+
+    /*extra button hover for future design */
+    //   &:hover {
+    //     color: $c-neutral-100;
+    //     background-color: $c-secondary-030;
+    //   }
+    // }
+    &:hover {
+      opacity: 0.7;
     }
+  }
+
     &::before {
       display: block;
       position: absolute;
@@ -147,11 +155,6 @@
       &:nth-child(3n) {
         margin-right: 0;
       }
-      @media screen and (max-width: 1000px) {
-        width: 100%;
-        padding: 1rem;
-        margin: 0.5rem;
-      }
     }
 
     p {
@@ -198,6 +201,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 0 1rem;
+      .case {
+        width: 100%;
+        padding: 1rem;
+        margin: 0.5rem;
+      }
       .case__title {
         font-size: 1rem;
       }
@@ -237,7 +246,10 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 0 auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   @media screen and (max-width: 1000px) {
@@ -249,6 +261,9 @@
     .kv__img-wrapper {
       grid-template-columns: 1fr;
       justify-items: center;
+      img {
+        padding: 0 1rem;
+      }
     }
   }
 }

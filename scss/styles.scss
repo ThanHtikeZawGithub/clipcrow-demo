@@ -206,7 +206,7 @@ nav {
   &::before {
     @include bg-deco(600px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1000px) {
-      @include bg-deco(950px, 100%, $c-secondary-099);
+      height: 950px;
     }
   }
   .maincont__card {
@@ -311,7 +311,7 @@ nav {
     top: 100px;
     @include bg-deco(1000px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1000px) {
-      @include bg-deco(950px, 100%, $c-secondary-099);
+      height: 1050px;
     }
   }
 

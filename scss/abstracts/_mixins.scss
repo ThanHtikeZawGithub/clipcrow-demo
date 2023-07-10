@@ -59,10 +59,10 @@
   height: $height;
   background-color: $bg-color;
   z-index: -1;
-  margin: 3% -22% 0 -21%;
+  margin: 3% -10% 0 -35%;
   transform: rotate(-12deg);
   @media screen and (max-width: 1000px) {
-    width: 160%;
+    width: 200%;
   }
 }
 

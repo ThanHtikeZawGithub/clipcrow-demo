@@ -228,18 +228,21 @@ span {
 .case__relation-link a {
   display: block;
   position: relative;
-  border: 1px solid #c2a731;
+  border: 1px solid #C2A731;
   line-height: 1;
   padding: 1rem 1rem;
   text-decoration: none;
   font-size: 0.875rem;
   border-radius: 3rem;
-  color: #c2a731;
+  color: #C2A731;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 1000px) {
+  .case__relation-link a {
+    /*extra button hover for future design */
+  }
   .case__relation-link a:hover {
-    color: #ffffff;
-    background-color: #c2a731;
+    opacity: 0.7;
   }
 }
 .case__relation-link a::before {
@@ -345,13 +348,6 @@ span {
 .features__case-wrapper .features__case .case:nth-child(3n) {
   margin-right: 0;
 }
-@media screen and (max-width: 1000px) {
-  .features__case-wrapper .features__case .case {
-    width: 100%;
-    padding: 1rem;
-    margin: 0.5rem;
-  }
-}
 .features__case-wrapper .features__case p {
   margin: 0;
   text-align: left;
@@ -396,6 +392,12 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1rem;
+  }
+  .features__case-wrapper .features__case .case {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
   }
   .features__case-wrapper .features__case .case__title {
     font-size: 1rem;
@@ -428,7 +430,10 @@ span {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin: 0 auto;
+}
+.features__kv .kv__img-wrapper img {
+  width: 100%;
+  height: auto;
 }
 @media screen and (max-width: 1000px) {
   .features__kv .kv__content p {
@@ -437,6 +442,9 @@ span {
   .features__kv .kv__img-wrapper {
     grid-template-columns: 1fr;
     justify-items: center;
+  }
+  .features__kv .kv__img-wrapper img {
+    padding: 0 1rem;
   }
 }
 
@@ -643,7 +651,7 @@ section {
 .btn.yellow-dark {
   font-size: 24px;
   margin: 3rem auto;
-  background-color: #c2a731;
+  background-color: #C2A731;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -768,13 +776,13 @@ nav {
   height: 400px;
   background-color: #ffe873;
   z-index: -1;
-  margin: 3% -22% 0 -21%;
+  margin: 3% -10% 0 -35%;
   transform: rotate(-12deg);
   top: -22vw;
 }
 @media screen and (max-width: 1000px) {
   .kv::before {
-    width: 160%;
+    width: 200%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -865,31 +873,17 @@ nav {
   height: 600px;
   background-color: #faf9ed;
   z-index: -1;
-  margin: 3% -22% 0 -21%;
+  margin: 3% -10% 0 -35%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .maincont::before {
-    width: 160%;
+    width: 200%;
   }
 }
 @media screen and (max-width: 1000px) {
   .maincont::before {
-    content: "";
-    display: block;
-    position: absolute;
-    overflow-x: hidden;
-    width: 100%;
     height: 950px;
-    background-color: #faf9ed;
-    z-index: -1;
-    margin: 3% -22% 0 -21%;
-    transform: rotate(-12deg);
-  }
-}
-@media screen and (max-width: 1000px) and (max-width: 1000px) {
-  .maincont::before {
-    width: 160%;
   }
 }
 .maincont .maincont__card {
@@ -945,12 +939,12 @@ nav {
   height: 111px;
   background-color: #ffeb87;
   z-index: -1;
-  margin: 3% -22% 0 -21%;
+  margin: 3% -10% 0 -35%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .features::before {
-    width: 160%;
+    width: 200%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -969,12 +963,12 @@ nav {
   height: 111px;
   background-color: #ffeb87;
   z-index: -1;
-  margin: 3% -22% 0 -21%;
+  margin: 3% -10% 0 -35%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .features::after {
-    width: 160%;
+    width: 200%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -991,20 +985,20 @@ nav {
 }
 .features .features__grid h4 {
   padding: 20px 0;
-  color: #c2a731;
+  color: #C2A731;
 }
 .features .features__grid .features__card {
   display: grid;
   grid-template-rows: 0.3fr 0.5fr 0.2fr;
   justify-items: center;
-  border: 1px solid #c2a731;
+  border: 1px solid #C2A731;
   border-radius: 16px;
   background-color: #ffffff;
   height: 100%;
   padding: 1rem;
 }
 .features .features__grid .features__card h4 {
-  color: #c2a731;
+  color: #C2A731;
 }
 .features .features__grid .features__card img {
   width: 100%;
@@ -1036,31 +1030,17 @@ nav {
   height: 1000px;
   background-color: #faf9ed;
   z-index: -1;
-  margin: 3% -22% 0 -21%;
+  margin: 3% -10% 0 -35%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .point::before {
-    width: 160%;
+    width: 200%;
   }
 }
 @media screen and (max-width: 1000px) {
   .point::before {
-    content: "";
-    display: block;
-    position: absolute;
-    overflow-x: hidden;
-    width: 100%;
-    height: 950px;
-    background-color: #faf9ed;
-    z-index: -1;
-    margin: 3% -22% 0 -21%;
-    transform: rotate(-12deg);
-  }
-}
-@media screen and (max-width: 1000px) and (max-width: 1000px) {
-  .point::before {
-    width: 160%;
+    height: 1050px;
   }
 }
 .point .point__top-grid {
@@ -1178,12 +1158,12 @@ nav {
   height: 111px;
   background-color: #ffeb87;
   z-index: -1;
-  margin: 3% -22% 0 -21%;
+  margin: 3% -10% 0 -35%;
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1000px) {
   .info::before {
-    width: 160%;
+    width: 200%;
   }
 }
 @media screen and (max-width: 1000px) {
