@@ -28,7 +28,10 @@ body {
 section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px 12px;
+  padding: 52px 12px;
+  @media screen and (max-width: 1000px) {
+    padding: 24px 12px;
+  }
 }
 
 
@@ -282,6 +285,10 @@ nav {
     }
   }
 
+  .btn {
+    margin-bottom: 2rem;
+  }
+
   .features__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -313,6 +320,9 @@ nav {
     }
   }
   @media screen and (max-width: 1000px) {
+    .btn {
+      margin-bottom: 0;
+    }
     .features__grid-wrapper {
       margin: 0 1rem;
     }
