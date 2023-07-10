@@ -39,6 +39,7 @@ section {
 .btn {
   &.blue {
     @include button($c-blue-dark, $c-blue-light, $c-neutral-100);
+    font-size: 22px;
     @media screen and (max-width: 1000px) {
       width: 100%;
       height: 60px;
@@ -46,18 +47,22 @@ section {
   }
   &.pink {
     @include button($c-tertiary-040, $c-tertiary-050, $c-neutral-100);
+    font-size: 22px;
+    color: $c-tertiary-099;
     @media screen and (max-width: 1000px) {
       width: 100%;
       height: 60px;
     }
   }
   &.yellow-dark {
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: 700;
     margin: 3rem auto;
     @include button($c-secondary-030, $c-secondary-040, $c-neutral-100);
   }
   &.yellow-light {
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: 700;
     margin: 2rem auto;
     @include button($c-primary-040, $c-primary-080, $c-secondary-010);
   }
@@ -138,8 +143,8 @@ nav {
     color: transparent;
     width: 100%;
     img {
-      width: 100%;
-      height: auto;
+      width: 658px;
+      height: 639px;
     }
   }
   .app-download__btn {
@@ -171,6 +176,10 @@ nav {
     }
     .hero__visual {
       grid-row: 1;
+      img {
+        height: 364px;
+        width: 364px;
+      }
     }
     .section__download {
       padding: 2rem 1rem;
@@ -219,13 +228,13 @@ nav {
     }
     .card {
       display: grid;
-      grid-template-rows: 1fr 2fr auto;
+      grid-template-rows: 0.8fr 2fr auto;
       justify-items: center;
       .card__img-wrapper {
         margin: 2rem 0;
         img {
-          height: 100%;
-          width: 100%;
+          height: 244px;
+          width: auto;
         }
       }
       @media screen and (max-width: 1000px) {
@@ -286,8 +295,8 @@ nav {
         color: $c-secondary-030;
       }
       img {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 244px;
         object-fit: contain;
       }
       p {
@@ -481,10 +490,15 @@ footer {
   z-index: -1;
 
   .footer__left {
-    h4 {
+    span {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    h1 {
       color: $c-neutral-099;
-      font-weight: 700;
+      font-weight: 500;
       margin-bottom: 1rem;
+      padding-top: 0;
     }
     p {
       color: $c-neutral-099;
