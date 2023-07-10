@@ -43,6 +43,7 @@ section {
     @media screen and (max-width: 1000px) {
       width: 100%;
       height: 60px;
+      font-size: 14px;
     }
   }
   &.pink {
@@ -52,6 +53,7 @@ section {
     @media screen and (max-width: 1000px) {
       width: 100%;
       height: 60px;
+      font-size: 14px;
     }
   }
   &.yellow-dark {
@@ -80,7 +82,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 150px;
   overflow: hidden;
   z-index: 50;
   transition: all 0.3s linear;
@@ -93,17 +95,21 @@ nav {
 }
 
 .nav__title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 80px;
+  font-weight: 700;
   line-height: 1;
   padding: 1rem 6rem;
+  font-weight: 500;
   span {
     display: block;
-    font-size: 1rem;
+    font-size: 36px;
   }
   @media screen and (max-width: 1000px) {
-    font-size: 1.8rem;
-    padding: 1rem;
+    font-size: 38px;
+    padding: 0;
+    span {
+      font-size: 20px;
+    }
   }
 }
 
@@ -117,12 +123,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   position: relative;
-  padding: 60px 0 32px;
+  padding: 160px 0 32px;
   &::before {
     @include bg-deco(400px, 120vw, $c-primary-050);
-    top: -22vw;
+    top: -17vw;
     @media screen and (max-width: 1000px) {
-      top: -80vw;
+      top: -75vw;
       overflow-x: hidden;
     }
   }
@@ -138,6 +144,9 @@ nav {
     span {
       color: $c-secondary-010;
     }
+    h1 {
+      font-size: 57px;
+    }
   }
   .hero__visual {
     color: transparent;
@@ -145,6 +154,12 @@ nav {
     img {
       width: 658px;
       height: 639px;
+    }
+  }
+  .section__download {
+    h4 {
+      font-size: 36px;
+      font-weight: 400;
     }
   }
   .app-download__btn {
@@ -173,6 +188,9 @@ nav {
     }
     .hero__content {
       grid-row: 2;
+      h1 {
+        font-size: 36px;
+      }
     }
     .hero__visual {
       grid-row: 1;
@@ -184,8 +202,9 @@ nav {
     .section__download {
       padding: 2rem 1rem;
       h4 {
-        font-size: 1rem;
+        font-size: 16px;        //to organized code
         margin-bottom: -1rem;
+        font-weight: 500;
       }
     }
     .google__btn {
@@ -241,6 +260,9 @@ nav {
         grid-template-rows: 0.5fr 1fr 0.2fr;
         .card__img-wrapper {
           margin: 2rem;
+          img {
+            height: 165px;
+          }
         }
       }
     }
@@ -305,8 +327,17 @@ nav {
     }
   }
   @media screen and (max-width: 1000px) {
+    .features {
+      padding: 0 2rem;
+    }
     .features__grid {
       grid-template-columns: 1fr;
+
+      .features__card {
+        img {
+          height: 165px;
+        }
+      }
     }
   }
 }
@@ -372,6 +403,7 @@ nav {
     }
     .point__text {
       padding: 1rem;
+      font-size: 24px;
     }
     .point__visual {
       img {
@@ -517,6 +549,15 @@ footer {
   @media screen and (max-width: 1000px) {
     flex-direction: column;
     padding: 2rem;
+    .footer__left {
+      h1 {
+        font-size: 24px;
+        span {
+          font-size: 14px;
+          margin-bottom: -2.4rem;
+        }
+      }
+    }
     .footer__right {
       align-self: flex-start;
     }

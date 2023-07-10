@@ -54,6 +54,12 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      @media screen and (max-width: 1000px) {
+        width: 0.875rem;
+        height: 0.875rem;
+        top: 33%;
+        left: 78%;
+      }
     }
     @media screen and (max-width: 1000px) {
       font-size: 14px;
