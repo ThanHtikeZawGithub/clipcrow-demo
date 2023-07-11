@@ -1596,14 +1596,16 @@ footer .footer__content {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  padding: 2rem 6rem;
+  padding: 1rem 6rem;
 }
 footer .footer__right {
+  margin-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  -moz-column-gap: 10rem;
-       column-gap: 10rem;
+  -moz-column-gap: 12rem;
+       column-gap: 12rem;
+  row-gap: 1rem;
 }
 footer .footer__left {
   align-items: flex-start;
@@ -1634,6 +1636,7 @@ footer .footer__left p {
     height: 51px;
   }
   footer .footer__right {
+    margin: 0;
     grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=styles.css.map */

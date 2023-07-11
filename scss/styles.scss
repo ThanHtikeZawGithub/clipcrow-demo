@@ -547,13 +547,15 @@ footer {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    padding: 2rem 6rem;
+    padding: 1rem 6rem;
   }
   .footer__right {
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 10rem;
+    column-gap: 12rem;
+    row-gap: 1rem;
   }
 
   .footer__left {
@@ -584,6 +586,7 @@ footer {
       }
     }
     .footer__right {
+      margin: 0;
       grid-template-columns: 1fr;
     }
   }
