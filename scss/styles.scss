@@ -573,8 +573,10 @@ footer {
   }
 
   @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr;
-    padding: 2rem;
+    .footer__content {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+    }
     .footer__left {
       margin: 0 auto;
       img {
