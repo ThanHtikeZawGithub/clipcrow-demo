@@ -1036,7 +1036,7 @@ section {
   .download__btn::before {
     width: 0.875rem;
     height: 0.875rem;
-    top: 33%;
+    top: 30%;
     left: 78%;
   }
 }
