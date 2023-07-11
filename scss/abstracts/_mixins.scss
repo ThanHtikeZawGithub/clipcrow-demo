@@ -117,14 +117,5 @@
   }
 }
 
-@mixin features__img ($height, $sp-height ,$width , $sp-width) {
-  img {
-    height: $height;
-    width: $width;
-    @media screen and (max-width: 1000px) {
-      height: $sp-height;
-      width: $sp-width;
-    }
-  }
-}
+
 

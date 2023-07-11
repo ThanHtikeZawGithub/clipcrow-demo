@@ -226,53 +226,6 @@ span {
   border-radius: 10px 0 0 10px;
 }
 
-/* main images in feauture page
-  (pc-height, sp-height, pc-width, sp-width)
-*/
-.features__img-1 img {
-  height: 245px;
-  width: 295px;
-}
-@media screen and (max-width: 1000px) {
-  .features__img-1 img {
-    height: 165px;
-    width: 198px;
-  }
-}
-
-.features__img-2 img {
-  height: 241px;
-  width: 516px;
-}
-@media screen and (max-width: 1000px) {
-  .features__img-2 img {
-    height: 136px;
-    width: 291px;
-  }
-}
-
-.features__img-3 img {
-  height: 245px;
-  width: 309px;
-}
-@media screen and (max-width: 1000px) {
-  .features__img-3 img {
-    height: 165px;
-    width: 208px;
-  }
-}
-
-.features__img-4 img {
-  height: 280px;
-  width: 481px;
-}
-@media screen and (max-width: 1000px) {
-  .features__img-4 img {
-    height: 176px;
-    width: 304px;
-  }
-}
-
 .extra-hover a {
   display: block;
   position: relative;
@@ -407,6 +360,22 @@ span {
   justify-content: center;
   align-items: center;
 }
+.features__img-ellipse .features__img-1 {
+  height: 245px;
+  width: 295px;
+}
+.features__img-ellipse .features__img-2 {
+  height: 241px;
+  width: 516px;
+}
+.features__img-ellipse .features__img-3 {
+  height: 245px;
+  width: 309px;
+}
+.features__img-ellipse .features__img-4 {
+  height: 280px;
+  width: 481px;
+}
 @media screen and (max-width: 1000px) {
   .features__img-ellipse {
     gap: 12px;
@@ -423,6 +392,22 @@ span {
     padding: 2rem 1rem 0;
     font-size: 16px;
     line-height: 1.5rem;
+  }
+  .features__img-ellipse .features__img-1 {
+    height: 165px;
+    width: 198px;
+  }
+  .features__img-ellipse .features__img-2 {
+    height: 136px;
+    width: 291px;
+  }
+  .features__img-ellipse .features__img-3 {
+    height: 165px;
+    width: 208px;
+  }
+  .features__img-ellipse .features__img-4 {
+    height: 176px;
+    width: 304px;
   }
 }
 
@@ -513,6 +498,10 @@ span {
   .features__case-wrapper .case .badge {
     top: 0.8rem;
   }
+  .features__case-wrapper .case .badge img {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 /* features cover section */
@@ -540,7 +529,7 @@ span {
 }
 @media screen and (max-width: 1000px) {
   .features__kv::before {
-    top: -99vw;
+    top: -95vw;
   }
 }
 .features__kv h1 {
@@ -567,6 +556,13 @@ span {
   height: auto;
 }
 @media screen and (max-width: 1000px) {
+  .features__kv h1 {
+    font-size: 28px;
+  }
+  .features__kv span {
+    font-size: 16px;
+    font-weight: 500;
+  }
   .features__kv .kv__content p {
     padding: 0 1rem;
   }
@@ -1157,6 +1153,9 @@ nav {
     top: 1680px;
     height: 57px;
   }
+}
+.features .features__grid-wrapper {
+  margin-bottom: 2rem;
 }
 .features .btn {
   margin-bottom: 2rem;

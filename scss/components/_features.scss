@@ -22,24 +22,6 @@
 }
 
 //============================================================
-/* main images in feauture page
-  (pc-height, sp-height, pc-width, sp-width)
-*/
-
-.features__img-1 {
-  @include features__img (245px, 165px, 295px, 198px);
-}
-.features__img-2 {
-  @include features__img (241px, 136px, 516px, 291px);
-}
-.features__img-3 {
-  @include features__img (245px, 165px, 309px, 208px);
-  
-}
-.features__img-4 {
-  @include features__img (280px, 176px, 481px, 304px);
- 
-}
 
 .extra-hover {
   a {
@@ -181,6 +163,23 @@
     justify-content: center;
     align-items: center;
   }
+  .features__img-1 {
+    height: 245px;
+    width: 295px;
+    
+  }
+  .features__img-2 {
+    height: 241px;
+    width: 516px;  
+  }
+  .features__img-3 {
+    height: 245px;
+    width: 309px;
+  }
+  .features__img-4 {
+    height: 280px;
+    width: 481px;
+  }
   @media screen and (max-width: 1000px) {
     gap: 12px;
     height: 250px;
@@ -195,6 +194,23 @@
       padding: 2rem 1rem 0;
       font-size: 16px;
       line-height: 1.5rem;
+    }
+    .features__img-1 {
+      height: 165px;
+      width: 198px;
+      
+    }
+    .features__img-2 {
+      height: 136px;
+      width: 291px;
+    }
+    .features__img-3 {
+      height: 165px;
+      width: 208px;
+    }
+    .features__img-4 {
+      height: 176px;
+      width: 304px;
     }
   }
 }
@@ -287,6 +303,10 @@
     .case {
       .badge {
         top: 0.8rem;
+        img {
+          height: 30px;
+          width: 30px;
+        }
       }
     }
   }
@@ -300,7 +320,7 @@
     @include bg-deco(400px, 120vw, $c-primary-050);
     top: -33vw;
     @media screen and (max-width: 1000px) {
-      top: -99vw;
+      top: -95vw;
     }
   }
   h1 {
@@ -330,6 +350,13 @@
   }
 
   @media screen and (max-width: 1000px) {
+    h1 {
+      font-size: 28px;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 500;
+    }
     .kv__content {
       p {
         padding: 0 1rem;
