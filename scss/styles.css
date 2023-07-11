@@ -1301,7 +1301,7 @@ nav {
   }
 }
 .features::after {
-  top: 1170px;
+  top: 1140px;
   content: "";
   display: block;
   position: absolute;

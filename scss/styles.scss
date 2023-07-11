@@ -284,7 +284,7 @@ nav {
     }
   }
   &::after {
-    top: 1170px;
+    top: 1140px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1000px) {
       top: 1680px;
