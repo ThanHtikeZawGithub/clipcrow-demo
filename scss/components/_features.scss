@@ -312,9 +312,13 @@
 
 .features__kv {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   &::before {
-    @include bg-deco(400px, 120vw, $c-primary-050);
-    top: -33vw;
+    @include bg-deco(500px, 120vw, $c-primary-050);
+    top: -550px;
     @media screen and (max-width: 1000px) {
       top: -95vw;
     }

@@ -509,6 +509,10 @@ span {
 /* features cover section */
 .features__kv {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .features__kv::before {
   content: "";
@@ -516,12 +520,12 @@ span {
   position: absolute;
   overflow-x: hidden;
   width: 120vw;
-  height: 400px;
+  height: 500px;
   background-color: #ffe873;
   z-index: -1;
   margin: 3% -10% 0 -10%;
   transform: rotate(-12deg);
-  top: -33vw;
+  top: -550px;
 }
 @media screen and (max-width: 1000px) {
   .features__kv::before {
