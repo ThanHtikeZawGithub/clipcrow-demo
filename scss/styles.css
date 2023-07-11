@@ -1,14 +1,14 @@
 /* Reset default browser styles */
 a {
   text-decoration: none;
-  color: #55585b;
+  color: #5B5B55;
 }
 
 p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 24px;
-  color: #55585b;
+  color: #5B5B55;
   letter-spacing: 0.15px;
 }
 
@@ -20,7 +20,7 @@ span {
 h1 {
   font-size: 45px;
   font-weight: 700;
-  color: #55585b;
+  color: #5B5B55;
   text-align: center;
   padding: 1rem 0;
   line-height: 1.5;
@@ -39,6 +39,7 @@ li {
   list-style-type: none;
   margin-bottom: 1rem;
   color: #E6E6E5;
+  text-align: start;
 }
 
 .text-justify {
@@ -84,14 +85,14 @@ span {
 /* step header background in features/functions page */
 a {
   text-decoration: none;
-  color: #55585b;
+  color: #5B5B55;
 }
 
 p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 24px;
-  color: #55585b;
+  color: #5B5B55;
   letter-spacing: 0.15px;
 }
 
@@ -103,7 +104,7 @@ span {
 h1 {
   font-size: 45px;
   font-weight: 700;
-  color: #55585b;
+  color: #5B5B55;
   text-align: center;
   padding: 1rem 0;
   line-height: 1.5;
@@ -122,6 +123,7 @@ li {
   list-style-type: none;
   margin-bottom: 1rem;
   color: #E6E6E5;
+  text-align: start;
 }
 
 .text-justify {
@@ -690,6 +692,132 @@ span {
 /* example link */
 .example__link p {
   margin: 0.875rem 0;
+}
+
+.profile__kv .profile__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+.profile__kv .logo {
+  margin-bottom: 1rem;
+}
+.profile__kv .logo img {
+  height: 90px;
+  width: auto;
+}
+
+.business .teams {
+  color: #5B5B55;
+}
+.business .teams ul,
+.business .teams li {
+  color: #5B5B55;
+  list-style-type: disc;
+}
+@media screen and (min-width: 1000px) {
+  .business .teams {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 0 20px;
+  }
+}
+.business .teams .teambox {
+  border: 1px solid #C2A731;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+.business .teams .teambox .inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 0 20px;
+}
+@media screen and (min-width: 1000px) {
+  .business .teams .teambox .inner {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 0 20px;
+  }
+}
+.business .teams .teambox .inner .image {
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+}
+.business .teams .teambox .inner .image .dev__img {
+  height: 35px;
+  width: auto;
+}
+@media screen and (min-width: 1000px) {
+  .business .teams .teambox .inner .image {
+    width: 100px;
+    height: auto;
+  }
+}
+.business .teams .teambox .inner .image img {
+  height: 100px;
+  width: auto;
+}
+.business .teams .team-dev {
+  margin-right: 0;
+}
+@media screen and (min-width: 1000px) {
+  .business .teams .team-dev {
+    margin-right: 0.5rem;
+  }
+}
+.business .teams .teamname {
+  margin: 0;
+  padding: 0.5rem;
+  background-color: #ffeb87;
+  text-align: center;
+  font-size: 0.825rem;
+  font-weight: bold;
+}
+.business .teams .note {
+  padding: 0.5rem;
+  line-height: 1.25;
+  font-size: 0.825rem;
+}
+.business .teams ul {
+  margin: 0.5rem 0 0.5rem 3rem;
+}
+.business .teams ul li {
+  line-height: 1.25;
+}
+.business .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dotted #000;
+  background-color: #fffce8;
+}
+.business .image img {
+  height: 35px;
+  width: auto;
+}
+@media screen and (min-width: 1000px) {
+  .business {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+.business .dev__img {
+  height: 35px;
+  width: auto;
 }
 
 /* reset css */
@@ -1321,7 +1449,7 @@ nav {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.25px;
-  color: #55585b;
+  color: #5B5B55;
 }
 .blog .blog__card p {
   width: 194px;
@@ -1330,7 +1458,7 @@ nav {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15px;
-  color: #55585b;
+  color: #5B5B55;
 }
 @media screen and (max-width: 1000px) {
   .blog h1 {

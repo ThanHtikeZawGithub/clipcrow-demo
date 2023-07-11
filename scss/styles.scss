@@ -4,6 +4,7 @@
 @import "abstracts/mixins";
 @import "components/features";
 @import "components/usage-example";
+@import "components/profile";
 
 /* reset css */
 * {
@@ -33,8 +34,6 @@ section {
     padding: 24px 12px;
   }
 }
-
-
 
 //==================================================
 //button
@@ -96,7 +95,6 @@ nav {
     padding: 0 1rem;
     img {
       height: 82px;
-      
     }
   }
 }
@@ -129,24 +127,23 @@ nav {
   }
   @media screen and (max-width: 1000px) {
     padding: 2rem 1rem;
-      h4 {
-        font-size: 16px;        //to organized code
-        margin-bottom: -1rem;
-        font-weight: 500;
+    h4 {
+      font-size: 16px; //to organized code
+      margin-bottom: -1rem;
+      font-weight: 500;
+    }
+    .google__btn {
+      img {
+        height: 60px;
       }
-      .google__btn {
-        img {
-          height: 60px;
-        }
+    }
+    .app-store__btn {
+      img {
+        height: 47px;
       }
-      .app-store__btn {
-        img {
-          height: 47px;
-        }
-      }
+    }
   }
 }
-
 
 /*==================================================================================*/
 /*cover section*/
@@ -238,7 +235,7 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin: 3rem 1rem;
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width: 1000px) {
       grid-template-columns: 1fr;
       margin: 1rem;
     }
@@ -549,7 +546,6 @@ footer {
       line-height: 1.5;
       @media screen and (max-width: 1000px) {
         display: none;
-
       }
     }
   }
