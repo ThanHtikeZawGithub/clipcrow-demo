@@ -3,7 +3,7 @@ a {
     color: $c-neutral-010;
 }
 p {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     color: $c-neutral-010;
@@ -24,7 +24,7 @@ h1 {
     color: $c-neutral-010;
     text-align: center;
     padding: 1rem 0;
-    line-height: 1.5;
+    line-height: 52px;
 }
 
 h4 {
@@ -38,6 +38,10 @@ h4 {
 
 ul,
 li {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
     list-style-type: none;
     margin-bottom: 1rem;
     color: $c-neutral-099;
@@ -64,17 +68,27 @@ li {
     color: $c-tertiary-040;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     p,
     span {
         font-size: 14px;
         letter-spacing: 0.25px;
+        font-weight: 400;
+        line-height: 20px;
     }
 
     h1 {
         font-size: 32px;
+        line-height: 40px;
     }
     h4 {
         font-size: 22px;
+        line-height: 28px;
+    }
+    ul,
+    li {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
     }
 }

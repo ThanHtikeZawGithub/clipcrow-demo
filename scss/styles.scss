@@ -30,8 +30,8 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 52px 12px;
-  @media screen and (max-width: 1000px) {
-    padding: 24px 12px;
+  @media screen and (max-width: 1200px) {
+    padding: 32px 12px;
   }
 }
 
@@ -44,8 +44,8 @@ section {
     font-size: 22px;
     color: $c-neutral-070;
     line-height: 28px;
-    @media screen and (max-width: 1000px) {
-      width: 100%;
+    @media screen and (max-width: 1200px) {
+      width: 364px;
       height: 60px;
       font-weight: 500;
     }
@@ -55,8 +55,8 @@ section {
     font-size: 22px;
     color: $c-tertiary-099;
     line-height: 28px;
-    @media screen and (max-width: 1000px) {
-      width: 100%;
+    @media screen and (max-width: 1200px) {
+      width: 364px;
       height: 60px;
       font-weight: 500;
     }
@@ -64,6 +64,7 @@ section {
   &.yellow-dark {
     font-size: 32px;
     font-weight: 700;
+    line-height: 40px;
     margin: 0 auto;
     @include button($c-secondary-030, $c-secondary-040, $c-neutral-100);
   }
@@ -94,7 +95,7 @@ nav {
     width: auto;
     height: 153px;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     padding: 0 1rem;
     img {
       height: 82px;
@@ -109,40 +110,48 @@ nav {
   h4 {
     font-size: 36px;
     font-weight: 400;
+    line-height: 44px;
   }
   .app-download__btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 57px;
   }
   .google__btn {
     img {
-      height: 75px;
-      width: auto;
+      height: 104px;
+      width: 268px;
     }
   }
   .app-store__btn {
     img {
-      height: 60px;
-      width: auto;
+      height: 76px;
+      width: 214px;
     }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     padding: 2rem 1rem;
+    .app-download__btn {
+      gap: 27px;
+    }
     h4 {
       font-size: 16px; //to organized code
       margin-bottom: -1rem;
       font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.15px;
     }
     .google__btn {
       img {
-        height: 60px;
+        height: 52px;
+        width: 134px;
       }
     }
     .app-store__btn {
       img {
-        height: 47px;
+        height: 38px;
+        width: 107px;
       }
     }
   }
@@ -162,7 +171,7 @@ nav {
   &::before {
     @include bg-deco(900px, 120vw, $c-primary-050);
     top: -960px;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
       top: -900px;
     }
   }
@@ -180,6 +189,8 @@ nav {
     }
     h1 {
       font-size: 57px;
+      line-height: 64px;
+      letter-spacing: -0.25px;
     }
   }
   .hero__visual {
@@ -193,7 +204,7 @@ nav {
   .section__download {
     margin-top: 3rem;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     padding: 50px 0 0;
     .hero {
       grid-template-columns: 1fr;
@@ -205,9 +216,15 @@ nav {
       h1 {
         font-size: 36px;
       }
+      span {
+        font-weight: 700;
+      }
     }
     .hero__visual {
       grid-row: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
         height: 364px;
         width: 364px;
@@ -229,8 +246,15 @@ nav {
   position: relative;
   &::before {
     @include bg-deco(700px, 120vw, $c-secondary-099);
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
       height: 950px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    h1 {
+      text-align: start;
+      margin: 0 auto;
+      padding: 0 4rem;
     }
   }
   .maincont__card {
@@ -238,14 +262,17 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin: 3rem 1rem;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
       grid-template-columns: 1fr;
-      margin: 1rem;
+      margin: 2rem 2rem 1rem;
     }
     .card {
       display: grid;
       grid-template-rows: 0.8fr 2fr auto;
       justify-items: center;
+      .card__sp-text {
+        display: none;
+      }
       .card__img-wrapper {
         margin: 2rem 0;
         img {
@@ -253,10 +280,26 @@ nav {
           width: auto;
         }
       }
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1200px) {
         grid-template-rows: 0.5fr 1fr 0.2fr;
+        .card__pc-text {
+          display: none;
+        }
+        .card__sp-text {
+          display: flex;
+          flex-direction: column;
+          text-align: justify;
+        }
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 700;
+        }
         .card__img-wrapper {
-          margin: 2rem;
+          margin: 1.5rem;
           img {
             height: 165px;
           }
@@ -278,7 +321,7 @@ nav {
   &::before {
     top: 75px;
     @include bg-deco(111px, 120vw, $c-primary-060);
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
       top: 55px;
       height: 57px;
     }
@@ -286,8 +329,8 @@ nav {
   &::after {
     top: 1140px;
     @include bg-deco(111px, 120vw, $c-primary-060);
-    @media screen and (max-width: 1000px) {
-      top: 1680px;
+    @media screen and (max-width: 1200px) {
+      top: 1570px;
       height: 57px;
     }
   }
@@ -329,12 +372,16 @@ nav {
       }
     }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
+    h1 {
+      text-align: start;
+      padding: 0.5rem;
+    }
     .btn {
       margin-bottom: 0;
     }
     .features__grid-wrapper {
-      margin: 0 1rem;
+      margin: 0 0.8rem;
     }
     .features__grid {
       grid-template-columns: 1fr;
@@ -342,9 +389,13 @@ nav {
 
       .features__card {
         padding: 0;
+        grid-template-rows: 0.2fr 0.5fr 0.3fr;
         img {
           height: 165px;
           width: 100%;
+        }
+        p {
+          padding: 0 24px 32px;
         }
       }
     }
@@ -363,8 +414,9 @@ nav {
   margin: 0 auto;
   &::before {
     @include bg-deco(1000px, 120vw, $c-secondary-099);
-    @media screen and (max-width: 1000px) {
-      height: 1150px;
+    @media screen and (max-width: 1200px) {
+      height: 1080px;
+      top: 130px;
     }
   }
 
@@ -392,12 +444,16 @@ nav {
   }
   .point__visual {
     img {
-      width: 35rem;
-      height: auto;
+      width: 584px;
+      height: 446px;
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
+    h1 {
+      text-align: start;
+      padding: 0.5rem;
+    }
     .point__top-grid {
       flex-direction: column;
       justify-content: center;
@@ -408,6 +464,7 @@ nav {
         order: 2;
         h4 {
           font-size: 24px;
+          line-height: 32px;
         }
       }
     }
@@ -476,7 +533,7 @@ nav {
       color: $c-neutral-010;
     }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     h1 {
       margin-bottom: 12px;
     }
@@ -500,7 +557,7 @@ nav {
   &::before {
     top: 170px;
     @include bg-deco(111px, 120vw, $c-primary-060);
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
       top: 100px;
       height: 150px;
       width: 150%;
@@ -516,19 +573,20 @@ nav {
   }
 
   img {
-    height: 150px;
-    width: auto;
+    height: 160px;
+    width: 444px;
     margin-bottom: 1rem;
   }
   p {
     padding: 2rem 8rem;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     p {
       padding: 8px;
     }
     img {
-      height: 85px;
+      height: 77px;
+      width: 212px;
     }
   }
 }
@@ -567,14 +625,14 @@ footer {
     }
     p {
       color: $c-neutral-099;
-      line-height: 1.5;
-      @media screen and (max-width: 1000px) {
+      font-weight: 500;
+      @media screen and (max-width: 1200px) {
         display: none;
       }
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     .footer__content {
       grid-template-columns: 1fr;
       padding: 2rem;

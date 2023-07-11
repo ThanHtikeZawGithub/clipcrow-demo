@@ -16,12 +16,13 @@
     &:hover {
       background-color: $hover-color;
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
       font-size: 14px;
       width: 200px;
       height: 40px;
       font-weight: 700;
       line-height: 20px;
+      letter-spacing: 0.1px;
     }
   }
 
@@ -59,14 +60,15 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1200px) {
         width: 0.875rem;
         height: 0.875rem;
         top: 30%;
         left: 78%;
       }
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
+      box-shadow: 0px 0.988701px 1.9774px rgba(0, 0, 0, 0.3), 0px 1.9774px 5.9322px 1.9774px rgba(0, 0, 0, 0.15);
       font-size: 14px;
       width: 280px;
       height: 32px;
@@ -88,7 +90,7 @@
   z-index: -1;
   margin: 3% -10% 0 -10%;
   transform: rotate(-12deg);
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     width: 200%;
     margin: 3% -10% 0 -38%;
   }
@@ -114,11 +116,11 @@
       justify-content: center;
       align-items: center;
       z-index: -1;
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1200px) {
         width: 120%;
       }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     font-size: 24px;
   }
 }
