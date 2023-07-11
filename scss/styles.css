@@ -526,7 +526,7 @@ span {
 @media screen and (max-width: 1000px) {
   .features__kv::before {
     width: 200%;
-    margin: 3% -10% 0 -35%;
+    margin: 3% -10% 0 -38%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1094,7 +1094,7 @@ nav {
 @media screen and (max-width: 1000px) {
   .kv::before {
     width: 200%;
-    margin: 3% -10% 0 -35%;
+    margin: 3% -10% 0 -38%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1177,7 +1177,7 @@ nav {
 @media screen and (max-width: 1000px) {
   .maincont::before {
     width: 200%;
-    margin: 3% -10% 0 -35%;
+    margin: 3% -10% 0 -38%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1248,7 +1248,7 @@ nav {
 @media screen and (max-width: 1000px) {
   .features::before {
     width: 200%;
-    margin: 3% -10% 0 -35%;
+    margin: 3% -10% 0 -38%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1273,7 +1273,7 @@ nav {
 @media screen and (max-width: 1000px) {
   .features::after {
     width: 200%;
-    margin: 3% -10% 0 -35%;
+    margin: 3% -10% 0 -38%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1359,7 +1359,7 @@ nav {
 @media screen and (max-width: 1000px) {
   .point::before {
     width: 200%;
-    margin: 3% -10% 0 -35%;
+    margin: 3% -10% 0 -38%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1490,7 +1490,7 @@ nav {
 @media screen and (max-width: 1000px) {
   .info::before {
     width: 200%;
-    margin: 3% -10% 0 -35%;
+    margin: 3% -10% 0 -38%;
   }
 }
 @media screen and (max-width: 1000px) {
