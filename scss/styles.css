@@ -1050,13 +1050,13 @@ section {
 }
 
 nav {
-  display: flex;
-  align-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 1rem 0;
 }
 
 .nav__title {
-  padding: 1rem 6rem;
+  padding: 1rem;
 }
 .nav__title img {
   width: auto;
@@ -1123,12 +1123,12 @@ nav {
   position: absolute;
   overflow-x: hidden;
   width: 120vw;
-  height: 400px;
+  height: 900px;
   background-color: #ffe873;
   z-index: -1;
   margin: 3% -10% 0 -10%;
   transform: rotate(-12deg);
-  top: -33vw;
+  top: -960px;
 }
 @media screen and (max-width: 1000px) {
   .kv::before {
@@ -1583,12 +1583,16 @@ nav {
 footer {
   background-color: #504100;
   color: #E6E6E5;
+  z-index: -1;
+}
+footer .footer__content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
   padding: 2rem 6rem;
-  z-index: -1;
 }
 footer .footer__right {
   display: grid;

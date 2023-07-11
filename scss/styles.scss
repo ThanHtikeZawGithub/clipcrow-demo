@@ -83,13 +83,13 @@ section {
 // header
 
 nav {
-  display: flex;
-  align-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 1rem 0;
 }
 
 .nav__title {
-  padding: 1rem 6rem;
+  padding: 1rem;
   img {
     width: auto;
     height: 153px;
@@ -160,8 +160,8 @@ nav {
   position: relative;
   padding: 0 0 2rem;
   &::before {
-    @include bg-deco(400px, 120vw, $c-primary-050);
-    top: -33vw;
+    @include bg-deco(900px, 120vw, $c-primary-050);
+    top: -960px;
     @media screen and (max-width: 1000px) {
       top: -99vw;
     }
@@ -539,12 +539,16 @@ nav {
 footer {
   background-color: $c-primary-000;
   color: $c-neutral-099;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 6rem;
   z-index: -1;
+  .footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 6rem;
+  }
   .footer__right {
     display: grid;
     grid-template-columns: 1fr 1fr;
