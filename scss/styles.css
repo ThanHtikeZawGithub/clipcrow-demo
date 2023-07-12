@@ -570,7 +570,6 @@ li {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: #5B5B55;
 }
 .features__kv::before {
   content: "";
