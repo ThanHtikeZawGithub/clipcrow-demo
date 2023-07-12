@@ -900,7 +900,7 @@ section {
 }
 @media screen and (max-width: 1200px) {
   section {
-    padding: 32px 12px;
+    padding: 28px 12px;
   }
 }
 
@@ -1054,7 +1054,10 @@ section {
   line-height: 1.5;
 }
 .download__btn:hover {
-  opacity: 0.7;
+  color: #91918b;
+}
+.download__btn:hover::before {
+  background-image: url("/images/download-hover.svg");
 }
 .download__btn::before {
   display: block;
@@ -1275,7 +1278,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .maincont::before {
-    height: 950px;
+    height: 900px;
   }
 }
 @media screen and (max-width: 1200px) {
