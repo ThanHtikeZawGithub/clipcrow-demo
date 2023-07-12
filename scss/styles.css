@@ -593,7 +593,7 @@ li {
 }
 @media screen and (max-width: 1000px) {
   .features__kv::before {
-    top: -410px;
+    top: -445px;
   }
 }
 .features__kv h1 {
@@ -622,15 +622,24 @@ li {
   height: 300px;
 }
 @media screen and (max-width: 1000px) {
+  .features__kv {
+    padding-top: 0;
+  }
   .features__kv h1 {
     font-size: 28px;
+    line-height: 36.4px;
   }
   .features__kv span {
     font-size: 16px;
     font-weight: 500;
+    line-height: 24px;
+  }
+  .features__kv .kv__content {
+    margin-top: -2rem;
   }
   .features__kv .kv__content p {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+    text-align: start;
   }
   .features__kv .kv__img-wrapper {
     grid-template-columns: 1fr;

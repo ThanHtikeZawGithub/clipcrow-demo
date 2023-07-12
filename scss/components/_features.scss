@@ -339,7 +339,7 @@
     @include bg-deco(500px, 120vw, $c-primary-050);
     top: -550px;
     @media screen and (max-width: 1000px) {
-      top: -410px;
+      top: -445px;
     }
   }
   h1 {
@@ -371,16 +371,21 @@
   }
 
   @media screen and (max-width: 1000px) {
+    padding-top: 0;
     h1 {
       font-size: 28px;
+      line-height: 36.4px;
     }
     span {
       font-size: 16px;
       font-weight: 500;
+      line-height: 24px;
     }
     .kv__content {
+      margin-top: -2rem;
       p {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
+        text-align: start;
       }
     }
     .kv__img-wrapper {
