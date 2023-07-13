@@ -10,8 +10,8 @@
   &::before {
     right: 0;
     border-radius: 0px 10px 10px 0px;
-    @media screen and (max-width: 1000px) {
-      margin-right: 32px;
+    @media screen and (max-width: 1200px) {
+      margin-right: 20px;
     }
   }
 }
@@ -21,8 +21,8 @@
   &::before {
     left: 0;
     border-radius: 10px 0 0 10px;
-    @media screen and (max-width: 1000px) {
-      margin-left: 32px;
+    @media screen and (max-width: 1200px) {
+      margin-left: 20px;
     }
   }
 }
