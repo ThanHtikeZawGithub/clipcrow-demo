@@ -2,6 +2,7 @@
 
 
 .step__01 {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -14,21 +15,6 @@
       top: -445px;
     }
   }
-  .title__left {
-    .num {
-      .num__inner {
-        .step {
-
-        }
-        .figure {
-
-        }
-      }
-      .title {
-
-      }
-    }
-  }
 }
 
 
@@ -38,17 +24,18 @@
 
 //============================================================
 /* step header title */
-.title-left {
+.ex__title-left {
   @include features__deco();
   &::before {
-    // height: 79px;
+    height: 79px;
     right: 0;
   }
 }
-.title-right {
+.ex__title-right {
   @include features__deco();
   &::before {
-    // height: 79px;
+    height: 79px;
+    left: 0;
   }
 }
 .num {
@@ -110,7 +97,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
+  padding: 2rem 0;
+  gap: 1rem;
   .case {
     display: flex;
     flex-direction: column;
@@ -119,6 +107,7 @@
     background-color: $c-secondary-095;
     height: 288px;
     width: 288px;
+    margin-bottom: 1rem;
     border-radius: 100%;
     .roll {
       font-size: 22px;
@@ -128,7 +117,7 @@
     .image {
       img {
         height: 150px;
-      width: auto;
+        width: auto;
       }
     }
     .action {
@@ -189,6 +178,17 @@
 
 //====================================================================
 /* example link */
+.example__link {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16rem;
+  gap: 1rem;
+  h4 {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+}
 @media screen and (max-width: 1000px) {
   .example__link {
     p {

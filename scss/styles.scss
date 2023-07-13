@@ -31,7 +31,7 @@ section {
   margin: 0 auto;
   padding: 52px 12px;
   @media screen and (max-width: 1200px) {
-    padding: 28px 12px;
+    padding: 28px 32px;
   }
 }
 
@@ -605,15 +605,15 @@ footer {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    padding: 1rem 6rem;
+    padding: 1rem 0; 
   }
   .footer__right {
-    margin-top: 4rem;
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 12rem;
+    column-gap: 9rem;
     row-gap: 1rem;
+    margin-bottom: 2rem;
   }
 
   .footer__left {
