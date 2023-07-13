@@ -45,7 +45,7 @@ section {
     color: $c-neutral-070;
     line-height: 28px;
     @media screen and (max-width: 1200px) {
-      width: 364px;
+      width: 100%;
       height: 60px;
       font-weight: 500;
     }
@@ -56,7 +56,7 @@ section {
     color: $c-tertiary-099;
     line-height: 28px;
     @media screen and (max-width: 1200px) {
-      width: 364px;
+      width: 100%;
       height: 60px;
       font-weight: 500;
     }
@@ -180,7 +180,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    margin: -3rem 1.8rem;
+    margin-top: -3rem;
     grid-gap: 24px;
   }
   .hero__content {
@@ -205,14 +205,13 @@ nav {
     margin-top: 3rem;
   }
   @media screen and (max-width: 1200px) {
-    padding: 50px 0 0;
+    padding: 50px 0;
     .hero {
       grid-template-columns: 1fr;
-      grid-gap: 20px;
+      padding: 0 32px;
     }
     .hero__content {
       grid-row: 2;
-      padding: 0 1rem;
       h1 {
         font-size: 36px;
       }
@@ -242,7 +241,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
   position: relative;
   &::before {
     @include bg-deco(700px, 120vw, $c-secondary-099);
@@ -264,7 +263,8 @@ nav {
     margin: 3rem 1rem;
     @media screen and (max-width: 1200px) {
       grid-template-columns: 1fr;
-      margin: 2rem 2rem 1rem;
+      padding: 32px 32px 16px;
+      margin: 0;
     }
     .card {
       display: grid;
@@ -375,13 +375,13 @@ nav {
   @media screen and (max-width: 1200px) {
     h1 {
       text-align: start;
-      padding: 0.5rem;
+      padding: 0.5rem 0;
     }
     .btn {
       margin-bottom: 0;
     }
     .features__grid-wrapper {
-      margin: 0 0.8rem;
+      margin: 0;
     }
     .features__grid {
       grid-template-columns: 1fr;
@@ -411,7 +411,6 @@ nav {
   position: relative;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
   &::before {
     @include bg-deco(1000px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1200px) {
@@ -450,15 +449,16 @@ nav {
   }
 
   @media screen and (max-width: 1200px) {
+    
     h1 {
       text-align: start;
-      padding: 0.5rem;
+      padding: 0.5rem 0;
     }
     .point__top-grid {
       flex-direction: column;
       justify-content: center;
-      padding: 2rem 0;
       margin: 0 auto;
+      padding: 2rem 0;
       .point__text {
         padding: 1rem 2rem;
         order: 2;
@@ -471,8 +471,8 @@ nav {
     .point__bottom-grid {
       flex-direction: column;
       justify-content: center;
-      padding: 0.5rem 0 1rem 0;
       margin: 0 auto;
+      padding: 0 0 2rem;
     }
     .point__text {
       padding: 1rem 2rem;
@@ -484,7 +484,6 @@ nav {
       img {
         width: 100%;
         height: 347px;
-        padding: 0 1rem;
       }
     }
   }
@@ -539,6 +538,7 @@ nav {
     }
     .blog__card {
       padding: 1rem auto;
+      margin: 15px 0;
     }
   }
 }
@@ -582,7 +582,7 @@ nav {
   }
   @media screen and (max-width: 1200px) {
     p {
-      padding: 8px;
+      padding: 0;
     }
     img {
       height: 77px;

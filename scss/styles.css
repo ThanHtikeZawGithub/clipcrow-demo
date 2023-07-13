@@ -1180,7 +1180,7 @@ section {
 }
 @media screen and (max-width: 1200px) {
   .btn.blue {
-    width: 364px;
+    width: 100%;
     height: 60px;
     font-weight: 500;
   }
@@ -1216,7 +1216,7 @@ section {
 }
 @media screen and (max-width: 1200px) {
   .btn.pink {
-    width: 364px;
+    width: 100%;
     height: 60px;
     font-weight: 500;
   }
@@ -1439,7 +1439,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  margin: -3rem 1.8rem;
+  margin-top: -3rem;
   grid-gap: 24px;
 }
 .kv .hero__content span {
@@ -1463,15 +1463,14 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .kv {
-    padding: 50px 0 0;
+    padding: 50px 0;
   }
   .kv .hero {
     grid-template-columns: 1fr;
-    grid-gap: 20px;
+    padding: 0 32px;
   }
   .kv .hero__content {
     grid-row: 2;
-    padding: 0 1rem;
   }
   .kv .hero__content h1 {
     font-size: 36px;
@@ -1500,7 +1499,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
   position: relative;
 }
 .maincont::before {
@@ -1542,7 +1541,8 @@ nav {
 @media screen and (max-width: 1200px) {
   .maincont .maincont__card {
     grid-template-columns: 1fr;
-    margin: 2rem 2rem 1rem;
+    padding: 32px 32px 16px;
+    margin: 0;
   }
 }
 .maincont .maincont__card .card {
@@ -1688,13 +1688,13 @@ nav {
 @media screen and (max-width: 1200px) {
   .features h1 {
     text-align: start;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
   }
   .features .btn {
     margin-bottom: 0;
   }
   .features .features__grid-wrapper {
-    margin: 0 0.8rem;
+    margin: 0;
   }
   .features .features__grid {
     grid-template-columns: 1fr;
@@ -1721,7 +1721,6 @@ nav {
   position: relative;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
 }
 .point::before {
   content: "";
@@ -1776,13 +1775,13 @@ nav {
 @media screen and (max-width: 1200px) {
   .point h1 {
     text-align: start;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
   }
   .point .point__top-grid {
     flex-direction: column;
     justify-content: center;
-    padding: 2rem 0;
     margin: 0 auto;
+    padding: 2rem 0;
   }
   .point .point__top-grid .point__text {
     padding: 1rem 2rem;
@@ -1795,8 +1794,8 @@ nav {
   .point .point__bottom-grid {
     flex-direction: column;
     justify-content: center;
-    padding: 0.5rem 0 1rem 0;
     margin: 0 auto;
+    padding: 0 0 2rem;
   }
   .point .point__text {
     padding: 1rem 2rem;
@@ -1807,7 +1806,6 @@ nav {
   .point .point__visual img {
     width: 100%;
     height: 347px;
-    padding: 0 1rem;
   }
 }
 
@@ -1856,6 +1854,7 @@ nav {
   }
   .blog .blog__card {
     padding: 1rem auto;
+    margin: 15px 0;
   }
 }
 
@@ -1913,7 +1912,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .info p {
-    padding: 8px;
+    padding: 0;
   }
   .info img {
     height: 77px;
