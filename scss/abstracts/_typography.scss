@@ -68,6 +68,14 @@ li {
     color: $c-tertiary-040;
 }
 
+.ex-worker {
+    color: $ex-worker;
+}
+
+.ex-staff {
+    color: $ex-staff;
+}
+
 @media screen and (max-width: 1200px) {
     p,
     span {

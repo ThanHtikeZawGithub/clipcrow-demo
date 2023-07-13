@@ -1,38 +1,113 @@
+@import "../abstracts/mixins";
+
+
+.step__01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  &::before {
+    @include bg-deco(500px, 120vw, $c-primary-050);
+    top: -550px;
+    @media screen and (max-width: 1000px) {
+      top: -445px;
+    }
+  }
+  .title__left {
+    .num {
+      .num__inner {
+        .step {
+
+        }
+        .figure {
+
+        }
+      }
+      .title {
+
+      }
+    }
+  }
+}
+
+
+
+
+
+
 //============================================================
 /* step header title */
+.title-left {
+  @include features__deco();
+  &::before {
+    // height: 79px;
+    right: 0;
+  }
+}
+.title-right {
+  @include features__deco();
+  &::before {
+    // height: 79px;
+  }
+}
 .num {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: -1.5rem 0 0.5rem 2rem;
+  gap: 1rem;
+  .num__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: -4.5rem 0 0.5rem 2rem;
+  }
+  .step {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.15px;
+    margin-bottom: 0.5rem;
+  }
+  .figure {
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 70px;
+  }
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+  }
 }
-.num__inner {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
+@media screen and (max-width: 1000px) {
+  .num {
+    margin: -1.5rem 0 0.5rem 2rem;
+  }
+  .num__inner {
+    flex-wrap: nowrap;
+  }
+  .step {
+    font-size: 13px;
+    line-height: 1;
+  }
+  .figure {
+    font-size: 60px;
+    line-height: 1;
+    margin-top: -9px;
+  }
+  .title {
+    font-size: 22px;
+  }
 }
-.step {
-  font-size: 13px;
-  line-height: 1;
-}
-.figure {
-  font-size: 60px;
-  line-height: 1;
-  margin-top: -9px;
-}
-.title {
-  font-size: 22px;
-}
+
 
 //=======================================================================
 /*example case */
-
 .example__case {
-  padding: 32px 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
@@ -42,48 +117,85 @@
     justify-content: center;
     align-items: center;
     background-color: $c-secondary-095;
-    height: 240px;
-    width: 240px;
-    margin-bottom: 2rem;
+    height: 288px;
+    width: 288px;
     border-radius: 100%;
-    &.last-child {
-      margin-bottom: 0;
-    }
-    &.right {
-      align-self: flex-end;
-    }
-    &.left {
-      align-self: flex-start;
-    }
-    p {
-      margin: 0;
-      text-align: center;
-      padding: 0 40px;
-    }
     .roll {
-      font-size: 0.875rem;
-      font-weight: 700;
+      font-size: 22px;
+      font-style: 700;
+      line-height: 28px;
     }
     .image {
-      font-size: 0.875rem;
       img {
-        margin: 0;
-        height: auto;
-        width: 100%;
-        object-fit: contain;
+        height: 150px;
+      width: auto;
       }
     }
     .action {
-      font-size: 0.875rem;
-      z-index: 10;
     }
   }
 }
 
-//====================================================================
-/* example link */
-.example__link {
-  p {
-    margin: 0.875rem 0;
+@media screen and (max-width: 1000px) {
+  .example__case {
+    padding: 32px 0;
+    flex-direction: column;
+  
+    .case {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $c-secondary-095;
+      height: 240px;
+      width: 240px;
+      margin-bottom: 2rem;
+      border-radius: 100%;
+      &.last-child {
+        margin-bottom: 0;
+      }
+      &.right {
+        align-self: flex-end;
+      }
+      &.left {
+        align-self: flex-start;
+      }
+      p {
+        margin: 0;
+        text-align: center;
+        padding: 0 40px;
+      }
+      .roll {
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+      .image {
+        font-size: 0.875rem;
+        img {
+          margin: 0;
+          height: auto;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      .action {
+        font-size: 0.875rem;
+        z-index: 10;
+      }
+    }
   }
 }
+
+
+//====================================================================
+/* example link */
+@media screen and (max-width: 1000px) {
+  .example__link {
+    p {
+      margin: 0.875rem 0;
+    }
+  }
+}
+
+
+

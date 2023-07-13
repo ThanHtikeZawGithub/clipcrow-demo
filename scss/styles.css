@@ -66,6 +66,14 @@ li {
   color: #e87a7c;
 }
 
+.ex-worker {
+  color: #BA4583;
+}
+
+.ex-staff {
+  color: #399B5B;
+}
+
 @media screen and (max-width: 1200px) {
   p,
 span {
@@ -164,6 +172,14 @@ li {
   color: #e87a7c;
 }
 
+.ex-worker {
+  color: #BA4583;
+}
+
+.ex-staff {
+  color: #399B5B;
+}
+
 @media screen and (max-width: 1200px) {
   p,
 span {
@@ -212,7 +228,6 @@ li {
 }
 @media screen and (max-width: 1200px) {
   .title-left::before {
-    width: 120%;
     height: 56px;
   }
 }
@@ -225,6 +240,11 @@ li {
 .title-left::before {
   right: 0;
   border-radius: 0px 10px 10px 0px;
+}
+@media screen and (max-width: 1000px) {
+  .title-left::before {
+    margin-right: 32px;
+  }
 }
 
 .title-right {
@@ -251,7 +271,6 @@ li {
 }
 @media screen and (max-width: 1200px) {
   .title-right::before {
-    width: 120%;
     height: 56px;
   }
 }
@@ -264,6 +283,11 @@ li {
 .title-right::before {
   left: 0;
   border-radius: 10px 0 0 10px;
+}
+@media screen and (max-width: 1000px) {
+  .title-right::before {
+    margin-left: 32px;
+  }
 }
 
 .extra-hover a {
@@ -286,7 +310,7 @@ li {
 .extra-hover a:hover {
   opacity: 0.7;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .extra-hover a {
     display: flex;
     height: 34px;
@@ -301,18 +325,20 @@ li {
 .extra-hover a::before {
   display: block;
   position: absolute;
-  top: 1.2rem;
+  top: 1.1rem;
   right: 1rem;
   content: "";
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 20px;
+  height: 20px;
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23ffffff%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23ffffff%22%2F%3E%0A%3C%2Fsvg%3E%0A");
   background-repeat: no-repeat;
   background-position: center;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .extra-hover a::before {
     top: 0.5rem;
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -337,7 +363,7 @@ li {
 .case__relation-link a:hover {
   opacity: 0.7;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .case__relation-link a {
     display: flex;
     height: 34px;
@@ -351,18 +377,20 @@ li {
 .case__relation-link a::before {
   display: block;
   position: absolute;
-  top: 1.2rem;
+  top: 1.1rem;
   right: 1rem;
   content: "";
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 20px;
+  height: 20px;
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
   background-repeat: no-repeat;
   background-position: center;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .case__relation-link a::before {
     top: 0.5rem;
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -427,7 +455,7 @@ li {
   height: 280px;
   width: 481px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .features__img-ellipse {
     gap: 12px;
     height: 250px;
@@ -486,9 +514,6 @@ li {
   width: calc(33% - 1rem);
   margin-right: 1rem;
 }
-.features__case-wrapper .features__case .case:nth-child(3n) {
-  margin-right: 0;
-}
 .features__case-wrapper .features__case p {
   margin: 0;
   text-align: left;
@@ -528,12 +553,12 @@ li {
   flex-grow: 1;
   line-height: 24px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .features__case-wrapper .features__case .case__relation-link {
     margin-top: auto;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .features__case-wrapper .features__case {
     flex-direction: column;
     justify-content: center;
@@ -590,7 +615,7 @@ li {
     margin: 3% -10% 0 -38%;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .features__kv::before {
     top: -445px;
   }
@@ -620,12 +645,12 @@ li {
   width: 100%;
   height: 300px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .features__kv {
     padding-top: 0;
   }
   .features__kv h1 {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 36.4px;
   }
   .features__kv span {
@@ -669,7 +694,7 @@ li {
   height: 75px;
   width: auto;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .app-download__btn {
     gap: 30px;
   }
@@ -681,42 +706,167 @@ li {
   }
 }
 
+/* button in top page */
+/* app download button in top page */
+/* background decoration in top page */
+/* step header background in features/functions page */
+.step__01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.step__01::before {
+  content: "";
+  display: block;
+  position: absolute;
+  overflow-x: hidden;
+  width: 120vw;
+  height: 500px;
+  background-color: #ffe873;
+  z-index: -1;
+  margin: 3% -10% 0 -10%;
+  transform: rotate(-12deg);
+  top: -550px;
+}
+@media screen and (max-width: 1200px) {
+  .step__01::before {
+    width: 200%;
+    margin: 3% -10% 0 -38%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .step__01::before {
+    top: -445px;
+  }
+}
 /* step header title */
+.title-left {
+  margin-bottom: 3rem;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #5B5B55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.title-left::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #ffeb87;
+  height: 64px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+@media screen and (max-width: 1200px) {
+  .title-left::before {
+    height: 56px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .title-left {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.title-left::before {
+  right: 0;
+}
+
+.title-right {
+  margin-bottom: 3rem;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #5B5B55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.title-right::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #ffeb87;
+  height: 64px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+@media screen and (max-width: 1200px) {
+  .title-right::before {
+    height: 56px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .title-right {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 .num {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: -1.5rem 0 0.5rem 2rem;
+  gap: 1rem;
 }
-
-.num__inner {
+.num .num__inner {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
+  margin: -4.5rem 0 0.5rem 2rem;
+}
+.num .step {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+  margin-bottom: 0.5rem;
+}
+.num .figure {
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 70px;
+}
+.num .title {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
 }
 
-.step {
-  font-size: 13px;
-  line-height: 1;
+@media screen and (max-width: 1000px) {
+  .num {
+    margin: -1.5rem 0 0.5rem 2rem;
+  }
+  .num__inner {
+    flex-wrap: nowrap;
+  }
+  .step {
+    font-size: 13px;
+    line-height: 1;
+  }
+  .figure {
+    font-size: 60px;
+    line-height: 1;
+    margin-top: -9px;
+  }
+  .title {
+    font-size: 22px;
+  }
 }
-
-.figure {
-  font-size: 60px;
-  line-height: 1;
-  margin-top: -9px;
-}
-
-.title {
-  font-size: 22px;
-}
-
 /*example case */
 .example__case {
-  padding: 32px 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -726,49 +876,74 @@ li {
   justify-content: center;
   align-items: center;
   background-color: #f7f3dd;
-  height: 240px;
-  width: 240px;
-  margin-bottom: 2rem;
+  height: 288px;
+  width: 288px;
   border-radius: 100%;
 }
-.example__case .case.last-child {
-  margin-bottom: 0;
-}
-.example__case .case.right {
-  align-self: flex-end;
-}
-.example__case .case.left {
-  align-self: flex-start;
-}
-.example__case .case p {
-  margin: 0;
-  text-align: center;
-  padding: 0 40px;
-}
 .example__case .case .roll {
-  font-size: 0.875rem;
-  font-weight: 700;
-}
-.example__case .case .image {
-  font-size: 0.875rem;
+  font-size: 22px;
+  font-style: 700;
+  line-height: 28px;
 }
 .example__case .case .image img {
-  margin: 0;
-  height: auto;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 150px;
+  width: auto;
 }
-.example__case .case .action {
-  font-size: 0.875rem;
-  z-index: 10;
+@media screen and (max-width: 1000px) {
+  .example__case {
+    padding: 32px 0;
+    flex-direction: column;
+  }
+  .example__case .case {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f3dd;
+    height: 240px;
+    width: 240px;
+    margin-bottom: 2rem;
+    border-radius: 100%;
+  }
+  .example__case .case.last-child {
+    margin-bottom: 0;
+  }
+  .example__case .case.right {
+    align-self: flex-end;
+  }
+  .example__case .case.left {
+    align-self: flex-start;
+  }
+  .example__case .case p {
+    margin: 0;
+    text-align: center;
+    padding: 0 40px;
+  }
+  .example__case .case .roll {
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+  .example__case .case .image {
+    font-size: 0.875rem;
+  }
+  .example__case .case .image img {
+    margin: 0;
+    height: auto;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .example__case .case .action {
+    font-size: 0.875rem;
+    z-index: 10;
+  }
 }
-
 /* example link */
-.example__link p {
-  margin: 0.875rem 0;
+@media screen and (max-width: 1000px) {
+  .example__link p {
+    margin: 0.875rem 0;
+  }
 }
-
 .profile__kv::before {
   content: "";
   display: block;
