@@ -244,7 +244,8 @@ nav {
   padding: 1rem 0;
   position: relative;
   &::before {
-    @include bg-deco(700px, 120vw, $c-secondary-099);
+    top: 30px;
+    @include bg-deco(580px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1200px) {
       height: 900px;
     }
@@ -319,18 +320,18 @@ nav {
   position: relative;
   gap: 1rem;
   &::before {
-    top: 75px;
+    top: 55px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1200px) {
-      top: 55px;
+      top: 40px;
       height: 57px;
     }
   }
   &::after {
-    top: 1140px;
+    top: 1055px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1200px) {
-      top: 1570px;
+      top: 1500px;
       height: 57px;
     }
   }
@@ -412,10 +413,11 @@ nav {
   justify-content: space-around;
   align-items: center;
   &::before {
-    @include bg-deco(1000px, 120vw, $c-secondary-099);
+    top: 80px;
+    @include bg-deco(950px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1200px) {
       height: 1080px;
-      top: 130px;
+      top: 80px;
     }
   }
 
@@ -558,7 +560,7 @@ nav {
     top: 170px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1200px) {
-      top: 100px;
+      top: 110px;
       height: 150px;
       width: 150%;
     }

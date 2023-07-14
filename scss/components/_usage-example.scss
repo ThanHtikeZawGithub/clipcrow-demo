@@ -86,6 +86,9 @@
     line-height: 32px;
     padding: 2rem 11.5rem;
     text-align: start;
+    @media screen and (max-width: 1000px) {
+      padding: 2rem 0;
+    }
   }
   .ex__title-left {
     @include features__deco();
@@ -259,6 +262,7 @@
 }
 @media screen and (max-width: 1000px) {
   .example__link {
+    padding: 0 1rem;
     p {
       margin: 0.875rem 0;
     }
