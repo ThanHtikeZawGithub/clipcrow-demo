@@ -714,15 +714,14 @@ span {
 /* app download button in top page */
 /* background decoration in top page */
 /* step header background in features/functions page */
-.step__01 {
-  width: 100%;
+.example__title {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
-.step__01::before {
+.example__title::before {
   content: "";
   display: block;
   position: absolute;
@@ -736,18 +735,76 @@ span {
   top: -550px;
 }
 @media screen and (max-width: 1200px) {
-  .step__01::before {
+  .example__title::before {
     width: 200%;
     margin: 3% -10% 0 -38%;
   }
 }
 @media screen and (max-width: 1000px) {
-  .step__01::before {
+  .example__title::before {
     top: -445px;
   }
 }
 
-/* step header title */
+.case__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 613px) {
+  .case__wrapper {
+    flex-direction: column;
+  }
+  .case__wrapper .case.left {
+    align-self: flex-start;
+    align-items: flex-start;
+  }
+  .case__wrapper .case.right {
+    align-self: flex-end;
+    align-items: flex-end;
+  }
+}
+
+.step__wrapper#step2 .example__case {
+  gap: 128px;
+}
+.step__wrapper#step3 .example__case {
+  gap: 128px;
+}
+@media screen and (max-width: 1200px) {
+  .step__wrapper#step1 .example__case {
+    flex-direction: column;
+    gap: 64px;
+  }
+  .step__wrapper#step2 .example__case {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 896px) {
+  .step__wrapper#step3 .example__case {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .step__wrapper#step3 .example__case {
+    flex-direction: column;
+    gap: 64px;
+  }
+}
+
+.step-wrapper__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  padding: 2rem 11.5rem;
+  text-align: start;
+}
+
 .ex__title-left {
   margin-bottom: 3rem;
   font-size: 32px;
@@ -824,6 +881,7 @@ span {
   left: 0;
 }
 
+/* step header title */
 .num {
   display: flex;
   justify-content: space-around;
@@ -900,11 +958,19 @@ span {
   font-style: 700;
   line-height: 28px;
 }
+.example__case .case .image {
+  margin: 0.5rem 0;
+}
 .example__case .case .image img {
   height: 150px;
   width: auto;
 }
-@media screen and (max-width: 1000px) {
+.example__case .case .action {
+  padding: 0 2.7rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
   .example__case {
     padding: 32px 0;
     flex-direction: column;
@@ -957,7 +1023,7 @@ span {
 .example__link {
   display: flex;
   flex-direction: column;
-  padding: 0 16rem;
+  padding: 0 19rem;
   gap: 1rem;
 }
 .example__link h4 {
