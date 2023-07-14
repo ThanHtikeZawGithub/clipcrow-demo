@@ -413,8 +413,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   &::before {
-    top: 80px;
-    @include bg-deco(972px, 120vw, $c-secondary-099);
+    top: 83px;
+    @include bg-deco(960px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1200px) {
       height: 1090px;
       top: 73px;

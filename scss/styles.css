@@ -1798,13 +1798,13 @@ nav {
   align-items: center;
 }
 .point::before {
-  top: 80px;
+  top: 83px;
   content: "";
   display: block;
   position: absolute;
   overflow-x: hidden;
   width: 120vw;
-  height: 972px;
+  height: 960px;
   background-color: #faf9ed;
   z-index: -1;
   margin: 3% -10% 0 -10%;
