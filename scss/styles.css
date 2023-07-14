@@ -1577,13 +1577,13 @@ nav {
   position: relative;
 }
 .maincont::before {
-  top: 30px;
+  top: 38px;
   content: "";
   display: block;
   position: absolute;
   overflow-x: hidden;
   width: 120vw;
-  height: 580px;
+  height: 570px;
   background-color: #faf9ed;
   z-index: -1;
   margin: 3% -10% 0 -10%;
@@ -1597,7 +1597,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .maincont::before {
-    height: 900px;
+    height: 928px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1675,7 +1675,7 @@ nav {
   gap: 1rem;
 }
 .features::before {
-  top: 55px;
+  top: 46px;
   content: "";
   display: block;
   position: absolute;
@@ -1700,7 +1700,7 @@ nav {
   }
 }
 .features::after {
-  top: 1055px;
+  top: 1052px;
   content: "";
   display: block;
   position: absolute;
@@ -1804,7 +1804,7 @@ nav {
   position: absolute;
   overflow-x: hidden;
   width: 120vw;
-  height: 950px;
+  height: 972px;
   background-color: #faf9ed;
   z-index: -1;
   margin: 3% -10% 0 -10%;
@@ -1818,8 +1818,8 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .point::before {
-    height: 1080px;
-    top: 80px;
+    height: 1090px;
+    top: 73px;
   }
 }
 .point .point__top-grid {
@@ -1946,7 +1946,7 @@ nav {
   margin: 0 auto;
 }
 .info::before {
-  top: 170px;
+  top: 190px;
   content: "";
   display: block;
   position: absolute;
@@ -1966,7 +1966,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .info::before {
-    top: 110px;
+    top: 105px;
     height: 150px;
     width: 150%;
   }
