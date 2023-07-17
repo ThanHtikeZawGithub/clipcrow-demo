@@ -34,7 +34,8 @@ h4 {
   line-height: 36px;
 }
 
-li {
+li,
+dd {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -43,7 +44,8 @@ li {
   color: #E6E6E5;
   text-align: start;
 }
-li:not(:last-child) {
+li:not(:last-child),
+dd:not(:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -147,7 +149,8 @@ h4 {
   line-height: 36px;
 }
 
-li {
+li,
+dd {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -156,7 +159,8 @@ li {
   color: #E6E6E5;
   text-align: start;
 }
-li:not(:last-child) {
+li:not(:last-child),
+dd:not(:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -1097,61 +1101,99 @@ span {
     margin: 0.875rem 0;
   }
 }
-.profile__kv::before {
-  content: "";
-  display: block;
-  position: absolute;
-  overflow-x: hidden;
-  width: 120vw;
-  height: 400px;
-  background-color: #ffe873;
-  z-index: -1;
-  margin: 3% -10% 0 -10%;
-  transform: rotate(-12deg);
-  top: -33vw;
-}
-@media screen and (max-width: 1200px) {
-  .profile__kv::before {
-    width: 200%;
-    margin: 3% -10% 0 -38%;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .profile__kv::before {
-    top: -60vw;
-  }
+.profile__kv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .profile__kv .profile__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 1rem;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.profile__kv .profile__content p {
+  color: #5B5B55;
 }
 .profile__kv .logo {
   margin-bottom: 1rem;
 }
 .profile__kv .logo img {
-  height: 90px;
+  height: 150px;
   width: auto;
 }
+@media screen and (max-width: 1200px) {
+  .profile__kv {
+    overflow: hidden;
+  }
+}
 
+.business {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+  padding: 64px 0;
+  position: relative;
+}
+.business h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  position: relative;
+}
+.business h1::before {
+  top: -55px;
+  content: "";
+  display: block;
+  position: absolute;
+  overflow-x: hidden;
+  width: 120vw;
+  height: 111px;
+  background-color: #ffeb87;
+  z-index: -1;
+  margin: 3% -10% 0 -10%;
+  transform: rotate(-12deg);
+}
+@media screen and (max-width: 1200px) {
+  .business h1::before {
+    width: 200%;
+    margin: 3% -10% 0 -38%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .business h1::before {
+    top: 40px;
+    height: 57px;
+  }
+}
+.business .business-diagram {
+  height: 551px;
+  width: 100%;
+}
+.business .business-diagram .diagram__sp {
+  display: none;
+}
 .business .teams {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  padding: 0;
+  gap: 32px;
   color: #55585B;
 }
 .business .teams ul,
 .business .teams li {
   color: #55585B;
-  list-style-type: disc;
-}
-@media screen and (min-width: 1000px) {
-  .business .teams {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: stretch;
-    margin: 0 20px;
-  }
+  list-style: disc;
+  margin-bottom: 0;
+  font-weight: 400;
 }
 .business .teams .teambox {
   border: 1px solid #C2A731;
@@ -1159,92 +1201,107 @@ span {
   overflow: hidden;
   flex: 1 1 auto;
 }
-.business .teams .teambox .inner {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
-  margin: 0 20px;
-}
-@media screen and (min-width: 1000px) {
-  .business .teams .teambox .inner {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
-    margin: 0 20px;
-  }
-}
-.business .teams .teambox .inner .image {
-  width: 100%;
-  height: 100px;
-  background-color: transparent;
-  border: none;
-}
-.business .teams .teambox .inner .image .dev__img {
-  height: 35px;
-  width: auto;
-}
-@media screen and (min-width: 1000px) {
-  .business .teams .teambox .inner .image {
-    width: 100px;
-    height: auto;
-  }
-}
-.business .teams .teambox .inner .image img {
-  height: 100px;
-  width: auto;
-}
-.business .teams .team-dev {
-  margin-right: 0;
-}
-@media screen and (min-width: 1000px) {
-  .business .teams .team-dev {
-    margin-right: 0.5rem;
-  }
-}
-.business .teams .teamname {
+.business .teams .teambox .teamname {
   margin: 0;
   padding: 0.5rem;
   background-color: #ffeb87;
   text-align: center;
-  font-size: 0.825rem;
-  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 500;
 }
-.business .teams .note {
-  padding: 0.5rem;
-  line-height: 1.25;
-  font-size: 0.825rem;
-}
-.business .teams ul {
-  margin: 0.5rem 0 0.5rem 3rem;
-}
-.business .teams ul li {
-  line-height: 1.25;
-}
-.business .image {
+.business .teams .teambox .inner {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px dotted #000;
-  background-color: #fffce8;
+  padding: 16px;
+  gap: 48px;
 }
-.business .image img {
-  height: 35px;
+.business .teams .teambox .inner .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+}
+.business .teams .teambox .inner .image .dev__img {
+  height: 50px;
+  width: 100px;
+}
+.business .teams .teambox .inner .image .cc__img {
+  height: 87.5px;
   width: auto;
 }
-@media screen and (min-width: 1000px) {
-  .business {
-    max-width: 1000px;
+.business .teams .teambox .note {
+  padding-bottom: 1rem;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .business .business-diagram .diagram__pc {
+    display: none;
+  }
+  .business .business-diagram .diagram__sp {
+    display: block;
     margin: 0 auto;
+    height: 584px;
+    width: auto;
+  }
+  .business .teams {
+    flex-direction: column;
   }
 }
-.business .dev__img {
-  height: 35px;
-  width: auto;
+
+.enclose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #C2A731;
+  margin: 64px auto 128px;
+  padding: 32px;
+}
+.enclose dl dt {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #5B5B55;
+}
+.enclose dl dd {
+  color: #5B5B55;
+}
+.enclose dl dd + dt {
+  margin-top: 1rem;
+}
+.enclose dl dd span {
+  background-color: #C2A731;
+  height: 22px;
+  width: 80px;
+  border-radius: 11px;
+}
+.enclose dl dd span:hover {
+  background-color: #d7c064;
+}
+.enclose dl dd span a {
+  padding: 1rem 1.5rem;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+}
+.enclose dl dd ul {
+  margin: 0;
+}
+.enclose dl dd li {
+  list-style-type: disc;
+  font-size: 0.875rem;
+  margin: 0 0 0.5rem 2rem;
+  color: #5B5B55;
 }
 
 /* reset css */
