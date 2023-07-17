@@ -12,25 +12,23 @@
     @media screen and (max-width: 1000px) {
       top: -445px;
     }
-}
+  }
 }
 
 .case__wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
   gap: 1rem;
   @media screen and (max-width: 613px) {
+    padding: 0;
     flex-direction: column;
     .case {
       &.left {
         align-self: flex-start;
-        align-items: flex-start;
       }
       &.right {
         align-self: flex-end;
-        align-items: flex-end;
       }
     }
   }
@@ -45,6 +43,9 @@
   &#step3 {
     .example__case {
       gap: 128px;
+      .case__wrapper {
+        gap: 128px;
+      }
     }
   }
   @media screen and (max-width: 1200px) {
@@ -59,15 +60,17 @@
         gap: 16px;
       }
     }
-  }
-  @media screen and (max-width: 896px) {
     &#step3 {
       .example__case {
         gap: 16px;
+        .case__wrapper {
+          gap: 16px;
+        }
       }
     }
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 896px) {
     &#step3 {
       .example__case {
         flex-direction: column;
@@ -75,35 +78,90 @@
       }
     }
   }
+
+  @media screen and (max-width: 613px) {
+    &#step1,
+    &#step2,
+    &#step3 {
+      .example__case {
+        gap: 0;
+        .case {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: $c-secondary-095;
+          height: 240px;
+          width: 240px;
+          margin-bottom: 2rem;
+          border-radius: 100%;
+          &.last-child {
+            margin-bottom: 0;
+          }
+          &.right {
+            align-self: flex-end;
+          }
+          &.left {
+            align-self: flex-start;
+          }
+          p {
+            margin: 0;
+            text-align: center;
+            padding: 0 40px;
+          }
+          .roll {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+          }
+          .image {
+            font-size: 0.875rem;
+            img {
+              margin: 0;
+              height: 100px;
+              width: auto;
+              object-fit: contain;
+            }
+          }
+          .action {
+            font-size: 0.875rem;
+            z-index: 10;
+          }
+        }
+      }
+    }
+  }
 }
 
-  .step-wrapper__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-    padding: 2rem 11.5rem;
-    text-align: start;
-    @media screen and (max-width: 1000px) {
-      padding: 2rem 0;
-    }
+.step-wrapper__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  padding: 2rem 11.5rem;
+  text-align: start;
+  @media screen and (max-width: 613px) {
+    padding: 2rem 0;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
   }
-  .ex__title-left {
-    @include features__deco();
-    &::before {
-      height: 79px;
-      right: 0;
-    }
+}
+.ex__title-left {
+  @include features__deco();
+  &::before {
+    height: 79px;
+    right: 0;
   }
-  .ex__title-right {
-    @include features__deco();
-    &::before {
-      height: 79px;
-      left: 0;
-    }
+}
+.ex__title-right {
+  @include features__deco();
+  &::before {
+    height: 79px;
+    left: 0;
   }
+}
 
 //============================================================
 /* step header title */
@@ -165,7 +223,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   padding: 2rem 0;
   gap: 1rem;
   .case {
@@ -195,13 +252,9 @@
       text-align: center;
     }
   }
-}
-
-@media screen and (max-width: 768px) {
-  .example__case {
+  @media screen and (max-width: 613px) {
     padding: 32px 0;
     flex-direction: column;
-
     .case {
       display: flex;
       flex-direction: column;
@@ -234,8 +287,8 @@
         font-size: 0.875rem;
         img {
           margin: 0;
-          height: auto;
-          width: 100%;
+          height: 100px;
+          width: auto;
           object-fit: contain;
         }
       }

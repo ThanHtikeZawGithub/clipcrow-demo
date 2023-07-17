@@ -749,21 +749,19 @@ span {
 .case__wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
   gap: 1rem;
 }
 @media screen and (max-width: 613px) {
   .case__wrapper {
+    padding: 0;
     flex-direction: column;
   }
   .case__wrapper .case.left {
     align-self: flex-start;
-    align-items: flex-start;
   }
   .case__wrapper .case.right {
     align-self: flex-end;
-    align-items: flex-end;
   }
 }
 
@@ -771,6 +769,9 @@ span {
   gap: 128px;
 }
 .step__wrapper#step3 .example__case {
+  gap: 128px;
+}
+.step__wrapper#step3 .example__case .case__wrapper {
   gap: 128px;
 }
 @media screen and (max-width: 1200px) {
@@ -781,16 +782,65 @@ span {
   .step__wrapper#step2 .example__case {
     gap: 16px;
   }
-}
-@media screen and (max-width: 896px) {
   .step__wrapper#step3 .example__case {
     gap: 16px;
   }
+  .step__wrapper#step3 .example__case .case__wrapper {
+    gap: 16px;
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 896px) {
   .step__wrapper#step3 .example__case {
     flex-direction: column;
     gap: 64px;
+  }
+}
+@media screen and (max-width: 613px) {
+  .step__wrapper#step1 .example__case, .step__wrapper#step2 .example__case, .step__wrapper#step3 .example__case {
+    gap: 0;
+  }
+  .step__wrapper#step1 .example__case .case, .step__wrapper#step2 .example__case .case, .step__wrapper#step3 .example__case .case {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f7f3dd;
+    height: 240px;
+    width: 240px;
+    margin-bottom: 2rem;
+    border-radius: 100%;
+  }
+  .step__wrapper#step1 .example__case .case.last-child, .step__wrapper#step2 .example__case .case.last-child, .step__wrapper#step3 .example__case .case.last-child {
+    margin-bottom: 0;
+  }
+  .step__wrapper#step1 .example__case .case.right, .step__wrapper#step2 .example__case .case.right, .step__wrapper#step3 .example__case .case.right {
+    align-self: flex-end;
+  }
+  .step__wrapper#step1 .example__case .case.left, .step__wrapper#step2 .example__case .case.left, .step__wrapper#step3 .example__case .case.left {
+    align-self: flex-start;
+  }
+  .step__wrapper#step1 .example__case .case p, .step__wrapper#step2 .example__case .case p, .step__wrapper#step3 .example__case .case p {
+    margin: 0;
+    text-align: center;
+    padding: 0 40px;
+  }
+  .step__wrapper#step1 .example__case .case .roll, .step__wrapper#step2 .example__case .case .roll, .step__wrapper#step3 .example__case .case .roll {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .step__wrapper#step1 .example__case .case .image, .step__wrapper#step2 .example__case .case .image, .step__wrapper#step3 .example__case .case .image {
+    font-size: 0.875rem;
+  }
+  .step__wrapper#step1 .example__case .case .image img, .step__wrapper#step2 .example__case .case .image img, .step__wrapper#step3 .example__case .case .image img {
+    margin: 0;
+    height: 100px;
+    width: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .step__wrapper#step1 .example__case .case .action, .step__wrapper#step2 .example__case .case .action, .step__wrapper#step3 .example__case .case .action {
+    font-size: 0.875rem;
+    z-index: 10;
   }
 }
 
@@ -804,9 +854,12 @@ span {
   padding: 2rem 11.5rem;
   text-align: start;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 613px) {
   .step-wrapper__text {
     padding: 2rem 0;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
   }
 }
 
@@ -943,7 +996,6 @@ span {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   padding: 2rem 0;
   gap: 1rem;
 }
@@ -974,8 +1026,7 @@ span {
   padding: 0 2.7rem;
   text-align: center;
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 613px) {
   .example__case {
     padding: 32px 0;
     flex-direction: column;
@@ -1014,8 +1065,8 @@ span {
   }
   .example__case .case .image img {
     margin: 0;
-    height: auto;
-    width: 100%;
+    height: 100px;
+    width: auto;
     -o-object-fit: contain;
        object-fit: contain;
   }
@@ -1024,6 +1075,7 @@ span {
     z-index: 10;
   }
 }
+
 /* example link */
 .example__link {
   display: flex;
