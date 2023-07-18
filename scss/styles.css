@@ -1665,7 +1665,7 @@ section {
 .btn.yellow-light {
   font-size: 32px;
   font-weight: 700;
-  margin: 2rem auto;
+  margin: 0 auto;
   background-color: #f9d73a;
   color: #6c5c1b;
   display: flex;
@@ -1790,7 +1790,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .section__download {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0;
   }
   .section__download .app-download__btn {
     gap: 27px;
@@ -1820,7 +1820,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   position: relative;
-  padding: 0 0 2rem;
+  padding: 0;
 }
 .kv::before {
   content: "";
@@ -1870,11 +1870,11 @@ nav {
   height: 639px;
 }
 .kv .section__download {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 @media screen and (max-width: 1200px) {
   .kv {
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
   .kv .hero {
     grid-template-columns: 1fr;
@@ -1909,12 +1909,12 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
-  padding: 1rem 0;
+  margin: 256px auto;
+  padding: 0;
   position: relative;
 }
 .maincont::before {
-  top: 38px;
+  top: 20px;
   content: "";
   display: block;
   position: absolute;
@@ -1938,8 +1938,11 @@ nav {
   }
 }
 @media screen and (max-width: 1200px) {
+  .maincont {
+    margin: 128px auto;
+  }
   .maincont h1 {
-    text-align: start;
+    text-align: center;
     margin: 0 auto;
     padding: 0 4rem;
   }
@@ -2009,10 +2012,12 @@ nav {
   align-items: center;
   justify-content: center;
   position: relative;
+  margin: 0 auto 256px;
+  padding: 0;
   gap: 1rem;
 }
 .features::before {
-  top: 46px;
+  top: -5px;
   content: "";
   display: block;
   position: absolute;
@@ -2032,12 +2037,12 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .features::before {
-    top: 40px;
+    top: 14px;
     height: 57px;
   }
 }
 .features::after {
-  top: 1052px;
+  top: 1008px;
   content: "";
   display: block;
   position: absolute;
@@ -2057,8 +2062,9 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .features::after {
-    top: 1500px;
+    top: 1470px;
     height: 57px;
+    margin: 0;
   }
 }
 .features .features__grid-wrapper {
@@ -2098,8 +2104,11 @@ nav {
   padding: 20px;
 }
 @media screen and (max-width: 1200px) {
+  .features {
+    margin: 0 32px 128px;
+  }
   .features h1 {
-    text-align: start;
+    text-align: center;
     padding: 0.5rem 0;
   }
   .features .btn {
@@ -2133,9 +2142,11 @@ nav {
   position: relative;
   justify-content: space-around;
   align-items: center;
+  margin: 0 32px 256px;
+  padding: 0;
 }
 .point::before {
-  top: 83px;
+  top: 35px;
   content: "";
   display: block;
   position: absolute;
@@ -2156,7 +2167,8 @@ nav {
 @media screen and (max-width: 1200px) {
   .point::before {
     height: 1090px;
-    top: 73px;
+    top: 43px;
+    margin: 0;
   }
 }
 .point .point__top-grid {
@@ -2186,8 +2198,11 @@ nav {
   height: 446px;
 }
 @media screen and (max-width: 1200px) {
+  .point {
+    margin: 0 32px 128px;
+  }
   .point h1 {
-    text-align: start;
+    text-align: center;
     padding: 0.5rem 0;
   }
   .point .point__top-grid {
@@ -2208,7 +2223,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    padding: 0 0 2rem;
+    padding: 0;
   }
   .point .point__text {
     padding: 1rem 2rem;
@@ -2227,6 +2242,8 @@ nav {
 .blog {
   display: flex;
   flex-direction: column;
+  margin: 0 auto 256px;
+  padding: 0;
 }
 .blog h1 {
   margin-bottom: 24px;
@@ -2262,12 +2279,19 @@ nav {
   color: #55585B;
 }
 @media screen and (max-width: 1200px) {
+  .blog {
+    margin: 0 32px 128px;
+  }
   .blog h1 {
     margin-bottom: 12px;
+    padding: 0;
   }
   .blog .blog__card {
     padding: 1rem auto;
     margin: 15px 0;
+  }
+  .blog .btn {
+    margin-top: 24px;
   }
 }
 
@@ -2280,10 +2304,11 @@ nav {
   position: relative;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto 256px;
+  padding: 0;
 }
 .info::before {
-  top: 190px;
+  top: 140px;
   content: "";
   display: block;
   position: absolute;
@@ -2303,9 +2328,8 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .info::before {
-    top: 105px;
+    top: 83px;
     height: 150px;
-    width: 150%;
   }
 }
 .info .info__text {
@@ -2324,12 +2348,18 @@ nav {
   padding: 2rem 8rem;
 }
 @media screen and (max-width: 1200px) {
+  .info {
+    margin: 0 32px 128px;
+  }
   .info p {
     padding: 0;
   }
   .info img {
     height: 77px;
     width: 212px;
+  }
+  .info .btn {
+    margin-top: 24px;
   }
 }
 

@@ -71,7 +71,7 @@ section {
   &.yellow-light {
     font-size: 32px;
     font-weight: 700;
-    margin: 2rem auto;
+    margin: 0 auto;
     @include button($c-primary-040, $c-primary-080, $c-secondary-010);
   }
 }
@@ -131,7 +131,7 @@ nav {
     }
   }
   @media screen and (max-width: 1200px) {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0;
     .app-download__btn {
       gap: 27px;
     }
@@ -167,7 +167,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   position: relative;
-  padding: 0 0 2rem;
+  padding: 0;
   &::before {
     @include bg-deco(900px, 120vw, $c-primary-050);
     top: -960px;
@@ -202,10 +202,10 @@ nav {
     }
   }
   .section__download {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   @media screen and (max-width: 1200px) {
-    padding: 50px 0;
+    padding: 50px 0 0;
     .hero {
       grid-template-columns: 1fr;
       padding: 0 32px;
@@ -240,19 +240,20 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
-  padding: 1rem 0;
+  margin: 256px auto;
+  padding: 0;
   position: relative;
   &::before {
-    top: 38px;
+    top: 20px;
     @include bg-deco(570px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1200px) {
       height: 928px;
     }
   }
   @media screen and (max-width: 1200px) {
+    margin: 128px auto;
     h1 {
-      text-align: start;
+      text-align: center;
       margin: 0 auto;
       padding: 0 4rem;
     }
@@ -318,21 +319,24 @@ nav {
   align-items: center;
   justify-content: center;
   position: relative;
+  margin: 0 auto 256px;
+  padding: 0;
   gap: 1rem;
   &::before {
-    top: 46px;
+    top: -5px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1200px) {
-      top: 40px;
+      top: 14px;
       height: 57px;
     }
   }
   &::after {
-    top: 1052px;
+    top: 1008px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1200px) {
-      top: 1500px;
+      top: 1470px;
       height: 57px;
+      margin: 0;
     }
   }
   .features__grid-wrapper {
@@ -374,8 +378,9 @@ nav {
     }
   }
   @media screen and (max-width: 1200px) {
+    margin: 0 32px 128px;
     h1 {
-      text-align: start;
+      text-align: center;
       padding: 0.5rem 0;
     }
     .btn {
@@ -412,12 +417,15 @@ nav {
   position: relative;
   justify-content: space-around;
   align-items: center;
+  margin: 0 32px 256px;
+  padding: 0;
   &::before {
-    top: 83px;
+    top: 35px;
     @include bg-deco(960px, 120vw, $c-secondary-099);
     @media screen and (max-width: 1200px) {
       height: 1090px;
-      top: 73px;
+      top: 43px;
+      margin: 0;
     }
   }
 
@@ -451,9 +459,9 @@ nav {
   }
 
   @media screen and (max-width: 1200px) {
-    
+    margin: 0 32px 128px;
     h1 {
-      text-align: start;
+      text-align: center;
       padding: 0.5rem 0;
     }
     .point__top-grid {
@@ -474,7 +482,7 @@ nav {
       flex-direction: column;
       justify-content: center;
       margin: 0 auto;
-      padding: 0 0 2rem;
+      padding: 0;
     }
     .point__text {
       padding: 1rem 2rem;
@@ -497,6 +505,8 @@ nav {
 .blog {
   display: flex;
   flex-direction: column;
+  margin: 0 auto 256px;
+  padding: 0;
 
   h1 {
     margin-bottom: 24px;
@@ -535,12 +545,17 @@ nav {
     }
   }
   @media screen and (max-width: 1200px) {
+    margin: 0 32px 128px;
     h1 {
       margin-bottom: 12px;
+      padding: 0;
     }
     .blog__card {
       padding: 1rem auto;
       margin: 15px 0;
+    }
+    .btn {
+      margin-top: 24px;
     }
   }
 }
@@ -555,14 +570,14 @@ nav {
   position: relative;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto 256px;
+  padding: 0;
   &::before {
-    top: 190px;
+    top: 140px;
     @include bg-deco(111px, 120vw, $c-primary-060);
     @media screen and (max-width: 1200px) {
-      top: 105px;
+      top: 83px;
       height: 150px;
-      width: 150%;
     }
   }
 
@@ -583,12 +598,16 @@ nav {
     padding: 2rem 8rem;
   }
   @media screen and (max-width: 1200px) {
+    margin: 0 32px 128px;
     p {
       padding: 0;
     }
     img {
       height: 77px;
       width: 212px;
+    }
+    .btn {
+      margin-top: 24px;
     }
   }
 }
