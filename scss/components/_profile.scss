@@ -6,7 +6,7 @@
   position: relative;
   &::before {
     @include bg-deco(600px, 120vw, $c-primary-050);
-    top: -600px;
+    top: -650px;
     @media screen and (max-width: 1200px) {
       top: -560px;
     }
