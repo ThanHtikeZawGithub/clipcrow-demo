@@ -1198,6 +1198,9 @@ span {
     letter-spacing: 0.15px;
     height: 40px;
   }
+  .example__link .case__relation-link a::before {
+    top: 0.7rem;
+  }
 }
 
 .profile__kv {
