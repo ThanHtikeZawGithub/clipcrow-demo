@@ -1106,6 +1106,31 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.profile__kv::before {
+  content: "";
+  display: block;
+  position: absolute;
+  overflow-x: hidden;
+  width: 120vw;
+  height: 600px;
+  background-color: #ffe873;
+  z-index: -1;
+  margin: 3% -10% 0 -10%;
+  transform: rotate(-12deg);
+  top: -600px;
+}
+@media screen and (max-width: 1200px) {
+  .profile__kv::before {
+    width: 200%;
+    margin: 3% -10% 0 -38%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .profile__kv::before {
+    top: -560px;
+  }
 }
 .profile__kv .profile__content {
   display: flex;
@@ -1115,6 +1140,10 @@ span {
   margin-top: 2rem;
 }
 .profile__kv .profile__content p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.15px;
   color: #5B5B55;
 }
 .profile__kv .logo {
@@ -1126,7 +1155,16 @@ span {
 }
 @media screen and (max-width: 1200px) {
   .profile__kv {
-    overflow: hidden;
+    padding: 0 77px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile__kv {
+    padding: 0 32px;
+  }
+  .profile__kv .logo img {
+    height: 90px;
+    width: auto;
   }
 }
 
@@ -1168,12 +1206,11 @@ span {
 }
 @media screen and (max-width: 1200px) {
   .business h1::before {
-    top: 40px;
+    top: -15px;
     height: 57px;
   }
 }
 .business .business-diagram {
-  height: 551px;
   width: 100%;
 }
 .business .business-diagram .diagram__sp {
@@ -1193,6 +1230,9 @@ span {
   color: #55585B;
   list-style: disc;
   margin-bottom: 0;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
   font-weight: 400;
 }
 .business .teams .teambox {
@@ -1246,13 +1286,55 @@ span {
     display: none;
   }
   .business .business-diagram .diagram__sp {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     height: 584px;
     width: auto;
   }
   .business .teams {
     flex-direction: column;
+    padding: 0 77px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .business h1 {
+    font-size: 28px;
+    line-height: 36px;
+    padding: 0 32px;
+  }
+  .business .business-diagram .diagram__sp {
+    height: 338px;
+    width: 364px;
+  }
+  .business .teams {
+    padding: 0 32px;
+  }
+  .business .teams .teambox .inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .business .teams .teambox .inner .image {
+    width: 70px;
+    height: 70px;
+  }
+  .business .teams .teambox .inner .image .dev__img {
+    height: 35px;
+    width: 70px;
+  }
+  .business .teams .teambox .inner .image .cc__img {
+    height: 61px;
+    width: auto;
+  }
+  .business .teams .teambox .inner ul {
+    justify-content: flex-start;
+  }
+  .business .teams .teambox .note {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
   }
 }
 
@@ -1260,6 +1342,7 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   border: 1px solid #C2A731;
   margin: 64px auto 128px;
   padding: 32px;
@@ -1273,6 +1356,7 @@ span {
 }
 .enclose dl dd {
   color: #5B5B55;
+  font-size: 16px;
 }
 .enclose dl dd + dt {
   margin-top: 1rem;
@@ -1299,9 +1383,51 @@ span {
 }
 .enclose dl dd li {
   list-style-type: disc;
-  font-size: 0.875rem;
+  font-size: 16px;
   margin: 0 0 0.5rem 2rem;
   color: #5B5B55;
+}
+@media screen and (max-width: 1200px) {
+  .enclose {
+    margin: 64px 77px 128px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .enclose {
+    margin: 32px 32px 32px;
+    padding: 16px;
+  }
+  .enclose dl dt {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    margin-bottom: 0;
+  }
+  .enclose dl dd {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    margin-bottom: 1rem;
+  }
+  .enclose dl dd + dt {
+    margin-top: 0.2rem;
+  }
+  .enclose dl dd span {
+    height: 16px;
+    width: 52px;
+    align-items: center;
+  }
+  .enclose dl dd span a {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
+  .enclose dl dd li {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
 }
 
 /* reset css */
