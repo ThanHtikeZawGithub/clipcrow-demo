@@ -6,11 +6,35 @@
   position: relative;
   align-items: center;
   justify-content: center;
+  h1 {
+    padding-bottom: 4rem;
+    color: $c-neutral-020;
+  }
+  span {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+  }
   &::before {
     @include bg-deco(500px, 120vw, $c-primary-050);
     top: -550px;
     @media screen and (max-width: 1000px) {
       top: -445px;
+    }
+    @media screen and (max-width: 613px) {
+      top: -410px;
+    }
+  }
+  @media screen and (max-width: 613px) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+      padding-bottom: 0;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
     }
   }
 }
@@ -22,6 +46,7 @@
   gap: 1rem;
   @media screen and (max-width: 613px) {
     padding: 0;
+    gap: 0.5rem;
     flex-direction: column;
     .case {
       &.left {
@@ -35,11 +60,16 @@
 }
 
 .step__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
   &#step2 {
     .example__case {
       gap: 128px;
     }
   }
+
   &#step3 {
     .example__case {
       gap: 128px;
@@ -80,6 +110,7 @@
   }
 
   @media screen and (max-width: 613px) {
+    gap: 32px;
     &#step1,
     &#step2,
     &#step3 {
@@ -92,7 +123,7 @@
           background-color: $c-secondary-095;
           height: 240px;
           width: 240px;
-          margin-bottom: 2rem;
+          margin-bottom: -1rem;
           border-radius: 100%;
           &.last-child {
             margin-bottom: 0;
@@ -139,10 +170,13 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
-  padding: 2rem 11.5rem;
+  padding: 0 11.5rem;
   text-align: start;
+  @media screen and (max-width: 1200px) {
+    padding: 0;
+  }
   @media screen and (max-width: 613px) {
-    padding: 2rem 0;
+    padding: 0;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.15px;
@@ -150,16 +184,26 @@
 }
 .ex__title-left {
   @include features__deco();
+  margin-bottom: 0;
   &::before {
+    border-radius: 0px 10px 10px 0px;
     height: 79px;
     right: 0;
+    @media screen and (max-width: 613px) {
+      height: 46px;
+    }
   }
 }
 .ex__title-right {
   @include features__deco();
+  margin-bottom: 0;
   &::before {
+    border-radius: 10px 0 0 10px;
     height: 79px;
     left: 0;
+    @media screen and (max-width: 613px) {
+      height: 46px;
+    }
   }
 }
 
@@ -195,26 +239,34 @@
     line-height: 40px;
     font-weight: 700;
   }
-}
-@media screen and (max-width: 1000px) {
-  .num {
-    margin: -1.5rem 0 0.5rem 2rem;
+  @media screen and (max-width: 1000px) {
+    .num {
+      margin: -1.5rem 0 0.5rem 2rem;
+    }
+    .num__inner {
+      flex-wrap: nowrap;
+      margin: -1.3rem 0 0 0;
+    }
+    .step {
+      font-size: 13px;
+      line-height: 1;
+      margin-bottom: -1rem;
+    }
   }
-  .num__inner {
-    flex-wrap: nowrap;
+  @media screen and (max-width: 613px) {
+    .step {
+      font-size: 12px;
+      letter-spacing: 0.4px;
+    }
+    .figure {
+      font-size: 60px;
+      line-height: 86.88px;
+    }
+    .title {
+      font-size: 22px;
+    }
   }
-  .step {
-    font-size: 13px;
-    line-height: 1;
-  }
-  .figure {
-    font-size: 60px;
-    line-height: 1;
-    margin-top: -9px;
-  }
-  .title {
-    font-size: 22px;
-  }
+  
 }
 
 //=======================================================================
@@ -223,7 +275,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 2rem 0;
   gap: 1rem;
   .case {
     display: flex;
@@ -307,17 +358,40 @@
   flex-direction: column;
   padding: 0 19rem;
   gap: 1rem;
+  .case__relation-link {
+    a {
+      height: 48px;
+      font-size: 24px;
+      line-height: 32px;
+      &::before {
+        top: 0.9rem;
+      }
+    }
+  }
   h4 {
+    color: $c-neutral-020;
     font-size: 22px;
     line-height: 28px;
     font-weight: 700;
   }
-}
-@media screen and (max-width: 1000px) {
-  .example__link {
-    padding: 0 1rem;
-    p {
-      margin: 0.875rem 0;
-    }
+  @media screen and (max-width: 613px) {
+      padding: 0 1rem;
+      h4 {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+      }
+      p {
+        margin: 0;
+      }
+      .case__relation-link {
+        a {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        height: 40px;
+        }
+      }
   }
 }
+
