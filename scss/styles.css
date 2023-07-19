@@ -22,7 +22,6 @@ h1 {
   font-weight: 700;
   color: #55585B;
   text-align: center;
-  padding: 1rem 0;
   line-height: 52px;
 }
 
@@ -137,7 +136,6 @@ h1 {
   font-weight: 700;
   color: #55585B;
   text-align: center;
-  padding: 1rem 0;
   line-height: 52px;
 }
 
@@ -686,14 +684,6 @@ span {
 }
 
 /* download section */
-.app-download__btn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  padding-top: 30px;
-}
 .app-download__btn .google__btn img {
   height: 95px;
   width: auto;
@@ -1769,6 +1759,15 @@ nav {
 }
 
 /* downlaod section google/app store */
+.section__download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  max-height: 172px;
+  width: 100%;
+}
 .section__download h4 {
   font-size: 36px;
   font-weight: 400;
@@ -1777,8 +1776,9 @@ nav {
 .section__download .app-download__btn {
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: center;
-  gap: 57px;
+  gap: 64px;
 }
 .section__download .google__btn img {
   height: 104px;
@@ -1790,7 +1790,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .section__download {
-    padding: 2rem 1rem 0;
+    padding: 0;
   }
   .section__download .app-download__btn {
     gap: 27px;
@@ -1874,6 +1874,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .kv {
+    gap: 32px;
     padding: 50px 0 0;
   }
   .kv .hero {
@@ -1899,6 +1900,9 @@ nav {
     height: 364px;
     width: 364px;
   }
+  .kv .section__download {
+    margin-top: 0;
+  }
 }
 
 /*==================================================================================*/
@@ -1911,10 +1915,11 @@ nav {
   align-items: center;
   margin: 256px auto;
   padding: 0;
+  gap: 64px;
   position: relative;
 }
 .maincont::before {
-  top: 30px;
+  top: 10px;
   content: "";
   display: block;
   position: absolute;
@@ -1934,12 +1939,14 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .maincont::before {
-    height: 928px;
+    top: 25px;
+    height: 990px;
   }
 }
 @media screen and (max-width: 1200px) {
   .maincont {
     margin: 128px auto;
+    gap: 32px;
   }
   .maincont h1 {
     text-align: center;
@@ -1950,26 +1957,24 @@ nav {
 .maincont .maincont__card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin: 3rem 1rem;
+  gap: 32px;
 }
 @media screen and (max-width: 1200px) {
   .maincont .maincont__card {
     grid-template-columns: 1fr;
-    padding: 32px 32px 16px;
+    padding: 0 32px;
     margin: 0;
   }
 }
 .maincont .maincont__card .card {
   display: grid;
-  grid-template-rows: 0.8fr 2fr auto;
+  grid-template-rows: 1fr;
   justify-items: center;
+  max-height: 488px;
+  gap: 16px;
 }
 .maincont .maincont__card .card .card__sp-text {
   display: none;
-}
-.maincont .maincont__card .card .card__img-wrapper {
-  margin: 2rem 0;
 }
 .maincont .maincont__card .card .card__img-wrapper img {
   height: 244px;
@@ -2014,10 +2019,10 @@ nav {
   position: relative;
   margin: 0 auto 256px;
   padding: 0;
-  gap: 1rem;
+  gap: 64px;
 }
 .features::before {
-  top: -5px;
+  top: -21px;
   content: "";
   display: block;
   position: absolute;
@@ -2042,7 +2047,7 @@ nav {
   }
 }
 .features::after {
-  top: 1013px;
+  top: 998px;
   content: "";
   display: block;
   position: absolute;
@@ -2062,22 +2067,22 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .features::after {
-    top: 1470px;
+    top: 1516px;
     height: 57px;
     margin: 0;
   }
 }
 .features .features__grid-wrapper {
-  margin-bottom: 2rem;
-}
-.features .btn {
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
 }
 .features .features__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  padding: 1rem 0;
 }
 .features .features__grid h4 {
   padding: 20px 0;
@@ -2085,27 +2090,28 @@ nav {
 }
 .features .features__grid .features__card {
   display: grid;
-  grid-template-rows: 0.3fr 0.5fr 0.2fr;
+  grid-template-rows: 1fr;
   justify-items: center;
   border: 1px solid #C2A731;
   border-radius: 16px;
   background-color: #ffffff;
-  height: 100%;
-  padding: 1rem;
+  max-width: 584px;
+  max-height: 440px;
+  gap: 24px;
+  padding: 32px;
 }
 .features .features__grid .features__card h4 {
   color: #C2A731;
+  padding: 0;
 }
 .features .features__grid .features__card img {
   width: auto;
   height: 244px;
 }
-.features .features__grid .features__card p {
-  padding: 20px;
-}
 @media screen and (max-width: 1200px) {
   .features {
     margin: 0 32px 128px;
+    gap: 32px;
   }
   .features h1 {
     text-align: center;
@@ -2122,7 +2128,9 @@ nav {
     margin: 0 auto;
   }
   .features .features__grid .features__card {
-    padding: 0;
+    padding: 16px;
+    max-height: 329px;
+    gap: 16px;
     grid-template-rows: 0.2fr 0.5fr 0.3fr;
   }
   .features .features__grid .features__card img {
@@ -2144,9 +2152,10 @@ nav {
   align-items: center;
   margin: 0 auto 256px;
   padding: 0;
+  gap: 64px;
 }
 .point::before {
-  top: 35px;
+  top: 18px;
   content: "";
   display: block;
   position: absolute;
@@ -2175,15 +2184,18 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 2rem;
+  padding: 0;
+  margin: 0;
+}
+.point .point__top-grid img {
   margin-right: 6rem;
 }
 .point .point__bottom-grid {
   display: flex;
   align-items: center;
-  padding: 2rem;
+}
+.point .point__bottom-grid img {
   margin-left: 4rem;
-  margin-bottom: 1rem;
 }
 .point .point__text {
   padding: 4.5rem;
@@ -2193,13 +2205,14 @@ nav {
   text-align: center;
   margin-bottom: 1rem;
 }
-.point .point__visual img {
+.point img {
   width: 584px;
-  height: 446px;
+  height: 442px;
 }
 @media screen and (max-width: 1200px) {
   .point {
     margin: 0 32px 128px;
+    gap: 32px;
   }
   .point h1 {
     text-align: center;
@@ -2210,6 +2223,7 @@ nav {
     justify-content: center;
     margin: 0 auto;
     padding: 2rem 0;
+    max-height: 483px;
   }
   .point .point__top-grid .point__text {
     padding: 1rem 2rem;
@@ -2223,7 +2237,11 @@ nav {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    gap: 16px;
     padding: 0;
+  }
+  .point .point__bottom-grid img {
+    margin-left: 0;
   }
   .point .point__text {
     padding: 1rem 2rem;
@@ -2231,7 +2249,7 @@ nav {
   .point .point__text h4 {
     font-size: 24px;
   }
-  .point .point__visual img {
+  .point img {
     width: 100%;
     height: 347px;
   }
@@ -2242,19 +2260,22 @@ nav {
 .blog {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0 auto 256px;
   padding: 0;
+  gap: 64px;
 }
-.blog h1 {
-  margin-bottom: 24px;
+.blog .blog-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
 }
 .blog .blog__card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 24px 32px;
-  margin: 15px;
+  padding: 32px;
   gap: 10px;
   background: #ffffff;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
@@ -2278,23 +2299,14 @@ nav {
   letter-spacing: 0.15px;
   color: #55585B;
 }
-.blog .btn {
-  margin-top: 4rem;
-}
 @media screen and (max-width: 1200px) {
   .blog {
     margin: 0 32px 128px;
+    gap: 32px;
   }
   .blog h1 {
     margin-bottom: 12px;
     padding: 0;
-  }
-  .blog .blog__card {
-    padding: 1rem auto;
-    margin: 15px 0;
-  }
-  .blog .btn {
-    margin-top: 24px;
   }
 }
 
@@ -2311,7 +2323,7 @@ nav {
   padding: 0;
 }
 .info::before {
-  top: 140px;
+  top: 167px;
   content: "";
   display: block;
   position: absolute;
@@ -2331,7 +2343,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .info::before {
-    top: 83px;
+    top: 90px;
     height: 150px;
   }
 }
@@ -2345,27 +2357,25 @@ nav {
 .info img {
   height: 160px;
   width: 444px;
-  margin-bottom: 1rem;
 }
 .info p {
-  padding: 2rem 8rem;
-}
-.info .btn {
-  margin-top: 3rem;
+  padding: 32px 0 64px;
+  max-width: 880px;
 }
 @media screen and (max-width: 1200px) {
   .info {
     margin: 0 32px 128px;
   }
   .info p {
-    padding: 0;
+    padding: 16px 0 0;
+    letter-spacing: 0.25px;
   }
   .info img {
     height: 77px;
     width: 212px;
   }
   .info .btn {
-    margin-top: 24px;
+    margin-top: 32px;
   }
 }
 
@@ -2406,12 +2416,12 @@ footer .footer__left p {
   color: #E6E6E5;
   font-weight: 500;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   footer .footer__left p {
     display: none;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   footer .footer__content {
     grid-template-columns: 1fr;
     padding: 2rem;
