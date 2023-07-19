@@ -377,6 +377,7 @@
 .example__link {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   width: 568px;
   gap: 1rem;
@@ -401,9 +402,8 @@
     padding: 0;
   }
   @media screen and (max-width: 613px) {
-    width: 364px;
-    margin: 0 auto;
-      padding: 0;
+    padding: 0;
+    max-width: 100%;
       h4 {
         font-size: 16px;
         line-height: 24px;

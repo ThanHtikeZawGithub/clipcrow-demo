@@ -1162,6 +1162,7 @@ span {
 .example__link {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   width: 568px;
   gap: 1rem;
@@ -1188,9 +1189,8 @@ span {
 }
 @media screen and (max-width: 613px) {
   .example__link {
-    width: 364px;
-    margin: 0 auto;
     padding: 0;
+    max-width: 100%;
   }
   .example__link h4 {
     font-size: 16px;
