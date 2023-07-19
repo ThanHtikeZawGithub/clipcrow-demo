@@ -2458,7 +2458,7 @@ footer .footer__left p {
     align-items: center;
     gap: 16px;
   }
-  footer .footer__right a {
+  footer .footer__right .footer__link a {
     width: 100%;
     border: 1px solid #E6E6E5;
     text-align: center;
@@ -2468,7 +2468,7 @@ footer .footer__left p {
     line-height: 20px;
     letter-spacing: 0.1px;
   }
-  footer .footer__right a:hover {
+  footer .footer__right .footer__link a:hover {
     background-color: #E6E6E5;
     color: #504100;
   }

@@ -709,19 +709,19 @@ footer {
       .footer__link {
         align-items: center;
         gap: 16px;
-      }
-      a {
-        width: 100%;
-        border: 1px solid $c-neutral-099;
-        text-align: center;
-        padding: 16px;
-        border-radius: 8px;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.1px;
-        &:hover {
-          background-color: $c-neutral-099;
-          color: $c-primary-000;
+        a {
+          width: 100%;
+          border: 1px solid $c-neutral-099;
+          text-align: center;
+          padding: 16px;
+          border-radius: 8px;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.1px;
+          &:hover {
+            background-color: $c-neutral-099;
+            color: $c-primary-000;
+          }
         }
       }
       margin: 0;
