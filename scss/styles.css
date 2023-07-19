@@ -1914,7 +1914,7 @@ nav {
   position: relative;
 }
 .maincont::before {
-  top: 20px;
+  top: 30px;
   content: "";
   display: block;
   position: absolute;
@@ -2042,7 +2042,7 @@ nav {
   }
 }
 .features::after {
-  top: 1008px;
+  top: 1013px;
   content: "";
   display: block;
   position: absolute;
@@ -2278,6 +2278,9 @@ nav {
   letter-spacing: 0.15px;
   color: #55585B;
 }
+.blog .btn {
+  margin-top: 4rem;
+}
 @media screen and (max-width: 1200px) {
   .blog {
     margin: 0 32px 128px;
@@ -2346,6 +2349,9 @@ nav {
 }
 .info p {
   padding: 2rem 8rem;
+}
+.info .btn {
+  margin-top: 3rem;
 }
 @media screen and (max-width: 1200px) {
   .info {
