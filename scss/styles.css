@@ -2222,8 +2222,9 @@ nav {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    padding: 2rem 0;
-    max-height: 483px;
+  }
+  .point .point__top-grid img {
+    margin-right: 0;
   }
   .point .point__top-grid .point__text {
     padding: 1rem 2rem;
@@ -2433,7 +2434,22 @@ footer .footer__left p {
     height: 51px;
   }
   footer .footer__right {
+    gap: 16px;
     margin: 0;
     grid-template-columns: 1fr;
+  }
+  footer .footer__right li {
+    border: 1px solid #E6E6E5;
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  footer .footer__right li:hover {
+    background-color: #E6E6E5;
+    color: #504100;
+  }
+  footer .footer__right li:last-child {
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=styles.css.map */
