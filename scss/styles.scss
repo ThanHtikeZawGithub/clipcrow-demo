@@ -488,7 +488,7 @@ nav {
     .point__top-grid {
       flex-direction: column;
       justify-content: center;
-      margin: 0 auto;
+      margin: 0 32px;
       img {
         margin-right: 0;
       }
@@ -504,7 +504,7 @@ nav {
     .point__bottom-grid {
       flex-direction: column;
       justify-content: center;
-      margin: 0 auto;
+      margin: 0 32px;
       gap: 16px;
       padding: 0;
       img {
@@ -518,7 +518,7 @@ nav {
       }
     }
     img {
-        width: auto;
+        width: 364px;
         height: 347px;
       }
   }

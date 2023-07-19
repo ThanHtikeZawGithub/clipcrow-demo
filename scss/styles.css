@@ -2269,7 +2269,7 @@ nav {
   .point .point__top-grid {
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 32px;
   }
   .point .point__top-grid img {
     margin-right: 0;
@@ -2285,7 +2285,7 @@ nav {
   .point .point__bottom-grid {
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 32px;
     gap: 16px;
     padding: 0;
   }
@@ -2299,7 +2299,7 @@ nav {
     font-size: 24px;
   }
   .point img {
-    width: auto;
+    width: 364px;
     height: 347px;
   }
 }
