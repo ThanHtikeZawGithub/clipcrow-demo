@@ -657,8 +657,24 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 9rem;
-    row-gap: 1rem;
     margin-bottom: 2rem;
+    .footer__link {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      a {
+        color: $c-neutral-099;
+        color: #E6E6E5;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
   }
 
   .footer__left {
@@ -690,20 +706,23 @@ footer {
     }
     .footer__right {
       gap: 16px;
-      li {
+      .footer__link {
+        align-items: center;
+        gap: 16px;
+      }
+      a {
+        width: 100%;
         border: 1px solid $c-neutral-099;
         text-align: center;
         padding: 16px;
         border-radius: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
         &:hover {
           background-color: $c-neutral-099;
           color: $c-primary-000;
         }
-        margin-bottom: 16px;
-        &:last-child {
-          margin-bottom: 0;
-        }
-        
       }
       margin: 0;
       grid-template-columns: 1fr;
