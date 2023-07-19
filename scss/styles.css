@@ -1392,17 +1392,23 @@ span {
   }
 }
 @media screen and (max-width: 768px) {
+  .business {
+    gap: 32px;
+  }
   .business h1 {
     font-size: 28px;
     line-height: 36px;
     padding: 0 32px;
   }
   .business .business-diagram .diagram__sp {
-    height: 338px;
+    height: 304px;
     width: 364px;
   }
   .business .teams {
     padding: 0 32px;
+  }
+  .business .teams .teambox {
+    margin-bottom: 0;
   }
   .business .teams .teambox .inner {
     flex-direction: column;
@@ -1486,7 +1492,7 @@ span {
 }
 @media screen and (max-width: 768px) {
   .enclose {
-    margin: 32px 32px 32px;
+    margin: 0 32px 64px;
     padding: 16px;
   }
   .enclose dl dt {

@@ -164,6 +164,7 @@
     }
   }
   @media screen and (max-width: 768px) {
+    gap: 32px;
     h1 {
       font-size: 28px;
       line-height: 36px;
@@ -171,13 +172,14 @@
     }
     .business-diagram {
       .diagram__sp {
-        height: 338px;
+        height: 304px;
         width: 364px;
       }
     }
     .teams {
       padding: 0 32px;
       .teambox {
+        margin-bottom: 0;
         .inner {
           flex-direction: column;
           gap: 8px;
@@ -261,7 +263,7 @@
     margin: 64px 77px 128px;
   }
   @media screen and (max-width: 768px) {
-    margin: 32px 32px 32px;
+    margin: 0 32px 64px;
     padding: 16px;
     dl {
       dt {
