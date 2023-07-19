@@ -754,7 +754,7 @@ span {
     top: -410px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .example__title h1 {
     font-size: 45px;
     padding-bottom: 4rem;
@@ -767,6 +767,9 @@ span {
   }
 }
 @media screen and (max-width: 613px) {
+  .example__title {
+    padding-bottom: 32px;
+  }
   .example__title h1 {
     font-size: 32px;
     line-height: 40px;
@@ -803,6 +806,7 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 76px 0;
   gap: 64px;
 }
 .step__wrapper#step2 .example__case {
@@ -814,7 +818,10 @@ span {
 .step__wrapper#step3 .example__case .case__wrapper {
   gap: 128px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+  .step__wrapper {
+    padding: 76px 32px;
+  }
   .step__wrapper#step1 .example__case {
     flex-direction: column;
     gap: 64px;
@@ -838,6 +845,7 @@ span {
 @media screen and (max-width: 613px) {
   .step__wrapper {
     gap: 32px;
+    padding: 32px;
   }
   .step__wrapper#step1 .example__case, .step__wrapper#step2 .example__case, .step__wrapper#step3 .example__case {
     gap: 0;
@@ -897,14 +905,14 @@ span {
   padding: 0 11.5rem;
   text-align: start;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .step-wrapper__text {
-    padding: 0;
+    padding: 0 77px;
   }
 }
 @media screen and (max-width: 613px) {
   .step-wrapper__text {
-    padding: 0;
+    padding: 0 32px;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.15px;
@@ -1032,7 +1040,7 @@ span {
   line-height: 40px;
   font-weight: 700;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .num .num {
     margin: -1.5rem 0 0.5rem 2rem;
   }
@@ -1148,12 +1156,14 @@ span {
 .example__link {
   display: flex;
   flex-direction: column;
-  padding: 0 19rem;
+  margin: 0 auto;
+  width: 568px;
   gap: 1rem;
 }
 .example__link .case__relation-link a {
   height: 48px;
   font-size: 24px;
+  padding: 8px 16px;
   line-height: 32px;
 }
 .example__link .case__relation-link a::before {
@@ -1165,13 +1175,14 @@ span {
   line-height: 28px;
   font-weight: 700;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .example__link {
-    padding: 0 77px;
+    padding: 0;
   }
 }
 @media screen and (max-width: 613px) {
   .example__link {
+    width: 364px;
     padding: 0;
   }
   .example__link h4 {
@@ -2281,7 +2292,7 @@ nav {
     font-size: 24px;
   }
   .point img {
-    width: 100%;
+    width: auto;
     height: 347px;
   }
 }
