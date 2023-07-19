@@ -1,14 +1,35 @@
+.page__title {
+  h1 {
+    font-size: 45px;
+    // font-size: 40px;
+    font-weight: 700;
+    color: $c-neutral-010;
+    text-align: center;
+    line-height: 52px;
+}
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+  }
+  }
+}
+
 .profile__kv {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 76px 0 64px;
   &::before {
     @include bg-deco(600px, 120vw, $c-primary-050);
-    top: -650px;
+    top: -800px;
     @media screen and (max-width: 1200px) {
-      top: -560px;
+      top: -610px;
+    }
+    @media screen and (max-width: 768px) {
+      top: -645px;
     }
   }
   .profile__content {
@@ -60,6 +81,7 @@
     font-size: 36px;
     line-height: 44px;
     font-weight: 700;
+    padding: 0 32px;
     position: relative;
     &::before {
       top: -55px;
@@ -144,6 +166,7 @@
     }
   }
   @media screen and (max-width: 1200px) {
+    padding: 64px 77px;
     .business-diagram {
       .diagram__pc {
         display: none;
@@ -160,10 +183,10 @@
     }
     .teams {
       flex-direction: column;
-      padding: 0 77px;
     }
   }
   @media screen and (max-width: 768px) {
+    padding: 64px 0;
     gap: 32px;
     h1 {
       font-size: 28px;

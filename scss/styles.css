@@ -76,7 +76,7 @@ dd:not(:last-child) {
   color: #399B5B;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   p,
 span {
     font-size: 14px;
@@ -190,7 +190,7 @@ dd:not(:last-child) {
   color: #399B5B;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   p,
 span {
     font-size: 14px;
@@ -1193,12 +1193,27 @@ span {
   }
 }
 
+.page__title h1 {
+  font-size: 45px;
+  font-weight: 700;
+  color: #55585B;
+  text-align: center;
+  line-height: 52px;
+}
+@media screen and (max-width: 768px) {
+  .page__title h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
 .profile__kv {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 76px 0 64px;
 }
 .profile__kv::before {
   content: "";
@@ -1211,7 +1226,7 @@ span {
   z-index: -1;
   margin: 3% -10% 0 -10%;
   transform: rotate(-12deg);
-  top: -650px;
+  top: -800px;
 }
 @media screen and (max-width: 1200px) {
   .profile__kv::before {
@@ -1221,7 +1236,12 @@ span {
 }
 @media screen and (max-width: 1200px) {
   .profile__kv::before {
-    top: -560px;
+    top: -610px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile__kv::before {
+    top: -645px;
   }
 }
 .profile__kv .profile__content {
@@ -1275,6 +1295,7 @@ span {
   font-size: 36px;
   line-height: 44px;
   font-weight: 700;
+  padding: 0 32px;
   position: relative;
 }
 .business h1::before {
@@ -1374,6 +1395,9 @@ span {
   text-align: center;
 }
 @media screen and (max-width: 1200px) {
+  .business {
+    padding: 64px 77px;
+  }
   .business .business-diagram .diagram__pc {
     display: none;
   }
@@ -1388,11 +1412,11 @@ span {
   }
   .business .teams {
     flex-direction: column;
-    padding: 0 77px;
   }
 }
 @media screen and (max-width: 768px) {
   .business {
+    padding: 64px 0;
     gap: 32px;
   }
   .business h1 {
