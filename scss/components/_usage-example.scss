@@ -132,7 +132,10 @@
     &#step2,
     &#step3 {
       .example__case {
-        gap: 0;
+        gap: 8px;
+        .case__wrapper {
+          gap: 8px;
+        }
         .case {
           display: flex;
           flex-direction: column;
@@ -266,6 +269,7 @@
     }
   }
   @media screen and (max-width: 613px) {
+      gap: 8px;
     .step {
       font-size: 12px;
       letter-spacing: 0.4px;

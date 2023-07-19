@@ -848,7 +848,10 @@ span {
     padding: 32px;
   }
   .step__wrapper#step1 .example__case, .step__wrapper#step2 .example__case, .step__wrapper#step3 .example__case {
-    gap: 0;
+    gap: 8px;
+  }
+  .step__wrapper#step1 .example__case .case__wrapper, .step__wrapper#step2 .example__case .case__wrapper, .step__wrapper#step3 .example__case .case__wrapper {
+    gap: 8px;
   }
   .step__wrapper#step1 .example__case .case, .step__wrapper#step2 .example__case .case, .step__wrapper#step3 .example__case .case {
     display: flex;
@@ -1050,6 +1053,9 @@ span {
   }
 }
 @media screen and (max-width: 613px) {
+  .num {
+    gap: 8px;
+  }
   .num .step {
     font-size: 12px;
     letter-spacing: 0.4px;
