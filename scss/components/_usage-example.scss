@@ -269,7 +269,6 @@
     font-weight: 700;
   }
   @media screen and (max-width: 1200px) {
-      margin: -1.5rem 0 0.5rem 2rem;
     .num__inner {
       flex-wrap: nowrap;
       margin: -5rem 0 0 0;
@@ -335,15 +334,9 @@
     margin: 0 -32px;
     flex-direction: column;
     .case {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: $c-secondary-095;
       height: 240px;
       width: 240px;
       margin-bottom: -2rem;
-      border-radius: 100%;
       &.last-child {
         margin-bottom: 0;
       }

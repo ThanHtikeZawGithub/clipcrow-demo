@@ -7,19 +7,17 @@
 
 .title-left {
   @include features__deco();
-  &::before {
     right: 0;
     border-radius: 0px 10px 10px 0px;
   }
-}
+
 
 .title-right {
   @include features__deco();
-  &::before {
     left: 0;
     border-radius: 10px 0 0 10px;
   }
-}
+
 
 //============================================================
 
