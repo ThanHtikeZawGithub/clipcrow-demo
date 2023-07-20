@@ -2,6 +2,8 @@
 a {
   text-decoration: none;
   color: #55585B;
+  padding: 0;
+  margin: 0;
 }
 
 p {
@@ -116,6 +118,8 @@ span {
 a {
   text-decoration: none;
   color: #55585B;
+  padding: 0;
+  margin: 0;
 }
 
 p {
@@ -1827,6 +1831,9 @@ nav {
   flex-direction: row;
   justify-content: center;
   gap: 64px;
+}
+.section__download .google__btn {
+  max-height: 104px;
 }
 .section__download .google__btn img {
   height: 104px;
