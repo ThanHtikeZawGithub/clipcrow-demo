@@ -1054,7 +1054,7 @@ span {
   font-weight: 700;
 }
 @media screen and (max-width: 1200px) {
-  .num .num {
+  .num {
     margin: -1.5rem 0 0.5rem 2rem;
   }
   .num .num__inner {
@@ -1222,6 +1222,10 @@ span {
   }
 }
 
+body {
+  color: #5B5B55;
+}
+
 .page__title h1 {
   font-size: 45px;
   font-weight: 700;
@@ -1317,7 +1321,8 @@ span {
   padding: 64px 0;
   position: relative;
 }
-.business h1 {
+.business h4 {
+  color: #55585B;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1327,7 +1332,7 @@ span {
   padding: 0 32px;
   position: relative;
 }
-.business h1::before {
+.business h4::before {
   top: -55px;
   content: "";
   display: block;
@@ -1341,13 +1346,13 @@ span {
   transform: rotate(-12deg);
 }
 @media screen and (max-width: 1200px) {
-  .business h1::before {
+  .business h4::before {
     width: 200%;
     margin: 3% -10% 0 -38%;
   }
 }
 @media screen and (max-width: 1200px) {
-  .business h1::before {
+  .business h4::before {
     top: -15px;
     height: 57px;
   }
@@ -1365,7 +1370,6 @@ span {
   align-items: stretch;
   padding: 0;
   gap: 32px;
-  color: #55585B;
 }
 .business .teams ul,
 .business .teams li {
@@ -1379,7 +1383,6 @@ span {
 }
 .business .teams .teambox {
   border: 1px solid #C2A731;
-  margin-bottom: 1rem;
   overflow: hidden;
   flex: 1 1 auto;
 }
@@ -1409,7 +1412,6 @@ span {
 }
 .business .teams .teambox .inner .image .dev__img {
   height: 50px;
-  width: 100px;
 }
 .business .teams .teambox .inner .image .cc__img {
   height: 87.5px;
@@ -1448,7 +1450,7 @@ span {
     padding: 64px 0;
     gap: 32px;
   }
-  .business h1 {
+  .business h4 {
     font-size: 28px;
     line-height: 36px;
     padding: 0 32px;
@@ -1460,29 +1462,22 @@ span {
   .business .teams {
     padding: 0 32px;
   }
-  .business .teams .teambox {
-    margin-bottom: 0;
-  }
-  .business .teams .teambox .inner {
+  .business .teams .inner {
     flex-direction: column;
     gap: 8px;
   }
-  .business .teams .teambox .inner .image {
+  .business .teams .inner .image {
     width: 70px;
     height: 70px;
   }
-  .business .teams .teambox .inner .image .dev__img {
+  .business .teams .inner .image .dev__img {
     height: 35px;
-    width: 70px;
   }
-  .business .teams .teambox .inner .image .cc__img {
+  .business .teams .inner .image .cc__img {
     height: 61px;
     width: auto;
   }
-  .business .teams .teambox .inner ul {
-    justify-content: flex-start;
-  }
-  .business .teams .teambox .note {
+  .business .teams .note {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.4px;
@@ -1503,7 +1498,6 @@ span {
   line-height: 28px;
   font-weight: 700;
   margin-bottom: 0.25rem;
-  color: #5B5B55;
 }
 .enclose dl dd {
   color: #5B5B55;

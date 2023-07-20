@@ -1,7 +1,10 @@
+body {
+  color: $c-neutral-020;
+}
+
 .page__title {
   h1 {
     font-size: 45px;
-    // font-size: 40px;
     font-weight: 700;
     color: $c-neutral-010;
     text-align: center;
@@ -74,7 +77,8 @@
   gap: 64px;
   padding: 64px 0;
   position: relative;
-  h1 {
+  h4 {
+    color: $c-neutral-010;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,7 +111,6 @@
     align-items: stretch;
     padding: 0;
     gap: 32px;
-    color: $c-neutral-010;
     ul,
     li {
       color: $c-neutral-010;
@@ -120,7 +123,6 @@
     }
     .teambox {
       border: 1px solid $c-secondary-030;
-      margin-bottom: 1rem;
       overflow: hidden;
       flex: 1 1 auto;
       .teamname {
@@ -147,7 +149,6 @@
           width: 100px;
           .dev__img {
             height: 50px;
-            width: 100px;
           }
           .cc__img {
             height: 87.5px;
@@ -188,7 +189,7 @@
   @media screen and (max-width: 768px) {
     padding: 64px 0;
     gap: 32px;
-    h1 {
+    h4 {
       font-size: 28px;
       line-height: 36px;
       padding: 0 32px;
@@ -201,8 +202,6 @@
     }
     .teams {
       padding: 0 32px;
-      .teambox {
-        margin-bottom: 0;
         .inner {
           flex-direction: column;
           gap: 8px;
@@ -211,15 +210,11 @@
             height: 70px;
             .dev__img {
               height: 35px;
-              width: 70px;
             }
             .cc__img {
               height: 61px;
               width: auto;
             }
-          }
-          ul {
-            justify-content: flex-start;
           }
         }
         .note {
@@ -229,7 +224,6 @@
         }
       }
     }
-  }
 }
 
 .enclose {
@@ -246,7 +240,6 @@
       line-height: 28px;
       font-weight: 700;
       margin-bottom: 0.25rem;
-      color: $c-neutral-020;
     }
     dd {
       color: $c-neutral-020;
