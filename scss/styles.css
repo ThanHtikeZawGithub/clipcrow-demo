@@ -798,6 +798,9 @@ span {
     gap: 0;
     flex-direction: column;
   }
+  .case__wrapper:last-child .example__case:first-child {
+    margin-top: -3rem;
+  }
   .case__wrapper .case.left {
     align-self: flex-start;
   }
@@ -848,55 +851,67 @@ span {
 }
 @media screen and (max-width: 613px) {
   .step__wrapper {
-    gap: 32px;
     padding: 32px;
+    gap: 32px;
   }
-  .step__wrapper#step1 .example__case, .step__wrapper#step2 .example__case, .step__wrapper#step3 .example__case {
-    gap: 8px;
+  .step__wrapper#step1 .example__case {
+    gap: 0;
   }
-  .step__wrapper#step1 .example__case .case__wrapper, .step__wrapper#step2 .example__case .case__wrapper, .step__wrapper#step3 .example__case .case__wrapper {
-    gap: 8px;
+  .step__wrapper#step1 .example__case .case__wrapper:last-child {
+    margin-top: -2rem;
   }
-  .step__wrapper#step1 .example__case .case, .step__wrapper#step2 .example__case .case, .step__wrapper#step3 .example__case .case {
+  .step__wrapper#step2 .example__case {
+    gap: 0;
+  }
+  .step__wrapper#step3 .example__case {
+    gap: 0;
+  }
+  .step__wrapper#step3 .example__case .case__wrapper {
+    gap: 0;
+  }
+  .step__wrapper#step3 .example__case .case__wrapper:last-child {
+    margin-top: -2rem;
+  }
+  .step__wrapper .case {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #f7f3dd;
     height: 240px;
     width: 240px;
-    margin-bottom: -1rem;
+    margin-bottom: -3rem;
     border-radius: 100%;
   }
-  .step__wrapper#step1 .example__case .case.last-child, .step__wrapper#step2 .example__case .case.last-child, .step__wrapper#step3 .example__case .case.last-child {
+  .step__wrapper .case:last-child {
     margin-bottom: 0;
   }
-  .step__wrapper#step1 .example__case .case.right, .step__wrapper#step2 .example__case .case.right, .step__wrapper#step3 .example__case .case.right {
+  .step__wrapper .case.right {
     align-self: flex-end;
   }
-  .step__wrapper#step1 .example__case .case.left, .step__wrapper#step2 .example__case .case.left, .step__wrapper#step3 .example__case .case.left {
+  .step__wrapper .case.left {
     align-self: flex-start;
   }
-  .step__wrapper#step1 .example__case .case p, .step__wrapper#step2 .example__case .case p, .step__wrapper#step3 .example__case .case p {
+  .step__wrapper .case p {
     margin: 0;
     text-align: center;
     padding: 0 40px;
   }
-  .step__wrapper#step1 .example__case .case .roll, .step__wrapper#step2 .example__case .case .roll, .step__wrapper#step3 .example__case .case .roll {
+  .step__wrapper .case .roll {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
   }
-  .step__wrapper#step1 .example__case .case .image, .step__wrapper#step2 .example__case .case .image, .step__wrapper#step3 .example__case .case .image {
+  .step__wrapper .case .image-container {
     font-size: 0.875rem;
   }
-  .step__wrapper#step1 .example__case .case .image img, .step__wrapper#step2 .example__case .case .image img, .step__wrapper#step3 .example__case .case .image img {
+  .step__wrapper .case .image-container img {
     margin: 0;
     height: 100px;
     width: auto;
     -o-object-fit: contain;
        object-fit: contain;
   }
-  .step__wrapper#step1 .example__case .case .action, .step__wrapper#step2 .example__case .case .action, .step__wrapper#step3 .example__case .case .action {
+  .step__wrapper .case .action {
     font-size: 0.875rem;
     z-index: 10;
   }
@@ -1100,10 +1115,10 @@ span {
   font-style: 700;
   line-height: 28px;
 }
-.example__case .case .image {
+.example__case .case .image-container {
   margin: 0.5rem 0;
 }
-.example__case .case .image img {
+.example__case .case .image-container img {
   height: 150px;
   width: auto;
 }
@@ -1113,7 +1128,8 @@ span {
 }
 @media screen and (max-width: 613px) {
   .example__case {
-    padding: 32px 0;
+    gap: 0;
+    padding: 0;
     margin: 0 -32px;
     flex-direction: column;
   }
@@ -1125,7 +1141,7 @@ span {
     background-color: #f7f3dd;
     height: 240px;
     width: 240px;
-    margin-bottom: 2rem;
+    margin-bottom: -2rem;
     border-radius: 100%;
   }
   .example__case .case.last-child {
@@ -1146,10 +1162,10 @@ span {
     font-size: 0.875rem;
     font-weight: 700;
   }
-  .example__case .case .image {
+  .example__case .case .image-container {
     font-size: 0.875rem;
   }
-  .example__case .case .image img {
+  .example__case .case .image-container img {
     margin: 0;
     height: 100px;
     width: auto;
@@ -2506,7 +2522,7 @@ footer .footer__left p {
 @media screen and (max-width: 768px) {
   footer .footer__content {
     grid-template-columns: 1fr;
-    padding: 2rem;
+    padding: 32px 32px 64px;
   }
   footer .footer__left {
     margin: 0 auto;

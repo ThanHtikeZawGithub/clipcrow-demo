@@ -62,6 +62,13 @@
     padding: 0;
     gap: 0;
     flex-direction: column;
+    &:last-child {
+      .example__case {
+        &:first-child {
+          margin-top: -3rem;
+        }
+      }
+    }
     .case {
       &.left {
         align-self: flex-start;
@@ -126,58 +133,75 @@
   }
 
   @media screen and (max-width: 613px) {
-    gap: 32px;
     padding: 32px;
-    &#step1,
-    &#step2,
+    gap: 32px;
+    &#step1 {
+      .example__case {
+        gap: 0;
+        .case__wrapper {
+          &:last-child {
+            margin-top: -2rem;
+          }
+        }
+      }
+    }
+    &#step2 {
+      .example__case {
+        gap: 0;
+      }
+    }
     &#step3 {
       .example__case {
-        gap: 8px;
+        gap: 0;
+
         .case__wrapper {
-          gap: 8px;
-        }
-        .case {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background-color: $c-secondary-095;
-          height: 240px;
-          width: 240px;
-          margin-bottom: -1rem;
-          border-radius: 100%;
-          &.last-child {
-            margin-bottom: 0;
-          }
-          &.right {
-            align-self: flex-end;
-          }
-          &.left {
-            align-self: flex-start;
-          }
-          p {
-            margin: 0;
-            text-align: center;
-            padding: 0 40px;
-          }
-          .roll {
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;
-          }
-          .image {
-            font-size: 0.875rem;
-            img {
-              margin: 0;
-              height: 100px;
-              width: auto;
-              object-fit: contain;
-            }
-          }
-          .action {
-            font-size: 0.875rem;
-            z-index: 10;
+          gap: 0;
+          &:last-child {
+            margin-top: -2rem;
           }
         }
+      }
+    }
+    .case {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $c-secondary-095;
+      height: 240px;
+      width: 240px;
+      margin-bottom: -3rem;
+      border-radius: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.right {
+        align-self: flex-end;
+      }
+      &.left {
+        align-self: flex-start;
+      }
+      p {
+        margin: 0;
+        text-align: center;
+        padding: 0 40px;
+      }
+      .roll {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+      .image-container {
+        font-size: 0.875rem;
+        img {
+          margin: 0;
+          height: 100px;
+          width: auto;
+          object-fit: contain;
+        }
+      }
+      .action {
+        font-size: 0.875rem;
+        z-index: 10;
       }
     }
   }
@@ -269,7 +293,7 @@
     }
   }
   @media screen and (max-width: 613px) {
-      gap: 8px;
+    gap: 8px;
     .step {
       font-size: 12px;
       letter-spacing: 0.4px;
@@ -286,7 +310,6 @@
       font-size: 22px;
     }
   }
-  
 }
 
 //=======================================================================
@@ -311,7 +334,7 @@
       font-style: 700;
       line-height: 28px;
     }
-    .image {
+    .image-container {
       margin: 0.5rem 0;
       img {
         height: 150px;
@@ -324,7 +347,8 @@
     }
   }
   @media screen and (max-width: 613px) {
-    padding: 32px 0;
+    gap: 0;
+    padding: 0;
     margin: 0 -32px;
     flex-direction: column;
     .case {
@@ -335,7 +359,7 @@
       background-color: $c-secondary-095;
       height: 240px;
       width: 240px;
-      margin-bottom: 2rem;
+      margin-bottom: -2rem;
       border-radius: 100%;
       &.last-child {
         margin-bottom: 0;
@@ -355,7 +379,7 @@
         font-size: 0.875rem;
         font-weight: 700;
       }
-      .image {
+      .image-container {
         font-size: 0.875rem;
         img {
           margin: 0;
@@ -404,16 +428,16 @@
   @media screen and (max-width: 613px) {
     padding: 0;
     max-width: 100%;
-      h4 {
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0.15px;
-      }
-      p {
-        margin: 0;
-      }
-      .case__relation-link {
-        a {
+    h4 {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+    }
+    p {
+      margin: 0;
+    }
+    .case__relation-link {
+      a {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.15px;
@@ -421,9 +445,7 @@
         &::before {
           top: 0.7rem;
         }
-        }
-
       }
+    }
   }
 }
-
