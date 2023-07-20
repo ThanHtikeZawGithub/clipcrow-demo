@@ -87,9 +87,12 @@
     }
   }
   @media screen and (max-width: 1200px) {
-    padding: 76px 32px;
+    padding: 64px 77px;
     &#step1 {
       .example__case {
+        .case__wrapper {
+          height: 288px;
+        }
         flex-direction: column;
         gap: 64px;
       }
@@ -97,6 +100,7 @@
     &#step2 {
       .example__case {
         gap: 16px;
+        height: 288px;
       }
     }
     &#step3 {
@@ -104,9 +108,13 @@
         gap: 16px;
         .case__wrapper {
           gap: 16px;
+          height: 288px;
         }
       }
     }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 64px 32px;
   }
 
   @media screen and (max-width: 896px) {
@@ -125,6 +133,7 @@
       .example__case {
         gap: 0;
         .case__wrapper {
+          height: auto;
           &:last-child {
             margin-top: -2rem;
           }
@@ -134,6 +143,7 @@
     &#step2 {
       .example__case {
         gap: 0;
+        height: auto;
       }
     }
     &#step3 {
@@ -142,6 +152,7 @@
 
         .case__wrapper {
           gap: 0;
+          height: auto;
           &:last-child {
             margin-top: -2rem;
           }
@@ -224,6 +235,9 @@
   margin-bottom: 4rem;
   color: $c-neutral-020;
   margin-bottom: 0;
+  @media screen and (max-width: 613px) {
+    height: 46px;
+  }
   .title__bg {
     position: absolute;
     background-color: $c-primary-060;
@@ -249,10 +263,12 @@
   margin-bottom: 4rem;
   color: $c-neutral-020;
   margin-bottom: 0;
+  @media screen and (max-width: 613px) {
+    height: 46px;
+  }
   .title__bg {
     position: absolute;
     background-color: $c-primary-060;
-    margin: 0 auto;
     width: 100vw;
     height: 79px;
     z-index: -1;
@@ -462,4 +478,7 @@
 
 .example__download {
   padding: 64px 0 128px;
+  @media screen and (max-width: 613px) {
+    padding: 32px 0 64px;
+  }
 }

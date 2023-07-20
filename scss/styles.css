@@ -813,20 +813,30 @@ span {
 }
 @media screen and (max-width: 1200px) {
   .step__wrapper {
-    padding: 76px 32px;
+    padding: 64px 77px;
   }
   .step__wrapper#step1 .example__case {
     flex-direction: column;
     gap: 64px;
   }
+  .step__wrapper#step1 .example__case .case__wrapper {
+    height: 288px;
+  }
   .step__wrapper#step2 .example__case {
     gap: 16px;
+    height: 288px;
   }
   .step__wrapper#step3 .example__case {
     gap: 16px;
   }
   .step__wrapper#step3 .example__case .case__wrapper {
     gap: 16px;
+    height: 288px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .step__wrapper {
+    padding: 64px 32px;
   }
 }
 @media screen and (max-width: 896px) {
@@ -843,17 +853,22 @@ span {
   .step__wrapper#step1 .example__case {
     gap: 0;
   }
+  .step__wrapper#step1 .example__case .case__wrapper {
+    height: auto;
+  }
   .step__wrapper#step1 .example__case .case__wrapper:last-child {
     margin-top: -2rem;
   }
   .step__wrapper#step2 .example__case {
     gap: 0;
+    height: auto;
   }
   .step__wrapper#step3 .example__case {
     gap: 0;
   }
   .step__wrapper#step3 .example__case .case__wrapper {
     gap: 0;
+    height: auto;
   }
   .step__wrapper#step3 .example__case .case__wrapper:last-child {
     margin-top: -2rem;
@@ -938,6 +953,11 @@ span {
   color: #5B5B55;
   margin-bottom: 0;
 }
+@media screen and (max-width: 613px) {
+  .ex__title-left {
+    height: 46px;
+  }
+}
 .ex__title-left .title__bg {
   position: absolute;
   background-color: #ffeb87;
@@ -965,10 +985,14 @@ span {
   color: #5B5B55;
   margin-bottom: 0;
 }
+@media screen and (max-width: 613px) {
+  .ex__title-right {
+    height: 46px;
+  }
+}
 .ex__title-right .title__bg {
   position: absolute;
   background-color: #ffeb87;
-  margin: 0 auto;
   width: 100vw;
   height: 79px;
   z-index: -1;
@@ -1181,6 +1205,11 @@ span {
 
 .example__download {
   padding: 64px 0 128px;
+}
+@media screen and (max-width: 613px) {
+  .example__download {
+    padding: 32px 0 64px;
+  }
 }
 
 body {
@@ -1804,7 +1833,7 @@ nav {
   height: 76px;
   width: 214px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 767px) {
   .section__download {
     padding: 0;
   }
