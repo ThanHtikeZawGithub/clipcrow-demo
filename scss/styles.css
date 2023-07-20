@@ -2137,9 +2137,9 @@ nav {
   color: #C2A731;
 }
 .features .features__grid .features__card {
-  display: grid;
-  grid-template-rows: 1fr;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid #C2A731;
   border-radius: 16px;
   background-color: #ffffff;
@@ -2155,6 +2155,9 @@ nav {
 .features .features__grid .features__card img {
   width: auto;
   height: 244px;
+}
+.features .features__grid .features__card p {
+  text-align: start;
 }
 @media screen and (max-width: 1200px) {
   .features {

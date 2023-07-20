@@ -372,9 +372,9 @@ nav {
       color: $c-secondary-030;
     }
     .features__card {
-      display: grid;
-      grid-template-rows: 1fr;
-      justify-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       border: 1px solid $c-secondary-030;
       border-radius: 16px;
       background-color: $c-neutral-100;
@@ -389,6 +389,9 @@ nav {
       img {
         width: auto;
         height: 244px;
+      }
+      p {
+        text-align: start;
       }
     }
   }
