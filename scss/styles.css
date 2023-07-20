@@ -2063,7 +2063,7 @@ nav {
     font-weight: 700;
   }
   .maincont .maincont__card .card .card__img-wrapper {
-    margin: 1.5rem;
+    margin: 0;
   }
   .maincont .maincont__card .card .card__img-wrapper img {
     height: 165px;
