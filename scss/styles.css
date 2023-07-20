@@ -225,49 +225,71 @@ span {
 }
 /* title underline */
 .title-left {
-  margin-bottom: 3rem;
-  font-size: 32px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 64px;
+  margin-bottom: 4rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 40px;
   color: #5B5B55;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffeb87;
-  height: 64px;
-  width: 100%;
-  right: 0;
-  border-radius: 0px 10px 10px 0px;
 }
 @media screen and (max-width: 1200px) {
   .title-left {
     font-size: 24px;
     line-height: 32px;
+  }
+}
+.title-left .title__bg {
+  position: absolute;
+  background-color: #ffeb87;
+  margin: 0 auto;
+  width: 100vw;
+  height: 64px;
+  z-index: -1;
+  border-radius: 0px 10px 10px 0px;
+  right: 0;
+}
+@media screen and (max-width: 1200px) {
+  .title-left .title__bg {
     height: 56px;
   }
 }
 
 .title-right {
-  margin-bottom: 3rem;
-  font-size: 32px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 64px;
+  margin-bottom: 4rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 40px;
   color: #5B5B55;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffeb87;
-  height: 64px;
-  width: 100%;
-  left: 0;
-  border-radius: 10px 0 0 10px;
 }
 @media screen and (max-width: 1200px) {
   .title-right {
     font-size: 24px;
     line-height: 32px;
+  }
+}
+.title-right .title__bg {
+  position: absolute;
+  background-color: #ffeb87;
+  margin: 0 auto;
+  width: 100vw;
+  height: 64px;
+  z-index: -1;
+  border-radius: 10px 0 0 10px;
+  left: 0;
+}
+@media screen and (max-width: 1200px) {
+  .title-right .title__bg {
     height: 56px;
   }
 }
@@ -690,16 +712,17 @@ span {
   position: relative;
   align-items: center;
   justify-content: center;
+  padding: 52px 0 64px;
 }
 .example__title h1 {
-  font-size: 45px;
+  font-size: 2.8125rem;
   padding-bottom: 0;
   color: #5B5B55;
 }
 .example__title span {
   font-weight: 400;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 .example__title::before {
   content: "";
@@ -732,14 +755,14 @@ span {
 }
 @media screen and (max-width: 1200px) {
   .example__title h1 {
-    font-size: 45px;
+    font-size: 2.8125rem;
     padding-bottom: 4rem;
     color: #5B5B55;
   }
   .example__title span {
     font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 }
 @media screen and (max-width: 613px) {
@@ -747,14 +770,14 @@ span {
     padding-bottom: 32px;
   }
   .example__title h1 {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 2rem;
+    line-height: 2.5rem;
     padding-bottom: 0;
   }
   .example__title span {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
 }
 
@@ -776,7 +799,7 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 76px 0;
+  padding: 64px 0;
   gap: 64px;
 }
 .step__wrapper#step2 .example__case {
@@ -860,9 +883,9 @@ span {
     padding: 0 40px;
   }
   .step__wrapper .case .roll {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
   .step__wrapper .case .image-container {
     font-size: 0.875rem;
@@ -884,7 +907,7 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 32px;
   padding: 0 11.5rem;
@@ -898,74 +921,62 @@ span {
 @media screen and (max-width: 613px) {
   .step-wrapper__text {
     padding: 0;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     letter-spacing: 0.15px;
   }
 }
 
 .ex__title-left {
-  margin-bottom: 3rem;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 40px;
-  color: #5B5B55;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
   align-items: center;
-  background-color: #ffeb87;
-  height: 64px;
-  width: 100%;
+  justify-content: center;
+  text-align: center;
+  height: 79px;
+  margin-bottom: 4rem;
+  color: #5B5B55;
   margin-bottom: 0;
 }
-@media screen and (max-width: 1200px) {
-  .ex__title-left {
-    font-size: 24px;
-    line-height: 32px;
-    height: 56px;
-  }
-}
-.ex__title-left::before {
-  border-radius: 0px 10px 10px 0px;
+.ex__title-left .title__bg {
+  position: absolute;
+  background-color: #ffeb87;
+  margin: 0 auto;
+  width: 100vw;
   height: 79px;
+  z-index: -1;
+  border-radius: 0px 10px 10px 0px;
   right: 0;
 }
 @media screen and (max-width: 613px) {
-  .ex__title-left::before {
+  .ex__title-left .title__bg {
     height: 46px;
   }
 }
 
 .ex__title-right {
-  margin-bottom: 3rem;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 40px;
-  color: #5B5B55;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
   align-items: center;
-  background-color: #ffeb87;
-  height: 64px;
-  width: 100%;
+  justify-content: center;
+  text-align: center;
+  height: 79px;
+  margin-bottom: 4rem;
+  color: #5B5B55;
   margin-bottom: 0;
 }
-@media screen and (max-width: 1200px) {
-  .ex__title-right {
-    font-size: 24px;
-    line-height: 32px;
-    height: 56px;
-  }
-}
-.ex__title-right::before {
-  border-radius: 10px 0 0 10px;
+.ex__title-right .title__bg {
+  position: absolute;
+  background-color: #ffeb87;
+  margin: 0 auto;
+  width: 100vw;
   height: 79px;
+  z-index: -1;
+  border-radius: 10px 0 0 10px;
   left: 0;
 }
 @media screen and (max-width: 613px) {
-  .ex__title-right::before {
+  .ex__title-right .title__bg {
     height: 46px;
   }
 }
@@ -985,19 +996,19 @@ span {
   margin: -4.5rem 0 0.5rem 2rem;
 }
 .num .step {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.15px;
   margin-bottom: 0.5rem;
 }
 .num .figure {
-  font-size: 90px;
+  font-size: 5.625rem;
   font-weight: 700;
   line-height: 70px;
 }
 .num .title {
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 40px;
   font-weight: 700;
 }
@@ -1012,7 +1023,7 @@ span {
     gap: 8px;
   }
   .num .step {
-    font-size: 12px;
+    font-size: 0.75rem;
     letter-spacing: 0.4px;
     margin-bottom: -1rem;
   }
@@ -1020,7 +1031,7 @@ span {
     margin: -2.2rem 0 0 0;
   }
   .num .figure {
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 86.88px;
   }
   .num .title {
@@ -1033,6 +1044,7 @@ span {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 288px;
   gap: 1rem;
 }
 .example__case .case {
@@ -1047,7 +1059,7 @@ span {
   border-radius: 100%;
 }
 .example__case .case .roll {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-style: 700;
   line-height: 28px;
 }
@@ -1062,8 +1074,14 @@ span {
   padding: 0 2.7rem;
   text-align: center;
 }
+@media screen and (max-width: 1200px) {
+  .example__case {
+    height: 640px;
+  }
+}
 @media screen and (max-width: 613px) {
   .example__case {
+    height: 100%;
     gap: 0;
     padding: 0;
     margin: 0 -32px;
@@ -1119,15 +1137,15 @@ span {
 }
 .example__link h4 {
   color: #5B5B55;
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
   font-weight: 700;
 }
 .example__link .case__relation-link a {
   height: 48px;
-  font-size: 24px;
+  font-size: 1.5rem;
   padding: 8px 16px;
-  line-height: 32px;
+  line-height: 2rem;
 }
 .example__link .case__relation-link a::before {
   top: 0.9rem;
@@ -1143,22 +1161,26 @@ span {
     max-width: 100%;
   }
   .example__link h4 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     letter-spacing: 0.15px;
   }
   .example__link p {
     margin: 0;
   }
   .example__link .case__relation-link a {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     letter-spacing: 0.15px;
     height: 40px;
   }
   .example__link .case__relation-link a::before {
     top: 0.7rem;
   }
+}
+
+.example__download {
+  padding: 64px 0 128px;
 }
 
 body {
@@ -1757,7 +1779,6 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  max-height: 172px;
   width: 100%;
 }
 .section__download h4 {

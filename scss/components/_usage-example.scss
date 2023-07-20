@@ -6,15 +6,16 @@
   position: relative;
   align-items: center;
   justify-content: center;
+  padding: 52px 0 64px;
   h1 {
-    font-size: 45px;
+    font-size: 2.8125rem;
     padding-bottom: 0;
     color: $c-neutral-020;
   }
   span {
     font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
   &::before {
     @include bg-deco(500px, 120vw, $c-primary-050);
@@ -28,27 +29,27 @@
   }
   @media screen and (max-width: 1200px) {
     h1 {
-      font-size: 45px;
+      font-size: 2.8125rem;
       padding-bottom: 4rem;
       color: $c-neutral-020;
     }
     span {
       font-weight: 400;
-      font-size: 32px;
-      line-height: 40px;
+      font-size: 2rem;
+      line-height: 2.5rem;
     }
   }
   @media screen and (max-width: 613px) {
     padding-bottom: 32px;
     h1 {
-      font-size: 32px;
-      line-height: 40px;
+      font-size: 2rem;
+      line-height: 2.5rem;
       padding-bottom: 0;
     }
     span {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
-      line-height: 24px;
+      line-height: 1.5rem;
     }
   }
 }
@@ -69,7 +70,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 76px 0;
+  padding: 64px 0;
   gap: 64px;
   &#step2 {
     .example__case {
@@ -171,9 +172,9 @@
         padding: 0 40px;
       }
       .roll {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 700;
-        line-height: 24px;
+        line-height: 1.5rem;
       }
       .image-container {
         font-size: 0.875rem;
@@ -196,7 +197,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 32px;
   padding: 0 11.5rem;
@@ -206,29 +207,56 @@
   }
   @media screen and (max-width: 613px) {
     padding: 0;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     letter-spacing: 0.15px;
   }
 }
+
+
 .ex__title-left {
-  @include features__deco();
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 79px;
+  margin-bottom: 4rem;
+  color: $c-neutral-020;
   margin-bottom: 0;
-  &::before {
-    border-radius: 0px 10px 10px 0px;
+  .title__bg {
+    position: absolute;
+    background-color: $c-primary-060;
+    margin: 0 auto;
+    width: 100vw;
     height: 79px;
+    z-index: -1;
+    border-radius: 0px 10px 10px 0px;
     right: 0;
     @media screen and (max-width: 613px) {
       height: 46px;
     }
   }
 }
+
 .ex__title-right {
-  @include features__deco();
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 79px;
+  margin-bottom: 4rem;
+  color: $c-neutral-020;
   margin-bottom: 0;
-  &::before {
-    border-radius: 10px 0 0 10px;
+  .title__bg {
+    position: absolute;
+    background-color: $c-primary-060;
+    margin: 0 auto;
+    width: 100vw;
     height: 79px;
+    z-index: -1;
+    border-radius: 10px 0 0 10px;
     left: 0;
     @media screen and (max-width: 613px) {
       height: 46px;
@@ -252,19 +280,19 @@
     margin: -4.5rem 0 0.5rem 2rem;
   }
   .step {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.15px;
     margin-bottom: 0.5rem;
   }
   .figure {
-    font-size: 90px;
+    font-size: 5.625rem;
     font-weight: 700;
     line-height: 70px;
   }
   .title {
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 40px;
     font-weight: 700;
   }
@@ -277,7 +305,7 @@
   @media screen and (max-width: 613px) {
     gap: 8px;
     .step {
-      font-size: 12px;
+      font-size: 0.75rem;
       letter-spacing: 0.4px;
       margin-bottom: -1rem;
     }
@@ -285,7 +313,7 @@
       margin: -2.2rem 0 0 0;
     }
     .figure {
-      font-size: 60px;
+      font-size: 3.75rem;
       line-height: 86.88px;
     }
     .title {
@@ -300,6 +328,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 288px;
   gap: 1rem;
   .case {
     display: flex;
@@ -312,7 +341,7 @@
     margin-bottom: 1rem;
     border-radius: 100%;
     .roll {
-      font-size: 22px;
+      font-size: 1.375rem;
       font-style: 700;
       line-height: 28px;
     }
@@ -328,7 +357,11 @@
       text-align: center;
     }
   }
+  @media screen and (max-width: 1200px) {
+    height: 640px;
+  }
   @media screen and (max-width: 613px) {
+    height: 100%;
     gap: 0;
     padding: 0;
     margin: 0 -32px;
@@ -383,16 +416,16 @@
   gap: 1rem;
   h4 {
     color: $c-neutral-020;
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 1.375rem;
+    line-height: 1.75rem;
     font-weight: 700;
   }
   .case__relation-link {
     a {
       height: 48px;
-      font-size: 24px;
+      font-size: 1.5rem;
       padding: 8px 16px;
-      line-height: 32px;
+      line-height: 2rem;
       &::before {
         top: 0.9rem;
       }
@@ -406,8 +439,8 @@
     padding: 0;
     max-width: 100%;
     h4 {
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 1rem;
+      line-height: 1.5rem;
       letter-spacing: 0.15px;
     }
     p {
@@ -415,8 +448,8 @@
     }
     .case__relation-link {
       a {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 1rem;
+        line-height: 1.5rem;
         letter-spacing: 0.15px;
         height: 40px;
         &::before {
@@ -425,4 +458,8 @@
       }
     }
   }
+}
+
+.example__download {
+  padding: 64px 0 128px;
 }

@@ -103,7 +103,7 @@
 
 @mixin features__deco {
   margin-bottom: 3rem;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 40px;
   color: $c-neutral-020;
@@ -112,8 +112,9 @@
   justify-content: center;
   align-items: center;
   background-color: $c-primary-060;
+  margin: 0 auto;
+  width: 100vw;
   height: 64px;
-  width: 100%;
   // &::before {
   //   content: "";
   //   display: block;

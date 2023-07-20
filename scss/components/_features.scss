@@ -6,18 +6,66 @@
 /* title underline */
 
 .title-left {
-  @include features__deco();
-    right: 0;
-    border-radius: 0px 10px 10px 0px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 64px;
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 40px;
+  color: $c-neutral-020;
+  @media screen and (max-width: 1200px) {
+    font-size: 24px;
+    line-height: 32px;
   }
-
+  .title__bg {
+    position: absolute;
+    background-color: $c-primary-060;
+    margin: 0 auto;
+    width: 100vw;
+    height: 64px;
+    z-index: -1;
+    border-radius: 0px 10px 10px 0px;
+    right: 0;
+    @media screen and (max-width: 1200px) {
+      height: 56px;
+    }
+  }
+}
 
 .title-right {
-  @include features__deco();
-    left: 0;
-    border-radius: 10px 0 0 10px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 64px;
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 40px;
+  color: $c-neutral-020;
+  @media screen and (max-width: 1200px) {
+    font-size: 24px;
+    line-height: 32px;
   }
-
+  .title__bg {
+    position: absolute;
+    background-color: $c-primary-060;
+    margin: 0 auto;
+    width: 100vw;
+    height: 64px;
+    z-index: -1;
+    border-radius: 10px 0 0 10px;
+    left: 0;
+    @media screen and (max-width: 1200px) {
+      height: 56px;
+    }
+  }
+}
 
 //============================================================
 
@@ -124,7 +172,6 @@
     }
   }
 }
-
 
 //======================================================================================================
 /* image and ellipse shape */
