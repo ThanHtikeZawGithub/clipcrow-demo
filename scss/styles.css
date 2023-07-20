@@ -2248,7 +2248,7 @@ nav {
 @media screen and (max-width: 1200px) {
   .point::before {
     height: 1090px;
-    top: 43px;
+    top: 45px;
     margin: 0;
   }
 }
