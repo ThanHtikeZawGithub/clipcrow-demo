@@ -2020,16 +2020,22 @@ nav {
     padding: 0 32px;
     margin: 0;
   }
+  .maincont .maincont__card .card {
+    gap: 16px;
+  }
 }
 .maincont .maincont__card .card {
   display: grid;
   grid-template-rows: 1fr;
   justify-items: center;
   max-height: 488px;
-  gap: 16px;
+  gap: 32px;
 }
 .maincont .maincont__card .card .card__sp-text {
   display: none;
+}
+.maincont .maincont__card .card .card__img-wrapper {
+  max-height: 244px;
 }
 .maincont .maincont__card .card .card__img-wrapper img {
   height: 244px;
@@ -2037,6 +2043,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .maincont .maincont__card .card {
+    gap: 16px;
     grid-template-rows: 0.5fr 1fr 0.2fr;
   }
   .maincont .maincont__card .card .card__pc-text {
