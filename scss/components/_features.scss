@@ -5,14 +5,14 @@
 //==========================================================================
 /* title underline */
 
+
 .title-left {
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 64px;
-  margin-bottom: 4rem;
+  height: 4rem;
   font-size: 2rem;
   font-weight: 700;
   line-height: 40px;
@@ -20,6 +20,7 @@
   @media screen and (max-width: 1200px) {
     font-size: 24px;
     line-height: 32px;
+    height: 56px;
   }
   .title__bg {
     position: absolute;
@@ -43,7 +44,6 @@
   justify-content: center;
   text-align: center;
   height: 64px;
-  margin-bottom: 4rem;
   font-size: 2rem;
   font-weight: 700;
   line-height: 40px;
@@ -214,7 +214,6 @@
 
   .img-ellipse__text {
     width: 100%;
-    height: 32px;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
@@ -240,7 +239,7 @@
     width: 481px;
   }
   @media screen and (max-width: 1200px) {
-    gap: 12px;
+    gap: 16px;
     height: 250px;
     .img-ellipse__wrapper {
       width: 105%;
@@ -250,7 +249,6 @@
       }
     }
     .img-ellipse__text {
-      padding: 2rem 1rem 0;
       font-size: 16px;
       line-height: 24px;
     }
@@ -271,31 +269,36 @@
       width: 304px;
     }
   }
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
 }
 
 //====================================================================================================
 /* features case */
 
 .features__case-wrapper {
-  padding-top: 42px;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  gap: 32px;
   .features__case {
-    padding-top: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 0.5rem;
+    gap: 32px;
     .case {
       display: flex;
       flex-direction: column;
       position: relative;
+      max-height: 316px;
+      margin: 0;
       border: 1px solid $c-secondary-030;
       border-radius: 10px;
       justify-content: flex-start;
       padding: 2rem 1rem;
       width: calc(33% - 1rem);
-      margin-right: 1rem;
     }
     p {
       margin: 0;
@@ -321,7 +324,7 @@
       font-size: 22px;
       font-weight: 700;
       line-height: 28px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: $c-neutral-020;
     }
     .case__body {
@@ -331,35 +334,43 @@
       letter-spacing: 0.15px;
       text-align-last: left;
       text-align: justify;
-      margin-bottom: 1rem;
       flex-grow: 1;
       line-height: 24px;
     }
     .case__relation-link {
+      margin-top: 1.5rem;
       @media screen and (max-width: 1200px) {
         margin-top: auto;
       }
     }
   }
   @media screen and (max-width: 1200px) {
+    gap: 16px;
     .features__case {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 0;
+      gap: 16px;
       .case {
         width: 100%;
         padding: 1rem;
-        margin: 0.5rem;
       }
       .case__title {
         font-size: 1rem;
         line-height: 24px;
+        margin-bottom: 12px;
       }
       .case__body {
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.25px;
+      }
+      .case__relation-link {
+        margin-top: 12px;
+      }
+      .extra-hover {
+        margin-top: 12px;
       }
     }
     .case {
@@ -448,8 +459,31 @@
   }
 }
 
+.features__maincont {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 64px 0;
+  @media screen and (max-width: 1200px) {
+    padding: 64px 77px;
+  }
+  @media screen and (max-width: 768px) {
+    gap: 32px;
+    padding: 32px;
+  }
+}
+
 //====================================================================================================
 /* download section */
+.features__download {
+  padding: 64px 0 128px;
+  @media screen and (max-width: 1200px) {
+    padding: 64px 77px 128px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 32px 32px 64px;
+  }
+}
 
 .app-download__btn {
   .google__btn {

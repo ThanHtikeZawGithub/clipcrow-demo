@@ -230,8 +230,7 @@ span {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 64px;
-  margin-bottom: 4rem;
+  height: 4rem;
   font-size: 2rem;
   font-weight: 700;
   line-height: 40px;
@@ -241,6 +240,7 @@ span {
   .title-left {
     font-size: 24px;
     line-height: 32px;
+    height: 56px;
   }
 }
 .title-left .title__bg {
@@ -266,7 +266,6 @@ span {
   justify-content: center;
   text-align: center;
   height: 64px;
-  margin-bottom: 4rem;
   font-size: 2rem;
   font-weight: 700;
   line-height: 40px;
@@ -434,7 +433,6 @@ span {
 }
 .features__img-ellipse .img-ellipse__text {
   width: 100%;
-  height: 32px;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
@@ -461,7 +459,7 @@ span {
 }
 @media screen and (max-width: 1200px) {
   .features__img-ellipse {
-    gap: 12px;
+    gap: 16px;
     height: 250px;
   }
   .features__img-ellipse .img-ellipse__wrapper {
@@ -472,7 +470,6 @@ span {
     height: 200px;
   }
   .features__img-ellipse .img-ellipse__text {
-    padding: 2rem 1rem 0;
     font-size: 16px;
     line-height: 24px;
   }
@@ -493,30 +490,37 @@ span {
     width: 304px;
   }
 }
+@media screen and (max-width: 768px) {
+  .features__img-ellipse {
+    height: auto;
+  }
+}
 
 /* features case */
 .features__case-wrapper {
-  padding-top: 42px;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  gap: 32px;
 }
 .features__case-wrapper .features__case {
-  padding-top: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 0.5rem;
+  gap: 32px;
 }
 .features__case-wrapper .features__case .case {
   display: flex;
   flex-direction: column;
   position: relative;
+  max-height: 316px;
+  margin: 0;
   border: 1px solid #C2A731;
   border-radius: 10px;
   justify-content: flex-start;
   padding: 2rem 1rem;
   width: calc(33% - 1rem);
-  margin-right: 1rem;
 }
 .features__case-wrapper .features__case p {
   margin: 0;
@@ -542,7 +546,7 @@ span {
   font-size: 22px;
   font-weight: 700;
   line-height: 28px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #5B5B55;
 }
 .features__case-wrapper .features__case .case__body {
@@ -553,9 +557,11 @@ span {
   -moz-text-align-last: left;
        text-align-last: left;
   text-align: justify;
-  margin-bottom: 1rem;
   flex-grow: 1;
   line-height: 24px;
+}
+.features__case-wrapper .features__case .case__relation-link {
+  margin-top: 1.5rem;
 }
 @media screen and (max-width: 1200px) {
   .features__case-wrapper .features__case .case__relation-link {
@@ -563,25 +569,35 @@ span {
   }
 }
 @media screen and (max-width: 1200px) {
+  .features__case-wrapper {
+    gap: 16px;
+  }
   .features__case-wrapper .features__case {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
+    gap: 16px;
   }
   .features__case-wrapper .features__case .case {
     width: 100%;
     padding: 1rem;
-    margin: 0.5rem;
   }
   .features__case-wrapper .features__case .case__title {
     font-size: 1rem;
     line-height: 24px;
+    margin-bottom: 12px;
   }
   .features__case-wrapper .features__case .case__body {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.25px;
+  }
+  .features__case-wrapper .features__case .case__relation-link {
+    margin-top: 12px;
+  }
+  .features__case-wrapper .features__case .extra-hover {
+    margin-top: 12px;
   }
   .features__case-wrapper .case .badge {
     top: 0.8rem;
@@ -681,7 +697,39 @@ span {
   }
 }
 
+.features__maincont {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 64px 0;
+}
+@media screen and (max-width: 1200px) {
+  .features__maincont {
+    padding: 64px 77px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .features__maincont {
+    gap: 32px;
+    padding: 32px;
+  }
+}
+
 /* download section */
+.features__download {
+  padding: 64px 0 128px;
+}
+@media screen and (max-width: 1200px) {
+  .features__download {
+    padding: 64px 77px 128px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .features__download {
+    padding: 32px 32px 64px;
+  }
+}
+
 .app-download__btn .google__btn img {
   height: 95px;
   width: auto;
