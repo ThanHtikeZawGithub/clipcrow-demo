@@ -798,15 +798,6 @@ span {
     gap: 0;
     flex-direction: column;
   }
-  .case__wrapper:last-child .example__case:first-child {
-    margin-top: -3rem;
-  }
-  .case__wrapper .case.left {
-    align-self: flex-start;
-  }
-  .case__wrapper .case.right {
-    align-self: flex-end;
-  }
 }
 
 .step__wrapper {
@@ -1187,6 +1178,12 @@ span {
   width: 568px;
   gap: 1rem;
 }
+.example__link h4 {
+  color: #5B5B55;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+}
 .example__link .case__relation-link a {
   height: 48px;
   font-size: 24px;
@@ -1195,12 +1192,6 @@ span {
 }
 .example__link .case__relation-link a::before {
   top: 0.9rem;
-}
-.example__link h4 {
-  color: #5B5B55;
-  font-size: 22px;
-  line-height: 28px;
-  font-weight: 700;
 }
 @media screen and (max-width: 1200px) {
   .example__link {
@@ -2011,7 +2002,7 @@ nav {
 @media screen and (max-width: 1200px) {
   .maincont::before {
     top: 25px;
-    height: 990px;
+    height: 875px;
   }
 }
 @media screen and (max-width: 1200px) {

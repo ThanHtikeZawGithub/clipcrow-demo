@@ -62,21 +62,6 @@
     padding: 0;
     gap: 0;
     flex-direction: column;
-    &:last-child {
-      .example__case {
-        &:first-child {
-          margin-top: -3rem;
-        }
-      }
-    }
-    .case {
-      &.left {
-        align-self: flex-start;
-      }
-      &.right {
-        align-self: flex-end;
-      }
-    }
   }
 }
 
@@ -405,6 +390,12 @@
   margin: 0 auto;
   width: 568px;
   gap: 1rem;
+  h4 {
+    color: $c-neutral-020;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+  }
   .case__relation-link {
     a {
       height: 48px;
@@ -416,12 +407,7 @@
       }
     }
   }
-  h4 {
-    color: $c-neutral-020;
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 700;
-  }
+
   @media screen and (max-width: 1200px) {
     padding: 0;
   }
