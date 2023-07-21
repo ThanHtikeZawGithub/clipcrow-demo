@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset default browser styles */
 a {
   text-decoration: none;
@@ -1401,6 +1402,9 @@ body {
 .business .business-diagram .diagram__sp {
   display: none;
 }
+.business .business-diagram .diagram__tab {
+  display: none;
+}
 .business .teams {
   display: flex;
   flex-direction: row;
@@ -1409,15 +1413,21 @@ body {
   padding: 0;
   gap: 32px;
 }
-.business .teams ul,
 .business .teams li {
   color: #55585B;
-  list-style: disc;
   margin-bottom: 0;
+  margin-left: 0;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15px;
   font-weight: 400;
+}
+.business .teams li:before {
+  content: "•";
+  color: inherit;
+  font-size: 20px;
+  margin-right: 5px;
+  vertical-align: auto;
 }
 .business .teams .teambox {
   border: 1px solid #C2A731;
@@ -1438,8 +1448,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px;
-  gap: 48px;
+  padding: 16px 32px 26px;
+  gap: 32px;
 }
 .business .teams .teambox .inner .image {
   display: flex;
@@ -1456,7 +1466,7 @@ body {
   width: auto;
 }
 .business .teams .teambox .note {
-  padding-bottom: 1rem;
+  padding: 0 32px 16px;
   line-height: 20px;
   font-weight: 400;
   font-size: 14px;
@@ -1465,25 +1475,30 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .business {
-    padding: 64px 77px;
+    padding: 64px 12px;
   }
   .business .business-diagram .diagram__pc {
     display: none;
   }
-  .business .business-diagram .diagram__sp {
+  .business .business-diagram .diagram__tab {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     height: 584px;
-    width: auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 967px) {
+  .business {
+    padding: 64px 77px;
   }
   .business .teams {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .business {
     padding: 64px 0;
     gap: 32px;
@@ -1493,32 +1508,50 @@ body {
     line-height: 36px;
     padding: 0 32px;
   }
+  .business .business-diagram .diagram__tab {
+    display: none;
+  }
   .business .business-diagram .diagram__sp {
+    display: block;
+    margin: 0 auto;
     height: 304px;
     width: 364px;
   }
   .business .teams {
     padding: 0 32px;
   }
-  .business .teams .inner {
+  .business .teams .teambox .teamname {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+  }
+  .business .teams .teambox .inner {
+    padding: 8px 16px;
     flex-direction: column;
     gap: 8px;
   }
-  .business .teams .inner .image {
+  .business .teams .teambox .inner .image {
     width: 70px;
     height: 70px;
   }
-  .business .teams .inner .image .dev__img {
+  .business .teams .teambox .inner .image .dev__img {
     height: 35px;
   }
-  .business .teams .inner .image .cc__img {
+  .business .teams .teambox .inner .image .cc__img {
     height: 61px;
     width: auto;
   }
-  .business .teams .note {
+  .business .teams ul,
+.business .teams li {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  .business .note {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.4px;
+    padding: 0 16px 8px;
   }
 }
 
@@ -1572,10 +1605,15 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .enclose {
+    margin: 64px 12px 128px;
+  }
+}
+@media screen and (max-width: 968px) {
+  .enclose {
     margin: 64px 77px 128px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .enclose {
     margin: 0 32px 64px;
     padding: 16px;

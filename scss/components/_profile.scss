@@ -9,12 +9,12 @@ body {
     color: $c-neutral-010;
     text-align: center;
     line-height: 52px;
-}
+  }
   @media screen and (max-width: 768px) {
     h1 {
       font-size: 32px;
       line-height: 40px;
-  }
+    }
   }
 }
 
@@ -102,6 +102,9 @@ body {
     .diagram__sp {
       display: none;
     }
+    .diagram__tab {
+      display: none;
+    }
   }
 
   .teams {
@@ -111,15 +114,21 @@ body {
     align-items: stretch;
     padding: 0;
     gap: 32px;
-    ul,
     li {
       color: $c-neutral-010;
-      list-style: disc;
       margin-bottom: 0;
+      margin-left: 0;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.15px;
       font-weight: 400;
+      &:before {
+        content: '\2022'; // Unicode for the disc bullet (•)
+        color: inherit; // Example: black bullet color
+        font-size: 20px; // Adjust the font-size to make the bullet smaller
+        margin-right: 5px; // Add some space between the bullet and the text
+        vertical-align: auto; // Center the bullet vertically with the text
+      }
     }
     .teambox {
       border: 1px solid $c-secondary-030;
@@ -139,8 +148,8 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 16px;
-        gap: 48px;
+        padding: 16px 32px 26px;
+        gap: 32px;
         .image {
           display: flex;
           align-items: center;
@@ -157,7 +166,7 @@ body {
         }
       }
       .note {
-        padding-bottom: 1rem;
+        padding: 0 32px 16px;
         line-height: 20px;
         font-weight: 400;
         font-size: 14px;
@@ -167,26 +176,30 @@ body {
     }
   }
   @media screen and (max-width: 1200px) {
-    padding: 64px 77px;
+    padding: 64px 12px;
     .business-diagram {
       .diagram__pc {
         display: none;
       }
-      .diagram__sp {
+      .diagram__tab {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
         height: 584px;
-        width: auto;
+        width: 100%;
       }
     }
+  }
+  @media screen and (max-width: 967px) {
+    padding: 64px 77px;
     .teams {
       flex-direction: column;
+      
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding: 64px 0;
     gap: 32px;
     h4 {
@@ -195,14 +208,26 @@ body {
       padding: 0 32px;
     }
     .business-diagram {
+      .diagram__tab {
+        display: none;
+      }
       .diagram__sp {
+        display: block;
+        margin: 0 auto;
         height: 304px;
         width: 364px;
       }
     }
     .teams {
       padding: 0 32px;
+      .teambox {
+        .teamname {
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.15px;
+        }
         .inner {
+          padding: 8px 16px;
           flex-direction: column;
           gap: 8px;
           .image {
@@ -217,13 +242,21 @@ body {
             }
           }
         }
-        .note {
-          font-size: 12px;
-          line-height: 16px;
-          letter-spacing: 0.4px;
-        }
+      }
+      ul,
+      li {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
       }
     }
+    .note {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.4px;
+      padding: 0 16px 8px;
+    }
+  }
 }
 
 .enclose {
@@ -276,9 +309,12 @@ body {
     }
   }
   @media screen and (max-width: 1200px) {
+    margin: 64px 12px 128px;
+  }
+  @media screen and (max-width: 968px) {
     margin: 64px 77px 128px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     margin: 0 32px 64px;
     padding: 16px;
     dl {
@@ -307,6 +343,7 @@ body {
             letter-spacing: 0.4px;
           }
         }
+
         li {
           font-size: 12px;
           line-height: 16px;
