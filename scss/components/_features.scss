@@ -393,11 +393,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 51px 0 64px;
   &::before {
     @include bg-deco(500px, 120vw, $c-primary-050);
     top: -550px;
     @media screen and (max-width: 1200px) {
-      top: -445px;
+      top: -428px;
     }
   }
   h1 {
@@ -429,7 +430,7 @@
   }
 
   @media screen and (max-width: 1200px) {
-    padding-top: 0;
+    padding: 31px 32px 32px;
     h1 {
       font-size: 32px;
       line-height: 40px;

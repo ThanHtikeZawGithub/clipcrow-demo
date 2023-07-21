@@ -616,6 +616,7 @@ span {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 51px 0 64px;
 }
 .features__kv::before {
   content: "";
@@ -638,7 +639,7 @@ span {
 }
 @media screen and (max-width: 1200px) {
   .features__kv::before {
-    top: -445px;
+    top: -428px;
   }
 }
 .features__kv h1 {
@@ -668,7 +669,7 @@ span {
 }
 @media screen and (max-width: 1200px) {
   .features__kv {
-    padding-top: 0;
+    padding: 31px 32px 32px;
   }
   .features__kv h1 {
     font-size: 32px;
