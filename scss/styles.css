@@ -584,6 +584,9 @@ span {
     width: 100%;
     padding: 1rem;
   }
+  .features__case-wrapper .features__case .case.no-link {
+    padding: 1rem 1rem 2rem;
+  }
   .features__case-wrapper .features__case .case__title {
     font-size: 1rem;
     line-height: 24px;
@@ -600,10 +603,10 @@ span {
   .features__case-wrapper .features__case .extra-hover {
     margin-top: 12px;
   }
-  .features__case-wrapper .case .badge {
+  .features__case-wrapper .features__case .badge {
     top: 0.8rem;
   }
-  .features__case-wrapper .case .badge img {
+  .features__case-wrapper .features__case .badge img {
     height: 30px;
     width: 30px;
   }

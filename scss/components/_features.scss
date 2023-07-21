@@ -355,6 +355,9 @@
       .case {
         width: 100%;
         padding: 1rem;
+        &.no-link {
+          padding: 1rem 1rem 2rem;
+        }
       }
       .case__title {
         font-size: 1rem;
@@ -372,8 +375,6 @@
       .extra-hover {
         margin-top: 12px;
       }
-    }
-    .case {
       .badge {
         top: 0.8rem;
         img {
@@ -382,7 +383,7 @@
         }
       }
     }
-  }
+    }
 }
 
 /* features cover section */
