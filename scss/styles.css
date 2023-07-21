@@ -617,6 +617,7 @@ span {
   justify-content: space-around;
   align-items: center;
   padding: 51px 0 64px;
+  gap: 64px;
 }
 .features__kv::before {
   content: "";
@@ -643,7 +644,6 @@ span {
   }
 }
 .features__kv h1 {
-  padding-bottom: 4rem;
   color: #5B5B55;
 }
 .features__kv span {
@@ -669,7 +669,8 @@ span {
 }
 @media screen and (max-width: 1200px) {
   .features__kv {
-    padding: 31px 32px 32px;
+    padding: 25px 32px 32px;
+    gap: 32px;
   }
   .features__kv h1 {
     font-size: 32px;
@@ -679,9 +680,6 @@ span {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-  }
-  .features__kv .kv__content {
-    margin-top: -2rem;
   }
   .features__kv .kv__content p {
     padding: 0 1.5rem;

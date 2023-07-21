@@ -394,6 +394,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 51px 0 64px;
+  gap: 64px;
   &::before {
     @include bg-deco(500px, 120vw, $c-primary-050);
     top: -550px;
@@ -402,7 +403,6 @@
     }
   }
   h1 {
-    padding-bottom: 4rem;
     color: $c-neutral-020;
   }
   span {
@@ -430,7 +430,8 @@
   }
 
   @media screen and (max-width: 1200px) {
-    padding: 31px 32px 32px;
+    padding: 25px 32px 32px;
+    gap: 32px;
     h1 {
       font-size: 32px;
       line-height: 40px;
@@ -441,7 +442,6 @@
       line-height: 24px;
     }
     .kv__content {
-      margin-top: -2rem;
       p {
         padding: 0 1.5rem;
         text-align: start;
