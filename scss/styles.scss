@@ -5,13 +5,20 @@
 @import "components/features";
 @import "components/usage-example";
 @import "components/profile";
+@import "components/content";
+@import "components/blog";
 
 /* reset css */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box !important;
 }
+
 
 html {
   overflow-x: hidden;

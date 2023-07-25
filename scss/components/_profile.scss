@@ -58,6 +58,7 @@ body {
   }
   @media screen and (max-width: 1200px) {
     padding: 0 77px;
+    max-width: 968px;
   }
   @media screen and (max-width: 768px) {
     padding: 0 32px;
@@ -176,7 +177,8 @@ body {
     }
   }
   @media screen and (max-width: 1200px) {
-    padding: 64px 12px;
+    max-width: 968px;
+    padding: 64px 0;
     .business-diagram {
       .diagram__pc {
         display: none;
@@ -309,7 +311,8 @@ body {
     }
   }
   @media screen and (max-width: 1200px) {
-    margin: 64px 12px 128px;
+    margin: 64px auto 128px;
+    max-width: 968px;
   }
   @media screen and (max-width: 968px) {
     margin: 64px 77px 128px;
