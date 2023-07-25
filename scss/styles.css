@@ -873,6 +873,7 @@ label {
   .step__wrapper#step1 .example__case {
     flex-direction: column;
     gap: 64px;
+    margin: 0 -24px;
   }
   .step__wrapper#step1 .example__case .case__wrapper {
     height: 288px;
@@ -880,6 +881,7 @@ label {
   .step__wrapper#step2 .example__case {
     gap: 16px;
     height: 288px;
+    margin: 0 -24px;
   }
   .step__wrapper#step3 .example__case {
     gap: 16px;
@@ -891,11 +893,12 @@ label {
 }
 @media screen and (max-width: 768px) {
   .step__wrapper {
-    padding: 64px 16px;
+    padding: 64px 32px;
   }
 }
 @media screen and (max-width: 895px) {
   .step__wrapper#step3 .example__case {
+    margin: 0 -24px;
     flex-direction: column;
     gap: 64px;
   }
@@ -1248,6 +1251,7 @@ label {
 @media screen and (max-width: 1200px) {
   .example__link {
     padding: 0;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 612px) {
