@@ -871,6 +871,7 @@ label {
     padding: 64px 77px;
   }
   .step__wrapper#step1 .example__case {
+    height: 640px;
     flex-direction: column;
     gap: 64px;
     margin: 0 -24px;
@@ -1133,7 +1134,6 @@ label {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 288px;
   gap: 1rem;
 }
 .example__case .case {
@@ -1165,11 +1165,6 @@ label {
   padding: 0 3rem;
   text-align: center;
   color: #5B5B55;
-}
-@media screen and (max-width: 1199px) {
-  .example__case {
-    height: 640px;
-  }
 }
 @media screen and (max-width: 612px) {
   .example__case {
@@ -1248,7 +1243,7 @@ label {
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%228%22%20height%3D%2210%22%20viewBox%3D%220%200%208%2010%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2.0876%200L0.912598%201.175L4.72926%205L0.912598%208.825L2.0876%2010L7.0876%205L2.0876%200Z%22%20fill%3D%22%23504100%22%2F%3E%3C%2Fsvg%3E");
   top: 0.9rem;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .example__link {
     padding: 0;
     max-width: 100%;
