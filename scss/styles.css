@@ -1281,7 +1281,7 @@ body {
 .page__title h1 {
   font-size: 45px;
   font-weight: 700;
-  color: #55585B;
+  color: #5B5B55;
   text-align: center;
   line-height: 52px;
 }
@@ -1929,8 +1929,38 @@ body {
 .blog__maincont {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 64px;
   padding: 64px 0;
+}
+.blog__maincont::before {
+  content: "";
+  display: block;
+  position: absolute;
+  overflow-x: hidden;
+  width: 120vw;
+  height: 600px;
+  background-color: #ffe873;
+  z-index: -1;
+  margin: 3% -10% 0 -10%;
+  transform: rotate(-12deg);
+  top: -500px;
+}
+@media screen and (max-width: 1200px) {
+  .blog__maincont::before {
+    width: 200%;
+    margin: 3% -10% 0 -38%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .blog__maincont::before {
+    top: -610px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blog__maincont::before {
+    top: -645px;
+  }
 }
 .blog__maincont .blog__card-wrapper {
   display: flex;
@@ -1960,15 +1990,6 @@ body {
   background-size: contain;
   position: relative;
 }
-.blog__maincont .blog__card-wrapper .blog__card .blog__card-content .blog__card-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3); /* Set the desired opacity here (0.3 = 30% opacity) */
-}
 .blog__maincont .blog__card-wrapper .blog__card .blog__card-content.card-1 {
   border-color: #348b76;
   background-color: #CCE7EF;
@@ -1996,6 +2017,7 @@ body {
 .blog__maincont .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside {
   border-width: 2px;
   border-style: solid;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2104,6 +2126,11 @@ body {
 .blog__maincont .blog__link .blog__monthly .blog-monthly-section .blog__monthly-year:focus + .monthly__dropdown-content .monthly__dropdown-icon,
 .blog__maincont .blog__link .blog__monthly .blog-monthly-section .monthly__dropdown-content:focus-within .monthly__dropdown-icon {
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.blog__maincont .blog__details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
 .blog__pagination {
