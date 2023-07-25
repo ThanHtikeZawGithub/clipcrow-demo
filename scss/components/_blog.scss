@@ -14,116 +14,6 @@
       top: -645px;
     }
   }
-  .blog__card-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    width: 768px;
-    &.page-1 {
-        .blog__card-content {
-            background-image: url("/images/blog-illust.png");
-        }
-    }
-    &.page-2 {
-        .blog__card-content {
-            background-image: url("/images/blog-illust-1.png");
-        }
-    }
-    .blog__card {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-      .blog__card-content {
-        height: 421px;
-        padding: 32px;
-        border-width: 1px;
-        border-style: solid;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        position: relative;
-        &.card-1 {
-          border-color: $blog-border-card1;
-          background-color: $blog-bg-card1;
-        }
-        &.card-2 {
-          border-color: $blog-border-card2;
-          background-color: $blog-bg-card2;
-        }
-        &.card-3 {
-          border-color: $blog-border-card3;
-          background-color: $blog-bg-card3;
-        }
-        &.card-4 {
-          border-color: $blog-border-card4;
-          background-color: $blog-bg-card4;
-        }
-        &.card-5 {
-          border-color: $blog-border-card5;
-          background-color: $blog-bg-card5;
-        }
-        &.card-6 {
-          border-color: $blog-border-card6;
-          background-color: $blog-bg-card6;
-        }
-
-        .blog__card-inside {
-          border-width: 2px;
-          border-style: solid;
-          cursor: pointer;
-          &.card-1 {
-            border-color: $blog-border-card1;
-          }
-          &.card-2 {
-            border-color: $blog-border-card2;
-          }
-          &.card-3 {
-            border-color: $blog-border-card3;
-          }
-          &.card-4 {
-            border-color: $blog-border-card4;
-          }
-          &.card-5 {
-            border-color: $blog-border-card5;
-          }
-          &.card-6 {
-            border-color: $blog-border-card6;
-          }
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 32px;
-          gap: 32px;
-          .blog__title {
-            color: $c-tertiary-000;
-            font-size: 28px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 36px; /* 128.571% */
-          }
-          .blog__lead {
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 32px;
-          }
-          .blog__category {
-            height: 56px;
-            padding: 16px 32px;
-            border: 1px solid $c-tertiary-000;
-            color: $c-tertiary-000;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px; /* 150% */
-            letter-spacing: 0.15px;
-            box-sizing: border-box;
-          }
-        }
-      }
-    }
-  }
   .blog__link {
     display: flex;
     flex-direction: column;
@@ -185,10 +75,116 @@
       }
     }
   }
-  .blog__details-content {
+}
+
+.blog__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 768px;
+  &.page-1 {
+      .blog__card-content {
+          background-image: url("/images/blog-illust.png");
+      }
+  }
+  &.page-2 {
+      .blog__card-content {
+          background-image: url("/images/blog-illust-1.png");
+      }
+  }
+  .blog__card {
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    align-items: flex-start;
+    gap: 16px;
+    .blog__card-content {
+      height: 421px;
+      padding: 32px;
+      border-width: 1px;
+      border-style: solid;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      position: relative;
+      &.card-1 {
+        border-color: $blog-border-card1;
+        background-color: $blog-bg-card1;
+      }
+      &.card-2 {
+        border-color: $blog-border-card2;
+        background-color: $blog-bg-card2;
+      }
+      &.card-3 {
+        border-color: $blog-border-card3;
+        background-color: $blog-bg-card3;
+      }
+      &.card-4 {
+        border-color: $blog-border-card4;
+        background-color: $blog-bg-card4;
+      }
+      &.card-5 {
+        border-color: $blog-border-card5;
+        background-color: $blog-bg-card5;
+      }
+      &.card-6 {
+        border-color: $blog-border-card6;
+        background-color: $blog-bg-card6;
+      }
+
+      .blog__card-inside {
+        border-width: 2px;
+        border-style: solid;
+        cursor: pointer;
+        &.card-1 {
+          border-color: $blog-border-card1;
+        }
+        &.card-2 {
+          border-color: $blog-border-card2;
+        }
+        &.card-3 {
+          border-color: $blog-border-card3;
+        }
+        &.card-4 {
+          border-color: $blog-border-card4;
+        }
+        &.card-5 {
+          border-color: $blog-border-card5;
+        }
+        &.card-6 {
+          border-color: $blog-border-card6;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px;
+        gap: 32px;
+        .blog__title {
+          color: $c-tertiary-000;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 36px; /* 128.571% */
+        }
+        .blog__lead {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+        }
+        .blog__category {
+          height: 56px;
+          padding: 16px 32px;
+          border: 1px solid $c-tertiary-000;
+          color: $c-tertiary-000;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px; /* 150% */
+          letter-spacing: 0.15px;
+          box-sizing: border-box;
+        }
+      }
+    }
   }
 }
 

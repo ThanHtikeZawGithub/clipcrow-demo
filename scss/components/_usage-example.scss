@@ -27,7 +27,7 @@
       top: -410px;
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     h1 {
       font-size: 2.8125rem;
       padding-bottom: 4rem;
@@ -86,7 +86,7 @@
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     padding: 64px 77px;
     &#step1 {
       .example__case {
@@ -117,7 +117,7 @@
     padding: 64px 32px;
   }
 
-  @media screen and (max-width: 896px) {
+  @media screen and (max-width: 895px) {
     &#step3 {
       .example__case {
         flex-direction: column;
@@ -214,7 +214,7 @@
   padding: 0 11.5rem;
   color: $c-neutral-020;
   text-align: start;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     padding: 0 77px;
   }
   @media screen and (max-width: 613px) {
@@ -314,7 +314,7 @@
     line-height: 40px;
     font-weight: 700;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     .num__inner {
       flex-wrap: nowrap;
       margin: -5rem 0 0 0;
@@ -356,6 +356,7 @@
     background-color: $c-secondary-095;
     height: 288px;
     width: 288px;
+    gap: 12px;
     margin-bottom: 1rem;
     border-radius: 100%;
     .roll {
@@ -364,12 +365,11 @@
       line-height: 28px;
     }
     .image-container {
-      margin: 12px 0;
       height: 150px;
-      width: 218px;
+      width: auto;
       img {
         height: 150px;
-        width: 218px;
+        width: auto;
       }
     }
     .action {
@@ -378,7 +378,7 @@
       color: $c-neutral-020;
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     height: 640px;
   }
   @media screen and (max-width: 613px) {
