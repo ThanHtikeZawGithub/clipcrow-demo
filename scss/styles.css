@@ -2544,6 +2544,7 @@ nav {
   font-size: 57px;
   line-height: 64px;
   letter-spacing: -0.25px;
+  padding-bottom: 32px;
 }
 .kv .hero__visual {
   color: transparent;
@@ -2570,6 +2571,7 @@ nav {
   }
   .kv .hero__content h1 {
     font-size: 36px;
+    padding-bottom: 16px;
   }
   .kv .hero__content span {
     font-weight: 700;

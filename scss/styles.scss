@@ -177,7 +177,6 @@ nav {
 /*cover section*/
 
 .kv {
-  // min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -207,6 +206,7 @@ nav {
       font-size: 57px;
       line-height: 64px;
       letter-spacing: -0.25px;
+      padding-bottom: 32px;
     }
   }
   .hero__visual {
@@ -231,6 +231,7 @@ nav {
       grid-row: 2;
       h1 {
         font-size: 36px;
+        padding-bottom: 16px;
       }
       span {
         font-weight: 700;
