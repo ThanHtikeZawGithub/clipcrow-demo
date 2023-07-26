@@ -1287,6 +1287,9 @@ body {
   color: #5B5B55;
 }
 
+.page__title {
+  padding: 48px 0 64px;
+}
 .page__title h1 {
   font-size: 45px;
   font-weight: 700;
@@ -1295,6 +1298,9 @@ body {
   line-height: 52px;
 }
 @media screen and (max-width: 768px) {
+  .page__title {
+    padding: 16px 0 64px;
+  }
   .page__title h1 {
     font-size: 32px;
     line-height: 40px;
@@ -1351,9 +1357,6 @@ body {
   letter-spacing: 0.15px;
   color: #5B5B55;
 }
-.profile__kv .logo {
-  margin-bottom: 1rem;
-}
 .profile__kv .logo img {
   height: 150px;
   width: auto;
@@ -1366,7 +1369,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .profile__kv {
-    padding: 36px 32px 0;
+    padding: 0 32px;
   }
   .profile__kv .logo img {
     height: 90px;
@@ -1454,6 +1457,7 @@ body {
   font-size: 22px;
   line-height: 28px;
   font-weight: 500;
+  color: #5B5B55;
 }
 .business .teams .teambox .inner {
   display: flex;
@@ -1487,6 +1491,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.25px;
   text-align: center;
+  color: #5B5B55;
 }
 @media screen and (max-width: 1200px) {
   .business {

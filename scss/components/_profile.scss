@@ -3,6 +3,7 @@ body {
 }
 
 .page__title {
+  padding: 48px 0 64px;
   h1 {
     font-size: 45px;
     font-weight: 700;
@@ -11,6 +12,7 @@ body {
     line-height: 52px;
   }
   @media screen and (max-width: 768px) {
+    padding: 16px 0 64px;
     h1 {
       font-size: 32px;
       line-height: 40px;
@@ -49,7 +51,6 @@ body {
     }
   }
   .logo {
-    margin-bottom: 1rem;
     img {
       height: 150px;
       width: auto;
@@ -60,7 +61,7 @@ body {
     max-width: 968px;
   }
   @media screen and (max-width: 768px) {
-    padding: 36px 32px 0;
+    padding: 0 32px;
     .logo {
       img {
         height: 90px;
@@ -130,6 +131,7 @@ body {
         font-size: 22px;
         line-height: 28px;
         font-weight: 500;
+        color: $c-neutral-020;
       }
       .inner {
         display: flex;
@@ -163,6 +165,7 @@ body {
         font-size: 14px;
         letter-spacing: 0.25px;
         text-align: center;
+        color: $c-neutral-020;
       }
     }
   }
