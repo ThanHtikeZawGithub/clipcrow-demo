@@ -89,7 +89,7 @@ body {
     padding: 0 32px;
     position: relative;
     &::before {
-      top: -72px;
+      top: -65px;
       @include bg-deco(111px, 120vw, $c-primary-060);
       @media screen and (max-width: 1199px) {
         top: -25px;

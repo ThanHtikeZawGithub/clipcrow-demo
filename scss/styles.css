@@ -1397,7 +1397,7 @@ body {
   position: relative;
 }
 .business h4::before {
-  top: -72px;
+  top: -65px;
   content: "";
   display: block;
   position: absolute;
