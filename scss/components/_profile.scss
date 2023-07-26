@@ -40,7 +40,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-top: 2rem;
     p {
       font-size: 16px;
       line-height: 24px;
@@ -61,7 +60,7 @@ body {
     max-width: 968px;
   }
   @media screen and (max-width: 768px) {
-    padding: 0 32px;
+    padding: 36px 32px 0;
     .logo {
       img {
         height: 90px;
@@ -79,7 +78,7 @@ body {
   padding: 64px 0;
   position: relative;
   h4 {
-    color: $c-neutral-010;
+    color: $c-neutral-020;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +91,7 @@ body {
       top: -55px;
       @include bg-deco(111px, 120vw, $c-primary-060);
       @media screen and (max-width: 1200px) {
-        top: -15px;
+        top: -8px;
         height: 57px;
       }
     }
@@ -127,8 +126,7 @@ body {
         content: '\2022'; // Unicode for the disc bullet (•)
         color: inherit; // Example: black bullet color
         font-size: 20px; // Adjust the font-size to make the bullet smaller
-        margin-right: 5px; // Add some space between the bullet and the text
-        vertical-align: auto; // Center the bullet vertically with the text
+        margin: 0 5px; 
       }
     }
     .teambox {
@@ -151,6 +149,9 @@ body {
         align-items: center;
         padding: 16px 32px 26px;
         gap: 32px;
+        li {
+          color: $c-neutral-020;
+        }
         .image {
           display: flex;
           align-items: center;
@@ -223,6 +224,13 @@ body {
     .teams {
       padding: 0 32px;
       .teambox {
+        .note {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.4px;
+          padding: 0 16px 8px;
+          text-align: start;
+        }
         .teamname {
           font-size: 16px;
           line-height: 24px;
@@ -231,8 +239,10 @@ body {
         .inner {
           padding: 8px 16px;
           flex-direction: column;
+          align-items: flex-start;
           gap: 8px;
           .image {
+            margin: 0 auto;
             width: 70px;
             height: 70px;
             .dev__img {
@@ -251,12 +261,6 @@ body {
         line-height: 20px;
         letter-spacing: 0.25px;
       }
-    }
-    .note {
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: 0.4px;
-      padding: 0 16px 8px;
     }
   }
 }
@@ -279,18 +283,20 @@ body {
     dd {
       color: $c-neutral-020;
       font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.15px; 
       + dt {
         margin-top: 1rem;
       }
-      span {
-        background-color: $c-secondary-030;
-        height: 22px;
-        width: 80px;
-        border-radius: 11px;
-        &:hover {
-          background-color: $c-secondary-040;
-        }
         a {
+          background-color: $c-secondary-030;
+          height: 22px;
+          width: 80px;
+          border-radius: 11px;
+          &:hover {
+            background-color: $c-secondary-040;
+          }
           padding: 1rem 1.5rem;
           color: $c-neutral-100;
           font-size: 16px;
@@ -298,7 +304,6 @@ body {
           font-weight: 700;
           letter-spacing: 0.15px;
         }
-      }
       ul {
         margin: 0;
       }
@@ -335,17 +340,15 @@ body {
         + dt {
           margin-top: 0.2rem;
         }
-        span {
-          height: 16px;
-          width: 52px;
-          align-items: center;
           a {
-            padding: 0.5rem 1rem;
+            height: 16px;
+            width: 52px;
+            padding: 0 13.5px;
             font-size: 12px;
             line-height: 16px;
             letter-spacing: 0.4px;
+            text-align: center;
           }
-        }
 
         li {
           font-size: 12px;

@@ -911,6 +911,7 @@ label {
   }
   .step__wrapper#step1 .example__case {
     gap: 0;
+    height: auto;
   }
   .step__wrapper#step1 .example__case .case__wrapper {
     height: auto;
@@ -1168,7 +1169,7 @@ label {
 }
 @media screen and (max-width: 612px) {
   .example__case {
-    height: 100%;
+    height: auto;
     gap: 0;
     padding: 0;
     margin: 0 -32px;
@@ -1342,7 +1343,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 2rem;
 }
 .profile__kv .profile__content p {
   font-size: 16px;
@@ -1366,7 +1366,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .profile__kv {
-    padding: 0 32px;
+    padding: 36px 32px 0;
   }
   .profile__kv .logo img {
     height: 90px;
@@ -1383,7 +1383,7 @@ body {
   position: relative;
 }
 .business h4 {
-  color: #55585B;
+  color: #5B5B55;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1414,7 +1414,7 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .business h4::before {
-    top: -15px;
+    top: -8px;
     height: 57px;
   }
 }
@@ -1448,8 +1448,7 @@ body {
   content: "•";
   color: inherit;
   font-size: 20px;
-  margin-right: 5px;
-  vertical-align: auto;
+  margin: 0 5px;
 }
 .business .teams .teambox {
   border: 1px solid #C2A731;
@@ -1472,6 +1471,9 @@ body {
   align-items: center;
   padding: 16px 32px 26px;
   gap: 32px;
+}
+.business .teams .teambox .inner li {
+  color: #5B5B55;
 }
 .business .teams .teambox .inner .image {
   display: flex;
@@ -1543,6 +1545,13 @@ body {
   .business .teams {
     padding: 0 32px;
   }
+  .business .teams .teambox .note {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    padding: 0 16px 8px;
+    text-align: start;
+  }
   .business .teams .teambox .teamname {
     font-size: 16px;
     line-height: 24px;
@@ -1551,9 +1560,11 @@ body {
   .business .teams .teambox .inner {
     padding: 8px 16px;
     flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
   }
   .business .teams .teambox .inner .image {
+    margin: 0 auto;
     width: 70px;
     height: 70px;
   }
@@ -1569,12 +1580,6 @@ body {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.25px;
-  }
-  .business .note {
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.4px;
-    padding: 0 16px 8px;
   }
 }
 
@@ -1596,26 +1601,27 @@ body {
 .enclose dl dd {
   color: #5B5B55;
   font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15px;
 }
 .enclose dl dd + dt {
   margin-top: 1rem;
 }
-.enclose dl dd span {
+.enclose dl dd a {
   background-color: #C2A731;
   height: 22px;
   width: 80px;
   border-radius: 11px;
-}
-.enclose dl dd span:hover {
-  background-color: #d7c064;
-}
-.enclose dl dd span a {
   padding: 1rem 1.5rem;
   color: #ffffff;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
   letter-spacing: 0.15px;
+}
+.enclose dl dd a:hover {
+  background-color: #d7c064;
 }
 .enclose dl dd ul {
   margin: 0;
@@ -1657,16 +1663,14 @@ body {
   .enclose dl dd + dt {
     margin-top: 0.2rem;
   }
-  .enclose dl dd span {
+  .enclose dl dd a {
     height: 16px;
     width: 52px;
-    align-items: center;
-  }
-  .enclose dl dd span a {
-    padding: 0.5rem 1rem;
+    padding: 0 13.5px;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.4px;
+    text-align: center;
   }
   .enclose dl dd li {
     font-size: 12px;

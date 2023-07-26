@@ -136,6 +136,7 @@
     &#step1 {
       .example__case {
         gap: 0;
+        height: auto;
         .case__wrapper {
           height: auto;
           &:last-child {
@@ -385,7 +386,7 @@
     }
   }
   @media screen and (max-width: 612px) {
-    height: 100%;
+    height: auto;
     gap: 0;
     padding: 0;
     margin: 0 -32px;
