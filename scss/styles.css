@@ -1820,6 +1820,9 @@ body {
   justify-content: center;
   gap: 16px;
 }
+.business__diagram .box__text p {
+  color: #5B5B55;
+}
 .business__diagram .box__text .box__title {
   color: #e87a7c;
   font-size: 22px;

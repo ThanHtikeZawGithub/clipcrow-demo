@@ -465,6 +465,9 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 16px;
+    p {
+      color: #5B5B55;
+    }
     .box__title {
       color: #e87a7c;
       font-size: 22px;
