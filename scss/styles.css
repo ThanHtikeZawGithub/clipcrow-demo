@@ -1588,6 +1588,7 @@ body {
 .enclose dl .enclose__button a {
   background-color: #C2A731;
   padding: auto 23.5px;
+  height: 22px;
   width: 80px;
   border-radius: 11px;
   text-align: center;
@@ -2351,49 +2352,6 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12.1312%207.5L10.3687%209.2625L16.0937%2015L10.3687%2020.7375L12.1312%2022.5L19.6312%2015L12.1312%207.5Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.blog__details {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 128px;
-  padding: 64px 0 128px;
-}
-.blog__details::before {
-  content: "";
-  display: block;
-  position: absolute;
-  overflow-x: hidden;
-  width: 120vw;
-  height: 600px;
-  background-color: #ffe873;
-  z-index: -1;
-  margin: 3% -10% 0 -10%;
-  transform: rotate(-12deg);
-  top: -470px;
-}
-@media screen and (max-width: 1200px) {
-  .blog__details::before {
-    width: 200%;
-    margin: 3% -10% 0 -38%;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .blog__details::before {
-    top: -610px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .blog__details::before {
-    top: -645px;
-  }
-}
-.blog__details .blog__card {
-  align-items: center;
-}
-.blog__details .blog__card .blog__card-content {
-  height: 252px;
 }
 
 /* reset css */
