@@ -11,7 +11,7 @@ body {
     text-align: center;
     line-height: 52px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding: 16px 0 64px;
     h1 {
       font-size: 32px;
@@ -26,15 +26,15 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 76px 0 64px;
+  padding: 64px 0 64px;
   &::before {
     @include bg-deco(600px, 120vw, $c-primary-050);
     top: -800px;
-    @media screen and (max-width: 1200px) {
-      top: -610px;
+    @media screen and (max-width: 1199px) {
+      top: -640px;
     }
-    @media screen and (max-width: 768px) {
-      top: -645px;
+    @media screen and (max-width: 767px) {
+      top: -680px;
     }
   }
   .profile__content {
@@ -56,11 +56,11 @@ body {
       width: auto;
     }
   }
-  @media screen and (max-width: 1200px) {
-    padding: 0 77px;
+  @media screen and (max-width: 1199px) {
+    padding: 76px 77px 64px;
     max-width: 968px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding: 0 32px;
     .logo {
       img {
@@ -89,11 +89,15 @@ body {
     padding: 0 32px;
     position: relative;
     &::before {
-      top: -55px;
+      top: -72px;
       @include bg-deco(111px, 120vw, $c-primary-060);
-      @media screen and (max-width: 1200px) {
-        top: -8px;
+      @media screen and (max-width: 1199px) {
+        top: -25px;
+        height: 111px;
+      }
+      @media screen and (max-width: 767px) {
         height: 57px;
+        top: -20px;
       }
     }
   }
@@ -169,7 +173,7 @@ body {
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     max-width: 968px;
     padding: 64px 0;
   }
@@ -288,7 +292,7 @@ body {
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     margin: 64px auto 128px;
     max-width: 968px;
   }

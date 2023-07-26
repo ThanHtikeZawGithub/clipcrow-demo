@@ -1297,7 +1297,7 @@ body {
   text-align: center;
   line-height: 52px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page__title {
     padding: 16px 0 64px;
   }
@@ -1313,7 +1313,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 76px 0 64px;
+  padding: 64px 0 64px;
 }
 .profile__kv::before {
   content: "";
@@ -1334,14 +1334,14 @@ body {
     margin: 3% -10% 0 -38%;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .profile__kv::before {
-    top: -610px;
+    top: -640px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .profile__kv::before {
-    top: -645px;
+    top: -680px;
   }
 }
 .profile__kv .profile__content {
@@ -1361,13 +1361,13 @@ body {
   height: 150px;
   width: auto;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .profile__kv {
-    padding: 0 77px;
+    padding: 76px 77px 64px;
     max-width: 968px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .profile__kv {
     padding: 0 32px;
   }
@@ -1397,7 +1397,7 @@ body {
   position: relative;
 }
 .business h4::before {
-  top: -55px;
+  top: -72px;
   content: "";
   display: block;
   position: absolute;
@@ -1415,10 +1415,16 @@ body {
     margin: 3% -10% 0 -38%;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .business h4::before {
-    top: -8px;
+    top: -25px;
+    height: 111px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .business h4::before {
     height: 57px;
+    top: -20px;
   }
 }
 .business .teams {
@@ -1493,7 +1499,7 @@ body {
   text-align: center;
   color: #5B5B55;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .business {
     max-width: 968px;
     padding: 64px 0;
@@ -1614,7 +1620,7 @@ body {
   color: #5B5B55;
   font-weight: 400;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .enclose {
     margin: 64px auto 128px;
     max-width: 968px;
@@ -2618,7 +2624,7 @@ nav {
   width: auto;
   height: 153px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .nav__title {
     padding: 0 1rem;
   }
