@@ -269,13 +269,14 @@ body {
           background-color: $c-secondary-040;
         }
         a {
+          width: 33px;
+          height: 24px;
           margin-bottom: 3px;
           color: $c-neutral-100;
           font-size: 16px;
           line-height: 24px;
           font-weight: 700;
           letter-spacing: 0.15px;
-          position: relative;
         }
       }
   }
@@ -338,6 +339,9 @@ body {
           width: 52px;
           padding: 0 13.5px;
           a {
+            margin-bottom: 2px;
+            width: 25px;
+            height: 16px;
             font-size: 12px;
             line-height: 16px;
             letter-spacing: 0.4px;

@@ -1558,13 +1558,14 @@ body {
   background-color: #d7c064;
 }
 .enclose dl .enclose__button .button a {
+  width: 33px;
+  height: 24px;
   margin-bottom: 3px;
   color: #ffffff;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
   letter-spacing: 0.15px;
-  position: relative;
 }
 .enclose dl dd {
   color: #5B5B55;
@@ -1631,6 +1632,9 @@ body {
     padding: 0 13.5px;
   }
   .enclose dl .enclose__button .button a {
+    margin-bottom: 2px;
+    width: 25px;
+    height: 16px;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.4px;
@@ -2374,6 +2378,9 @@ body {
 .blog__details .blog__card-wrapper {
   gap: 128px;
 }
+.blog__details .blog__card {
+  align-items: center;
+}
 .blog__details .blog__card .blog__card-content {
   height: 252px;
 }
@@ -2411,6 +2418,9 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
+}
+.blog__details .details {
+  color: #491919;
 }
 
 /* reset css */
