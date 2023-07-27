@@ -2122,6 +2122,12 @@ body {
     padding: 64px 77px;
   }
 }
+@media screen and (max-width: 767px) {
+  .blog__maincont {
+    flex-direction: column;
+    padding: 0 32px;
+  }
+}
 
 .blog__link {
   display: flex;
@@ -2196,6 +2202,11 @@ body {
   gap: 32px;
   width: 768px;
 }
+@media screen and (max-width: 767px) {
+  .blog__card-wrapper {
+    width: 100%;
+  }
+}
 .blog__card-wrapper.page-1 .blog__card-content {
   background-image: url("/images/blog-illust.png");
 }
@@ -2221,7 +2232,9 @@ body {
 }
 @media screen and (max-width: 1199px) {
   .blog__card-wrapper .blog__card .blog__card-content {
+    height: 264px;
     width: auto;
+    padding: 16px;
   }
 }
 .blog__card-wrapper .blog__card .blog__card-content.card-1 {
@@ -2249,14 +2262,14 @@ body {
   background-color: #EAEAEA;
 }
 .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside {
-  border-width: 2px;
-  border-style: solid;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 32px;
   gap: 32px;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
 }
 .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside.card-1 {
   border-color: #348b76;
@@ -2278,13 +2291,13 @@ body {
 }
 .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside .blog__title {
   color: #491919;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: 36px; /* 128.571% */
 }
 .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside .blog__lead {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
@@ -2294,12 +2307,38 @@ body {
   padding: 16px 32px;
   border: 1px solid #491919;
   color: #491919;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 24px; /* 150% */
   letter-spacing: 0.15px;
-  box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+  .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside {
+    padding: 32px 16px;
+    gap: 16px;
+  }
+  .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside .blog__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside .blog__lead {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    width: 250px;
+    height: 48px;
+    line-clamp: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside .blog__category {
+    height: 32px;
+    padding: 8px 16px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
 }
 
 .blog__pagination {
@@ -2313,7 +2352,7 @@ body {
 .blog__pagination .pagination__section {
   display: flex;
   flex-direction: row;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
@@ -2334,9 +2373,6 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12.1312%207.5L10.3687%209.2625L16.0937%2015L10.3687%2020.7375L12.1312%2022.5L19.6312%2015L12.1312%207.5Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: center;
-}
-.blog__pagination .details {
-  color: #491919;
 }
 
 .blog__details {
@@ -2391,7 +2427,7 @@ body {
 }
 .blog__details .blog__details-content .blog__details-lead {
   color: #5B5B55;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 32px;
 }
@@ -2401,21 +2437,21 @@ body {
   gap: 16px;
 }
 .blog__details .blog__details-content .blog__details-table .table-title {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 36px;
   color: #5B5B55;
 }
 .blog__details .blog__details-content .details__content .details__content-title {
   color: #5B5B55;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 700;
   line-height: 44px;
   margin-bottom: 16px;
 }
 .blog__details p {
   color: #5B5B55;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 32px;
 }

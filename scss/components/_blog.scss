@@ -21,6 +21,10 @@
   @media screen and (max-width: 1199px) {
     padding: 64px 77px;
   }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    padding: 0 32px;
+  }
 }
 
 //=====================================================================================
@@ -102,6 +106,9 @@
   flex-direction: column;
   gap: 32px;
   width: 768px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
   &.page-1 {
       .blog__card-content {
           background-image: url("/images/blog-illust.png");
@@ -128,7 +135,9 @@
       background-size: contain;
       position: relative;
       @media screen and (max-width: 1199px) {
+        height: 264px;
         width: auto;
+        padding: 16px;
       }
       &.card-1 {
         border-color: $blog-border-card1;
@@ -156,6 +165,11 @@
       }
 
       .blog__card-inside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px;
+        gap: 32px;
         border-width: 2px;
         border-style: solid;
         cursor: pointer;
@@ -177,20 +191,15 @@
         &.card-6 {
           border-color: $blog-border-card6;
         }
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 32px;
-        gap: 32px;
         .blog__title {
           color: $c-tertiary-000;
-          font-size: 28px;
+          font-size: 1.75rem;
           font-style: normal;
           font-weight: 700;
           line-height: 36px; /* 128.571% */
         }
         .blog__lead {
-          font-size: 24px;
+          font-size: 1.5rem;
           font-style: normal;
           font-weight: 400;
           line-height: 32px;
@@ -200,12 +209,36 @@
           padding: 16px 32px;
           border: 1px solid $c-tertiary-000;
           color: $c-tertiary-000;
-          font-size: 16px;
-          font-style: normal;
+          font-size: 1rem;
           font-weight: 400;
           line-height: 24px; /* 150% */
           letter-spacing: 0.15px;
-          box-sizing: border-box;
+        }
+        @media screen and (max-width: 767px) {
+          padding: 32px 16px;
+          gap: 16px;
+          .blog__title {
+            font-size: 22px;
+            line-height: 28px;
+          }
+          .blog__lead {
+            font-size: 1rem;
+            line-height: 24px;
+            letter-spacing: 0.15px; 
+            width: 250px;
+            height: 48px;
+            line-clamp: 2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .blog__category {
+            height: 32px;
+            padding: 8px 16px;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.4px; 
+          }
         }
       }
     }
@@ -225,7 +258,7 @@
     .pagination__section {
         display: flex;
         flex-direction: row;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
@@ -248,8 +281,5 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-    }
-    .details {
-      color: $c-tertiary-000;
     }
 }
