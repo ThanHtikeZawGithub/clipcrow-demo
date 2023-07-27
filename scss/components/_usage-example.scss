@@ -1,5 +1,9 @@
 @import "../abstracts/mixins";
 
+
+//page title
+//======================================================================
+
 .example__title {
   display: flex;
   flex-direction: column;
@@ -54,6 +58,9 @@
   }
 }
 
+//===================================================================
+//example case wrapper 
+
 .case__wrapper {
   display: flex;
   flex-direction: row;
@@ -66,6 +73,9 @@
   }
 }
 
+//========================================================================
+//example case arrangement for each step including responsive
+
 .step__wrapper {
   display: flex;
   flex-direction: column;
@@ -77,7 +87,6 @@
       gap: 128px;
     }
   }
-
   &#step3 {
     .example__case {
       gap: 128px;
@@ -91,12 +100,12 @@
     &#step1 {
       .example__case {
         height: 640px;
-        .case__wrapper {
-          height: 288px;
-        }
         flex-direction: column;
         gap: 64px;
         margin: 0 -24px;
+        .case__wrapper {
+          height: 288px;
+        }
       }
     }
     &#step2 {
@@ -116,6 +125,7 @@
       }
     }
   }
+
   @media screen and (max-width: 768px) {
     padding: 64px 32px;
   }
@@ -154,7 +164,6 @@
     &#step3 {
       .example__case {
         gap: 0;
-
         .case__wrapper {
           gap: 0;
           height: auto;
@@ -165,14 +174,6 @@
       }
     }
     .case {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: $c-secondary-095;
-      height: 240px;
-      width: 240px;
-      margin-bottom: -3rem;
-      border-radius: 100%;
       &:last-child {
         margin-bottom: 0;
       }
@@ -182,32 +183,12 @@
       &.left {
         align-self: flex-start;
       }
-      p {
-        margin: 0;
-        text-align: center;
-        padding: 0 40px;
-      }
-      .roll {
-        font-size: 1rem;
-        font-weight: 700;
-        line-height: 1.5rem;
-      }
-      .image-container {
-        font-size: 0.875rem;
-        img {
-          margin: 0;
-          height: 100px;
-          width: auto;
-          object-fit: contain;
-        }
-      }
-      .action {
-        font-size: 0.875rem;
-        z-index: 10;
-      }
     }
   }
 }
+
+//================================================================================
+//label text for each step
 
 .step-wrapper__text {
   display: flex;
@@ -233,6 +214,8 @@
   }
 }
 
+//===========================================================================================
+//title align to the left
 
 .ex__title-left {
   display: flex;
@@ -261,6 +244,9 @@
     }
   }
 }
+
+//========================================================================================
+//title align to the right
 
 .ex__title-right {
   display: flex;
@@ -394,16 +380,7 @@
     .case {
       height: 240px;
       width: 240px;
-      margin-bottom: -2rem;
-      &.last-child {
-        margin-bottom: 0;
-      }
-      &.right {
-        align-self: flex-end;
-      }
-      &.left {
-        align-self: flex-start;
-      }
+      margin-bottom: -3rem;
       p {
         margin: 0;
         text-align: center;
@@ -412,6 +389,7 @@
       .roll {
         font-size: 1rem;
         font-weight: 700;
+        line-height: 1.5rem;
       }
       .image-container {
         font-size: 0.875rem;
@@ -492,6 +470,9 @@
     }
   }
 }
+
+//=================================================================================
+//download section
 
 .example__download {
   padding: 64px 0 128px;

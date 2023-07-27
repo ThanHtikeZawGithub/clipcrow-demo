@@ -1,3 +1,5 @@
+//content page main content
+
 .content__maincont {
   display: flex;
   flex-direction: column;
@@ -32,10 +34,6 @@
       height: 48px;
       margin: 0;
       box-sizing: border-box;
-      border-color: #03e9f4;
-      &:active {
-        border-color: red;
-      }
     }
     input:valid ~ label {
       top: -20px;

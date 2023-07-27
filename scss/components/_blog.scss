@@ -1,3 +1,7 @@
+
+//========================================================================================
+//blog main content section
+
 .blog__maincont {
   display: flex;
   flex-direction: row;
@@ -14,68 +18,84 @@
       top: -645px;
     }
   }
-  .blog__link {
+  @media screen and (max-width: 1199px) {
+    padding: 64px 77px;
+  }
+}
+
+//=====================================================================================
+// blog details link 
+
+.blog__link {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 32px;
+  flex-grow: 1;
+  background-color: $c-tertiary-095;
+  .blog__monthly-title,
+  .blog__latest-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  .blog__latest {
     display: flex;
     flex-direction: column;
-    gap: 64px;
-    padding: 32px;
-    flex-grow: 1;
-    background-color: $c-tertiary-095;
-    .blog__monthly-title,
-    .blog__latest-title {
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 28px;
-    }
-    .blog__latest {
+    gap: 16px;
+  }
+  .blog__monthly {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .blog-monthly-section {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-    }
-    .blog__monthly {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      .blog-monthly-section {
+      position: relative;
+      .blog__monthly-year {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        cursor: pointer;
+        &:focus {
+          .monthly__dropdown-icon {
+            background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.75%2011.875L15%2018.125L21.25%2011.875H8.75Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
+          }
+        }
+        .monthly__dropdown-icon {
+          width: 30px;
+          height: 30px;
+          background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M11.875%2021.25L18.125%2015L11.875%208.75V21.25Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
+        }
+      }
+      .monthly__dropdown-content {
+        gap: 4px;
+        display: none;
+        top: 100%;
+        left: 64px;
+        background-color: transparent;
+      }
+      .blog__monthly-year:focus + .monthly__dropdown-content,
+      .monthly__dropdown-content:focus-within {
         display: flex;
         flex-direction: column;
-        position: relative;
-        .blog__monthly-year {
-          display: flex;
-          flex-direction: row;
-          justify-items: center;
-          cursor: pointer;
-          &:focus {
-            .monthly__dropdown-icon {
-              background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.75%2011.875L15%2018.125L21.25%2011.875H8.75Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
-            }
-          }
-          .monthly__dropdown-icon {
-            width: 30px;
-            height: 30px;
-            background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M11.875%2021.25L18.125%2015L11.875%208.75V21.25Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
-          }
-        }
-        .monthly__dropdown-content {
-          gap: 4px;
-          display: none;
-          top: 100%;
-          left: 64px;
-          background-color: transparent;
-        }
-        .blog__monthly-year:focus + .monthly__dropdown-content,
-        .monthly__dropdown-content:focus-within {
-          display: flex;
-          flex-direction: column;
-          padding-bottom: 2rem;
-          .monthly__dropdown-icon {
-            background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
-          }
+        padding-bottom: 2rem;
+        .monthly__dropdown-icon {
+          background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
         }
       }
     }
   }
 }
+
+//=============================================================================
+// blog cards
+/* there are 2 types of blog cards in blog section
+  1. card with no background images
+  2. card with background images 
+
+  Card with background images are page-1 and page-2
+*/
 
 .blog__card-wrapper {
   display: flex;
@@ -99,6 +119,7 @@
     gap: 16px;
     .blog__card-content {
       height: 421px;
+      width: 768px;
       padding: 32px;
       border-width: 1px;
       border-style: solid;
@@ -106,6 +127,9 @@
       background-position: center;
       background-size: contain;
       position: relative;
+      @media screen and (max-width: 1199px) {
+        width: auto;
+      }
       &.card-1 {
         border-color: $blog-border-card1;
         background-color: $blog-bg-card1;
@@ -188,6 +212,9 @@
   }
 }
 
+//=========================================================================
+//blog pagination in the bottom
+
 .blog__pagination {
     display: flex;
     flex-direction: row;
@@ -221,10 +248,8 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-    //     &::before {
-    //         display: block;
-    //         position: absolute;
-           
-    // }
+    }
+    .details {
+      color: $c-tertiary-000;
     }
 }

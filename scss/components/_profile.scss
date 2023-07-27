@@ -253,24 +253,31 @@ body {
     .enclose__button {
       display: flex;
       flex-direction: row;
+      align-items: center;
       box-sizing: border-box;
       gap: 12px;
-    a {
-      background-color: $c-secondary-030;
-      padding: auto 23.5px;
-      height: 22px;
-      width: 80px;
-      border-radius: 11px;
-      text-align: center;
-      &:hover {
-        background-color: $c-secondary-040;
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 22px;
+        width: 80px;
+        border-radius: 11px;
+        padding: 0 23.5px;
+        background-color: $c-secondary-030;
+        &:hover {
+          background-color: $c-secondary-040;
+        }
+        a {
+          margin-bottom: 3px;
+          color: $c-neutral-100;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 700;
+          letter-spacing: 0.15px;
+          position: relative;
+        }
       }
-      color: $c-neutral-100;
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 700;
-      letter-spacing: 0.15px;
-    }
   }
     dd {
       color: $c-neutral-020;
@@ -325,18 +332,16 @@ body {
         }
       }
       .enclose__button {
-        display: flex;
-        flex-direction: row;
-        box-sizing: border-box;
         gap: 8px;
-        a {
-        height: 16px;
-        width: 52px;
-        padding: 0 13.5px;
-        font-size: 12px;
-        line-height: 16px;
-        letter-spacing: 0.4px;
-        text-align: center;
+        .button {
+          height: 16px;
+          width: 52px;
+          padding: 0 13.5px;
+          a {
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.4px;
+            }
         }
       }
     }
@@ -442,7 +447,8 @@ body {
       height: 192px;
       padding: 96px 16px 16px;
       img {
-        height: 70px;
+        height: 80px;
+        width: 139px;
       }
     }
   }
