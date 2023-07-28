@@ -2,6 +2,10 @@ body {
   color: $c-neutral-020;
 }
 
+
+//===============================================================
+// profile page title 
+
 .page__title {
   padding: 48px 0 64px;
   h1 {
@@ -19,6 +23,9 @@ body {
     }
   }
 }
+
+//===============================================================
+//profile main content section
 
 .profile__kv {
   display: flex;
@@ -70,6 +77,9 @@ body {
     }
   }
 }
+
+//===============================================================
+/* business section (2nd section) */
 
 .business {
   display: flex;
@@ -235,6 +245,9 @@ body {
   }
 }
 
+//=======================================================
+//enclose section (3rd section)
+
 .enclose {
   display: flex;
   flex-direction: column;
@@ -352,6 +365,9 @@ body {
   }
 }
 
+//============================================
+//business diagram
+
 .business__diagram {
   width: 100%;
   max-width: 100%;
@@ -376,8 +392,8 @@ body {
     top: 0;
     gap: 32px;
     padding: 32px 32px 135px;
-    background: #ffffff;
-    border: 1px solid #c2a731;
+    background: $c-neutral-100;
+    border: 1px solid $c-secondary-030;
     .box__title,
     p {
       text-align: right;
@@ -403,8 +419,8 @@ body {
     height: 103px;
     top: 224px;
     z-index: 1;
-    background: #ffeb87;
-    border: 2px solid #c2a731;
+    background: $c-primary-060;
+    border: 2px solid $c-secondary-030;
     @media screen and (max-width: 1199px) {
       height: 135px;
     }
@@ -438,8 +454,8 @@ body {
     right: 0;
     bottom: 0;
     padding: 135px 32px 32px;
-    background: #ffffff;
-    border: 1px solid #c2a731;
+    background: $c-tertiary-100;
+    border: 1px solid $c-secondary-030;
     @media screen and (max-width: 1199px) {
       height: 360px;
       padding-top: 167px;
@@ -481,10 +497,10 @@ body {
     justify-content: center;
     gap: 16px;
     p {
-      color: #5B5B55;
+      color: $c-neutral-020;
     }
     .box__title {
-      color: #e87a7c;
+      color: $c-tertiary-040;
       font-size: 22px;
       font-weight: 700;
       line-height: 28px;

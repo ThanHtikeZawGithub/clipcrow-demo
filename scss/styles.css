@@ -1335,6 +1335,7 @@ body {
   }
 }
 
+/* business section (2nd section) */
 .business {
   display: flex;
   flex-direction: column;
@@ -1671,7 +1672,7 @@ body {
   gap: 32px;
   padding: 32px 32px 135px;
   background: #ffffff;
-  border: 1px solid #c2a731;
+  border: 1px solid #C2A731;
 }
 .business__diagram .top-box .box__title,
 .business__diagram .top-box p {
@@ -1702,7 +1703,7 @@ body {
   top: 224px;
   z-index: 1;
   background: #ffeb87;
-  border: 2px solid #c2a731;
+  border: 2px solid #C2A731;
 }
 @media screen and (max-width: 1199px) {
   .business__diagram .center-box {
@@ -1745,7 +1746,7 @@ body {
   bottom: 0;
   padding: 135px 32px 32px;
   background: #ffffff;
-  border: 1px solid #c2a731;
+  border: 1px solid #C2A731;
 }
 @media screen and (max-width: 1199px) {
   .business__diagram .bottom-box {
@@ -2126,6 +2127,7 @@ body {
   .blog__maincont {
     flex-direction: column;
     padding: 0 32px;
+    gap: 32px;
   }
 }
 
@@ -2134,8 +2136,14 @@ body {
   flex-direction: column;
   gap: 64px;
   padding: 32px;
+  margin-bottom: 120px;
   flex-grow: 1;
   background-color: #FAF9ED;
+}
+@media screen and (max-width: 767px) {
+  .blog__link {
+    margin-bottom: 0;
+  }
 }
 .blog__link .blog__monthly-title,
 .blog__link .blog__latest-title {
@@ -2143,10 +2151,22 @@ body {
   font-weight: 500;
   line-height: 28px;
 }
+@media screen and (max-width: 767px) {
+  .blog__link .blog__monthly-title,
+.blog__link .blog__latest-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.15px;
+  }
+}
 .blog__link .blog__latest {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
+}
+.blog__link .blog__latest .blog__latest-content p {
+  margin-bottom: 4px;
 }
 .blog__link .blog__monthly {
   display: flex;
@@ -2205,6 +2225,7 @@ body {
 @media screen and (max-width: 767px) {
   .blog__card-wrapper {
     width: 100%;
+    align-items: center;
   }
 }
 .blog__card-wrapper.page-1 .blog__card-content {
@@ -2220,6 +2241,7 @@ body {
   gap: 16px;
 }
 .blog__card-wrapper .blog__card .blog__card-content {
+  align-items: center;
   height: 421px;
   width: 768px;
   padding: 32px;
@@ -2230,9 +2252,9 @@ body {
   background-size: contain;
   position: relative;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .blog__card-wrapper .blog__card .blog__card-content {
-    height: 264px;
+    height: auto;
     width: auto;
     padding: 16px;
   }
@@ -2318,6 +2340,7 @@ body {
     gap: 16px;
   }
   .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside .blog__title {
+    text-align: center;
     font-size: 22px;
     line-height: 28px;
   }
@@ -2327,10 +2350,10 @@ body {
     letter-spacing: 0.15px;
     width: 250px;
     height: 48px;
-    line-clamp: 2;
-    white-space: nowrap;
+    display: -webkit-box; /* Required for Safari and some old versions of iOS */
+    -webkit-line-clamp: 2; /* Number of lines to display */
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
   }
   .blog__card-wrapper .blog__card .blog__card-content .blog__card-inside .blog__category {
     height: 32px;
@@ -2346,7 +2369,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 0 128px;
+  padding: 32px 0 0;
   gap: 128px;
 }
 .blog__pagination .pagination__section {
@@ -2373,6 +2396,22 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12.1312%207.5L10.3687%209.2625L16.0937%2015L10.3687%2020.7375L12.1312%2022.5L19.6312%2015L12.1312%207.5Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: center;
+}
+@media screen and (max-width: 767px) {
+  .blog__pagination {
+    padding: 0;
+  }
+  .blog__pagination .pagination__section {
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  .blog__pagination .pagination__section .pagination__nav {
+    height: 24px;
+    width: 24px;
+    top: -10px;
+  }
 }
 
 .blog__details {
