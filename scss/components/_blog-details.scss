@@ -4,6 +4,12 @@
     justify-content: center;
     gap: 64px;
     padding: 112px 0 128px;
+    @media screen and (max-width: 1199px) {
+        padding: 64px 0;
+        flex-direction: column;
+        max-width: 768px;
+        margin: 0 auto;
+      }
     @media screen and (max-width: 767px) {
         flex-direction: column;
         padding: 48px 32px 64px;
@@ -12,16 +18,6 @@
             display: none;
         }
     }
-    &::before {
-        @include bg-deco(600px, 120vw, $c-primary-050);
-        top: -500px;
-        @media screen and (max-width: 1200px) {
-          top: -610px;
-        }
-        @media screen and (max-width: 767px) {
-            top: -520px;
-          }
-      }
     .blog__card-wrapper {
         gap: 128px;
         @media screen and (max-width: 767px) {

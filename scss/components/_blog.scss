@@ -1,6 +1,43 @@
 
 //========================================================================================
 //blog main content section
+.blog__page-title {
+  padding: 48px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  &.details-title {
+    padding: 0;
+  }
+  &::before {
+    @include bg-deco(600px, 120vw, $c-primary-050);
+    top: -650px;
+    @media screen and (max-width: 1199px) {
+      top: -600px;
+    }
+    @media screen and (max-width: 767px) {
+      top: -600px;
+    }
+  }
+  h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: $c-neutral-020;
+    text-align: center;
+    line-height: 52px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 16px 0 64px;
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}
+
+
+
 
 .blog__maincont {
   display: flex;
@@ -8,18 +45,13 @@
   justify-content: center;
   gap: 64px;
   padding: 64px 0;
-  &::before {
-    @include bg-deco(600px, 120vw, $c-primary-050);
-    top: -500px;
-    @media screen and (max-width: 1200px) {
-      top: -400px;
-    }
-    @media screen and (max-width: 767px) {
-      top: -545px;
-    }
-  }
+  overflow-x: hidden;
+
   @media screen and (max-width: 1199px) {
-    padding: 64px 77px;
+    padding: 64px 0;
+    flex-direction: column;
+    max-width: 768px;
+    margin: 0 auto;
   }
   @media screen and (max-width: 767px) {
     flex-direction: column;
@@ -136,6 +168,9 @@
   flex-direction: column;
   gap: 32px;
   width: 768px;
+  @media screen and (max-width: 1199px) {
+    max-width: 768px;
+  }
   @media screen and (max-width: 767px) {
     width: 100%;
     align-items: center;
@@ -325,6 +360,9 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+    }
+    @media screen and (max-width: 1199px) {
+      width: 100%;
     }
     @media screen and (max-width: 767px) {
       width: 100%;
