@@ -1,3 +1,184 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    gap: 16px;
+}
+}
+.did-floating-label-content { 
+  position:relative; 
+}
+.did-floating-label {
+  color:$c-neutral-020; 
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.15px; 
+  position:absolute;
+  pointer-events:none;
+  left:15px;
+  top:11px;
+  padding:0 5px;
+  background: $c-neutral-100;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.25px; 
+  }
+}
+.did-floating-input {
+  font-size: 16px;
+  display:block;
+  width:100%;
+  height: 48px;
+  padding: 0 20px;
+  background: $c-neutral-100;
+  color: $c-neutral-020;
+  border: 1px solid $input-outline;
+  border-radius: 4px;
+  box-sizing: border-box;
+  &:focus{
+    outline:none;
+    ~ .did-floating-label{
+      top:-8px;
+      font-size:12px;
+      @media screen and (max-with: 767px) {
+        font-size: 11px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    height: 44px;
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.25px; 
+  }
+}
+
+.did-floating-textarea {
+  font-size: 16px;
+  display:block;
+  width:100%;
+  padding: 20px 20px;
+  background: $c-neutral-100;
+  color: $c-neutral-020;
+  border: 1px solid $input-outline;
+  border-radius: 4px;
+  box-sizing: border-box;
+  &:focus{
+    outline:none;
+    ~ .did-floating-label{
+      top:-8px;
+      font-size:13px;
+      @media screen and (max-with: 767px) {
+        font-size: 11px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.25px; 
+  }
+}
+
+.radio__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 16px;
+  .radio__title {
+    padding: 16px 0;
+  }
+  .radio__section {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 16px;
+    padding-left: 8px;
+  }
+}
+
+select.did-floating-select {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select.did-floating-select::-ms-expand {
+  display: none;
+}
+
+.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+  top:-8px;
+  font-size:13px;
+}
+
+.did-floating-textarea:not(:placeholder-shown) ~ .did-floating-label {
+  top:-8px;
+  font-size:13px;
+}
+
+.did-floating-select[value=""]:focus ~ .did-floating-label {
+  top:11px;
+  font-size:13px;
+}
+
+.did-floating-textarea[value=""]:focus ~ .did-floating-label {
+  top: 11px;
+  font-size: 13px;
+}
+
+
+
+.content__submit-button {
+  margin: 0 auto;
+  width: 160px;
+  height: 64px;
+  background-color: $c-primary-040;
+  border: none;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  border-radius: 100px;
+  color: $c-neutral-020;
+  margin-top: 32px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+  @media screen and (max-width: 767px) {
+    height: 40px;
+    width: 105px;
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.25px;
+    margin-top: 16px;
+}
+}
+
+.content__page-title {
+  padding: 48px 0 64px;
+  h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: $c-neutral-020;
+    text-align: center;
+    line-height: 52px;
+  }
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}
+
 //content page main content
 
 .content__maincont {
@@ -6,7 +187,7 @@
   align-items: center;
   gap: 64px;
   max-width: 613px;
-  padding: 36px 0 128px;
+  padding: 0 0 128px;
   position: relative;
   &::before {
     @include bg-deco(600px, 120vw, $c-primary-050);
@@ -15,114 +196,14 @@
       top: -610px;
     }
     @media screen and (max-width: 768px) {
-      top: -645px;
+      top: -735px;
     }
   }
   @media screen and (max-width: 768px) {
-    padding: 36px 32px 64px;
+    padding: 0 32px 64px;
     gap: 32px;
   }
 
-  .input-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    input {
-      width: 100%;
-      padding: 12px;
-      height: 48px;
-      margin: 0;
-      box-sizing: border-box;
-    }
-    input:valid ~ label {
-      top: -20px;
-    }
-
-    label {
-      position: absolute;
-      top: 0;
-      left: 12px;
-      padding: 10px 0;
-      font-size: 16px;
-      color: #000;
-      pointer-events: none;
-      transition: 0.5s;
-      &:hover {
-        top: -20px;
-      }
-    }
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 32px;
-
-    label {
-      padding: 16px 0;
-    }
-
-    .radio__wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      padding: 0 16px;
-
-      .radio__section {
-        display: flex;
-        flex-direction: row;
-        gap: 8px;
-        padding-left: 8px;
-      }
-    }
-
-    .error-message {
-      display: none;
-    }
-
-    input[type="submit"] {
-      margin: 0 auto;
-      width: 160px;
-      height: 64px;
-      background-color: $c-primary-040;
-      border: none;
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 32px;
-      border-radius: 100px;
-      color: $c-neutral-020;
-      margin-top: 32px;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-
-    textarea {
-      width: 100%;
-      padding: 12px;
-    }
-
-    //media querie for form
-    @media screen and (max-width: 768px) {
-      gap: 16px;
-      input[type="text"] {
-        height: 44px;
-      }
-      input[type="submit"] {
-        height: 40px;
-        width: 105px;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 20px; /* 142.857% */
-        letter-spacing: 0.25px;
-        margin-top: 16px;
-      }
-    }
-  }
   .confirm__title {
     display: flex;
     flex-direction: column;

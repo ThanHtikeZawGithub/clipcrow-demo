@@ -20,22 +20,22 @@
     </nav>
   </header>
   <main>
-    <section class="page__title">
+    <section class="content__page-title">
       <h1>お問い合わせ</h1>
     </section>
     <section class="content__maincont">
       <p>土日祝を除く3営業日以内に担当者よりご連絡させていただきます。お問い合わせ内容により、ご回答までにお時間をいただく場合または、ご回答が出来ない場合がございます。</p>
-      <form action="content_confirm.html" target="_blank">
-        <div class="input-box">
-          <label for="name">お名前 *</label>
-          <input type="text" id="name" required="required">
+      <form class="container" action="content_confirm.html">
+        <div class="did-floating-label-content">
+          <input class="did-floating-input" type="text" placeholder=" ">
+          <label class="did-floating-label">お名前 *</label>
         </div>
-        <div class="input-box">
-          <label for="email">メールアドレス *</label>
-          <input type="text" id="email" required>
+          <div class="did-floating-label-content">
+          <input class="did-floating-input" type="text" placeholder=" ">
+          <label class="did-floating-label">メールアドレス *</label>
         </div>
         <div class="radio__wrapper">
-          <label for="questions">ご用件 *</label>
+          <label class="radio__title" for="questions">ご用件 *</label>
           <div class="radio__section">
             <input type="radio" id="dev" value="dev" name="questions">
             <label for="dev">開発案件プロデュースのご依頼・ご相談</label>
@@ -49,11 +49,11 @@
             <label for="other">その他</label>
           </div>
         </div>
-        <div class="input-box">
-          <label for="text">お問い合わせ内容 *</label>
-          <textarea name="content" id="text" cols="30" rows="8" required></textarea>
+        <div class="did-floating-label-content">
+          <textarea class="did-floating-textarea" placeholder="" name="content" id="text" cols="30" rows="8" required></textarea>
+          <label class="did-floating-label">お問い合わせ内容 *</label>
         </div>
-        <input type="submit" value="内容確認" />
+        <input class="content__submit-button" type="submit" value="内容確認" />
       </form>
     </section>
   </main>

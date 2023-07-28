@@ -12,10 +12,10 @@
     @include bg-deco(600px, 120vw, $c-primary-050);
     top: -500px;
     @media screen and (max-width: 1200px) {
-      top: -610px;
+      top: -400px;
     }
-    @media screen and (max-width: 768px) {
-      top: -645px;
+    @media screen and (max-width: 767px) {
+      top: -545px;
     }
   }
   @media screen and (max-width: 1199px) {
@@ -41,6 +41,8 @@
   background-color: $c-tertiary-095;
   @media screen and (max-width: 767px) {
     margin-bottom: 0;
+    gap: 32px;
+    margin: 0 -32px;
   }
   .blog__monthly-title,
   .blog__latest-title {
@@ -68,6 +70,9 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    @media screen and (max-width: 767px) {
+      gap: 8px;
+    }
     .blog-monthly-section {
       display: flex;
       flex-direction: column;
@@ -76,7 +81,9 @@
         display: flex;
         flex-direction: row;
         justify-items: center;
+        align-items: center;
         cursor: pointer;
+        gap: 8px;
         &:focus {
           .monthly__dropdown-icon {
             background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.75%2011.875L15%2018.125L21.25%2011.875H8.75Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
@@ -86,20 +93,27 @@
           width: 30px;
           height: 30px;
           background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M11.875%2021.25L18.125%2015L11.875%208.75V21.25Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
+          @media screen and (max-width: 767px) {
+            width: 25px;
+            height: 25px;
+          }
         }
       }
       .monthly__dropdown-content {
         gap: 4px;
         display: none;
         top: 100%;
-        left: 64px;
+        padding: 0;
+        padding-left: 64px;
         background-color: transparent;
+        @media screen and (max-width: 767px) {
+          padding-left: 48px;
+        }
       }
       .blog__monthly-year:focus + .monthly__dropdown-content,
       .monthly__dropdown-content:focus-within {
         display: flex;
         flex-direction: column;
-        padding-bottom: 2rem;
         .monthly__dropdown-icon {
           background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
         }
@@ -141,9 +155,16 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    // @media screen and (max-width: 767px) { 
-    //   align-items: center;
-    // }
+    width: 100%;
+    @media screen and (max-width: 767px) { 
+      .blog__date {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+        letter-spacing: 0.4px; 
+      }
+    }
     .blog__card-content {
       align-items: center;
       height: 421px;
@@ -157,7 +178,7 @@
       position: relative;
       @media screen and (max-width: 767px) {
         height: auto;
-        width: auto;
+        width: 100%;
         padding: 16px;
       }
       &.card-1 {
@@ -272,9 +293,10 @@
 
 .blog__pagination {
     display: flex;
+    width: 1200px;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding: 32px 0 0;
     gap: 128px;
     .pagination__section {
@@ -284,7 +306,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
-        color: $c-neutral-020;
+        color: #491919;
         position: relative;
         cursor: pointer;
         gap: 8px;
@@ -305,12 +327,21 @@
         }
     }
     @media screen and (max-width: 767px) {
+      width: 100%;
       padding: 0;
       .pagination__section {
-        padding: 6px 12px;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.25px;
+        padding: 8px 12px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.15px; 
+        &.start {
+          align-self: flex-start;
+        }
+        &.end {
+          align-self: flex-end;
+        }
         .pagination__nav {
           height: 24px;
           width: 24px;
