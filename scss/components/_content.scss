@@ -42,7 +42,6 @@
   color: $c-neutral-020;
   border: 1px solid $input-outline;
   border-radius: 4px;
-  box-sizing: border-box;
   &:focus{
     outline:none;
     ~ .did-floating-label{
@@ -53,6 +52,12 @@
       }
     }
   }
+  &:invalid {
+    border: 1px solid $input-error-message;
+    ~ .error-message {
+      display: block;
+    }
+  }
   @media screen and (max-width: 767px) {
     height: 44px;
     font-size: 14px;
@@ -60,6 +65,14 @@
     letter-spacing: 0.25px; 
   }
 }
+
+.error-message {
+  display: none;
+  color: $input-error-message;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
 
 .did-floating-textarea {
   font-size: 16px;
@@ -103,15 +116,6 @@
     padding: 16px;
     padding-left: 8px;
   }
-}
-
-select.did-floating-select {
-  -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-select.did-floating-select::-ms-expand {
-  display: none;
 }
 
 .did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
@@ -190,10 +194,10 @@ select.did-floating-select::-ms-expand {
   padding: 0 0 128px;
   position: relative;
   &::before {
-    @include bg-deco(600px, 120vw, $c-primary-050);
+    @include bg-deco(600px, 130vw, $c-primary-050);
     top: -800px;
     @media screen and (max-width: 1200px) {
-      top: -610px;
+      top: -770px;
     }
     @media screen and (max-width: 768px) {
       top: -735px;

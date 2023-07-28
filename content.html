@@ -10,7 +10,6 @@
     rel="stylesheet" />
   <title>Clipcrow</title>
 </head>
-
 <body>
   <header>
     <nav class="nav">
@@ -27,12 +26,14 @@
       <p>土日祝を除く3営業日以内に担当者よりご連絡させていただきます。お問い合わせ内容により、ご回答までにお時間をいただく場合または、ご回答が出来ない場合がございます。</p>
       <form class="container" action="content_confirm.html">
         <div class="did-floating-label-content">
-          <input class="did-floating-input" type="text" placeholder=" ">
+          <input class="did-floating-input" type="text" placeholder=" " required>
           <label class="did-floating-label">お名前 *</label>
+          <div class="error-message">お名前を入力してください</div>
         </div>
           <div class="did-floating-label-content">
-          <input class="did-floating-input" type="text" placeholder=" ">
+          <input class="did-floating-input" type="text" placeholder=" " required>
           <label class="did-floating-label">メールアドレス *</label>
+          <div class="error-message">メールアドレスを入力してください</div>
         </div>
         <div class="radio__wrapper">
           <label class="radio__title" for="questions">ご用件 *</label>
