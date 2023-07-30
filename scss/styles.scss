@@ -31,6 +31,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   background-color: $c-neutral-100;
   overflow: hidden;
+  color: $c-neutral-020;
 }
 
 //===============================================
@@ -40,7 +41,7 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 52px 12px;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     padding: 28px 32px;
   }
 }
@@ -54,7 +55,7 @@ section {
     font-size: 22px;
     color: $c-neutral-070;
     line-height: 28px;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       width: 100%;
       height: 60px;
       font-weight: 500;
@@ -65,7 +66,7 @@ section {
     font-size: 22px;
     color: $c-tertiary-099;
     line-height: 28px;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       width: 100%;
       height: 60px;
       font-weight: 500;
@@ -92,10 +93,12 @@ section {
 
 //==============================================================================
 // header
-
-nav {
+header {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+nav {
   padding: 1rem 0;
 }
 
@@ -188,7 +191,7 @@ nav {
   &::before {
     @include bg-deco(900px, 120vw, $c-primary-050);
     top: -960px;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       top: -900px;
     }
   }
@@ -222,7 +225,7 @@ nav {
   .section__download {
     margin-top: 2rem;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     gap: 32px;
     padding: 50px 0 0;
     .hero {
@@ -270,12 +273,12 @@ nav {
   &::before {
     top: 10px;
     @include bg-deco(570px, 120vw, $c-secondary-099);
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       top: 25px;
       height: 875px;
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     margin: 128px auto;
     gap: 32px;
     h1 {
@@ -288,7 +291,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       grid-template-columns: 1fr;
       padding: 0 32px;
       margin: 0;
@@ -312,7 +315,7 @@ nav {
           width: auto;
         }
       }
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 1199px) {
         gap: 16px;
         grid-template-rows: 0.5fr 1fr 0.2fr;
         .card__pc-text {
@@ -356,7 +359,7 @@ nav {
   &::before {
     top: -21px;
     @include bg-deco(111px, 120vw, $c-primary-060);
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       top: 14px;
       height: 57px;
     }
@@ -364,7 +367,7 @@ nav {
   &::after {
     top: 998px;
     @include bg-deco(111px, 120vw, $c-primary-060);
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       top: 1516px;
       height: 57px;
       margin: 0;
@@ -411,7 +414,7 @@ nav {
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     margin: 0 32px 128px;
     gap: 32px;
     h1 {
@@ -460,7 +463,7 @@ nav {
   &::before {
     top: 18px;
     @include bg-deco(960px, 120vw, $c-secondary-099);
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       height: 1090px;
       top: 45px;
       margin: 0;
@@ -497,7 +500,7 @@ nav {
       height: 442px;
     }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     margin: 0 32px 128px;
     gap: 32px;
     h1 {
@@ -591,7 +594,7 @@ nav {
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     margin: 0 32px 128px;
     gap: 32px;
     h1 {
@@ -616,7 +619,7 @@ nav {
   &::before {
     top: 167px;
     @include bg-deco(111px, 120vw, $c-primary-060);
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       top: 90px;
       height: 150px;
     }
@@ -639,7 +642,7 @@ nav {
     max-width: 880px;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     margin: 0 32px 128px;
     p {
       padding: 16px 0 0;
@@ -663,7 +666,7 @@ footer {
   color: $c-neutral-099;
   z-index: -1;
   .footer__content {
-    max-width: 1200px;
+    max-width: 1199px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
