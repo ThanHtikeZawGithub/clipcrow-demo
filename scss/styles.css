@@ -2715,7 +2715,7 @@ h6 {
     margin: 3% -10% 0 -38%;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .error__cont::before {
     width: 120vw;
     top: -490px;

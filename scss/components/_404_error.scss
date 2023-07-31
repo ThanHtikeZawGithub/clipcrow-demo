@@ -16,7 +16,7 @@
   &::before {
     @include bg-deco(500px, 120vw, $c-primary-050);
     top: -520px;
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1200px) {
       width: 120vw;
       top: -490px;
     }
