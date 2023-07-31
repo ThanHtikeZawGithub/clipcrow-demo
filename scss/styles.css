@@ -2602,6 +2602,21 @@ h6 {
     gap: 32px;
   }
 }
+.blog__details .blog__details-content p {
+  color: #5B5B55;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 32px;
+}
+@media screen and (max-width: 767px) {
+  .blog__details .blog__details-content p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.15px;
+  }
+}
 .blog__details .blog__details-content .blog__details-lead {
   color: #5B5B55;
   font-size: 1.5rem;
@@ -2652,21 +2667,6 @@ h6 {
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
-  }
-}
-.blog__details p {
-  color: #5B5B55;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 32px;
-}
-@media screen and (max-width: 767px) {
-  .blog__details p {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.15px;
   }
 }
 .blog__details .details {
