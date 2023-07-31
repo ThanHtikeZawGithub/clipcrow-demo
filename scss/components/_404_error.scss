@@ -6,12 +6,12 @@
   gap: 64px;
   width: 438px;
   height: auto;
-  padding: 112px 0 128px;
+  padding: 128px 0;
   position: relative;
   @media screen and (max-width: 767px) {
     width: 322px;
     gap: 32px;
-    padding: 48px 0 64px;
+    padding: 64px 0;
   }
   &::before {
     @include bg-deco(500px, 120vw, $c-primary-050);
