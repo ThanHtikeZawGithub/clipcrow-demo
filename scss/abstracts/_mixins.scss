@@ -1,3 +1,33 @@
+
+@mixin page__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  &::before {
+    @include bg-deco(500px, 120vw, $c-primary-050);
+    top: -520px;
+    @media screen and (max-width: 1200px) {
+      top: -428px;
+    }
+  }
+  span {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+}
+
+
+
+
+
+
 /* button in top page */
 @mixin button($bg-color, $hover-color, $text-color) {
   background-color: $bg-color;
@@ -14,7 +44,7 @@
   &:hover {
     background-color: $hover-color;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     font-size: 14px;
     width: 200px;
     height: 40px;
@@ -24,57 +54,34 @@
   }
 }
 
-//=============================================
-/* app download button in top page */
-
-@mixin download_button {
+@mixin title($pc-height, $sp-height) {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  margin-top: 1rem;
-  position: relative;
-  background-color: $c-secondary-090;
-  color: #333538;
-  width: 568px;
-  height: 48px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.5;
-  &:hover {
-    color: #91918b;
-    &::before {
-      background-image: url("/images/download-hover.svg");
+  text-align: center;
+  height: $pc-height;
+    @media screen and (max-width: 767px) {
+      height: $pc-height;
     }
-  }
-  &::before {
-    display: block;
+  &__bg {
     position: absolute;
-    content: "";
-    left: 74%;
-    top: 23%;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-image: url("/images/download.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    @media screen and (max-width: 1200px) {
-      width: 0.875rem;
-      height: 0.875rem;
-      top: 30%;
-      left: 78%;
+    background-color: $c-primary-060;
+    margin: 0 auto;
+    width: 100vw;
+    height: $pc-height;
+    z-index: -1;
+    @media screen and (max-width: 767px) {
+      height: $sp-height;
     }
-  }
-  @media screen and (max-width: 1200px) {
-    box-shadow: 0px 0.988701px 1.9774px rgba(0, 0, 0, 0.3),
-      0px 1.9774px 5.9322px 1.9774px rgba(0, 0, 0, 0.15);
-    font-size: 14px;
-    width: 280px;
-    height: 32px;
-    line-height: 20px;
+    &.left {
+      border-radius: 0px 10px 10px 0px;
+      right: 0;
+    }
+    &.right {
+      border-radius: 10px 0 0 10px;
+      left: 0;
+    }
   }
 }
 

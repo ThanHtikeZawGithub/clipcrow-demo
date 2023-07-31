@@ -1,62 +1,35 @@
 
-//========================================================================================
-//blog main content section
+
+
 .blog__page-title {
-  padding: 48px 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  &.details-title {
-    padding: 0;
-  }
-  &::before {
-    @include bg-deco(600px, 120vw, $c-primary-050);
-    top: -650px;
-    @media screen and (max-width: 1199px) {
-      top: -600px;
-    }
-    @media screen and (max-width: 767px) {
-      top: -600px;
-    }
-  }
-  h1 {
-    font-size: 45px;
-    font-weight: 700;
-    color: $c-neutral-020;
-    text-align: center;
-    line-height: 52px;
-  }
+  padding: 103px 0 64px;
+  @include page__title();
   @media screen and (max-width: 767px) {
-    padding: 16px 0 64px;
-    h1 {
-      font-size: 32px;
-      line-height: 40px;
+    padding: 32px 0 64px;
+    &::before {
+      top: -490px;
     }
   }
 }
-
-
-
+//========================================================================================
+//blog main content section
 
 .blog__maincont {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 0 0 128px;
   gap: 64px;
-  padding: 64px 0;
-  overflow-x: hidden;
 
   @media screen and (max-width: 1199px) {
-    padding: 64px 0;
     flex-direction: column;
+    align-items: center;
     max-width: 768px;
-    margin: 0 auto;
   }
   @media screen and (max-width: 767px) {
     flex-direction: column;
-    padding: 0 32px;
     gap: 32px;
+    padding: 32px 0 0;
   }
 }
 
@@ -69,6 +42,7 @@
   gap: 64px;
   padding: 32px;
   margin-bottom: 120px;
+  width: 100%;
   flex-grow: 1;
   background-color: $c-tertiary-095;
   @media screen and (max-width: 767px) {
@@ -92,6 +66,9 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    @media screen and (max-width: 767px) {
+      gap: 8px;
+    }
     .blog__latest-content {
       p {
         margin-bottom: 4px;
@@ -101,9 +78,9 @@
   .blog__monthly {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     @media screen and (max-width: 767px) {
-      gap: 8px;
+      gap: 4px;
     }
     .blog-monthly-section {
       display: flex;
@@ -174,6 +151,7 @@
   @media screen and (max-width: 767px) {
     width: 100%;
     align-items: center;
+    padding: 0 32px;
   }
   &.page-1 {
       .blog__card-content {
@@ -192,7 +170,7 @@
     gap: 16px;
     width: 100%;
     @media screen and (max-width: 767px) { 
-      .blog__date {
+      &__date {
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -200,7 +178,7 @@
         letter-spacing: 0.4px; 
       }
     }
-    .blog__card-content {
+    &-content {
       align-items: center;
       height: 421px;
       width: 768px;
@@ -216,6 +194,7 @@
         width: 100%;
         padding: 16px;
       }
+
       &.card-1 {
         border-color: $blog-border-card1;
         background-color: $blog-bg-card1;
@@ -241,7 +220,7 @@
         background-color: $blog-bg-card6;
       }
 
-      .blog__card-inside {
+      .card__inside {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -250,6 +229,10 @@
         border-width: 2px;
         border-style: solid;
         cursor: pointer;
+        @media screen and (max-width: 767px) {
+          padding: 32px 16px;
+          gap: 16px;
+        }
         &.card-1 {
           border-color: $blog-border-card1;
         }
@@ -268,38 +251,17 @@
         &.card-6 {
           border-color: $blog-border-card6;
         }
-        .blog__title {
+        .card__title {
           color: $c-tertiary-000;
-          font-size: 1.75rem;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 36px; /* 128.571% */
+          text-align: center;
         }
-        .blog__lead {
+        .card__lead {
+          color: $c-neutral-020;
           font-size: 1.5rem;
           font-style: normal;
           font-weight: 400;
           line-height: 32px;
-        }
-        .blog__category {
-          height: 56px;
-          padding: 16px 32px;
-          border: 1px solid $c-tertiary-000;
-          color: $c-tertiary-000;
-          font-size: 1rem;
-          font-weight: 400;
-          line-height: 24px; /* 150% */
-          letter-spacing: 0.15px;
-        }
-        @media screen and (max-width: 767px) {
-          padding: 32px 16px;
-          gap: 16px;
-          .blog__title {
-            text-align: center;
-            font-size: 22px;
-            line-height: 28px;
-          }
-          .blog__lead {
+          @media screen and (max-width: 767px) {
             font-size: 1rem;
             line-height: 24px;
             letter-spacing: 0.15px; 
@@ -310,7 +272,17 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
           }
-          .blog__category {
+        }
+        .card__category {
+          height: 56px;
+          padding: 16px 32px;
+          border: 1px solid $c-tertiary-000;
+          color: $c-tertiary-000;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 24px; /* 150% */
+          letter-spacing: 0.15px;
+          @media screen and (max-width: 767px) {
             height: 32px;
             padding: 8px 16px;
             font-size: 12px;
@@ -334,11 +306,13 @@
     justify-content: center;
     padding: 32px 0 0;
     gap: 128px;
+    @media screen and (max-width: 767px) {
+      gap: 64px;
+    }
     .pagination__section {
         display: flex;
         flex-direction: row;
         font-size: 1.5rem;
-        font-style: normal;
         font-weight: 400;
         line-height: 32px;
         color: #491919;
@@ -369,11 +343,11 @@
       padding: 0;
       .pagination__section {
         padding: 8px 12px;
-        font-size: 16px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: 24px; /* 150% */
-        letter-spacing: 0.15px; 
+        line-height: 20px; /* 150% */
+        letter-spacing: 0.25px; 
         &.start {
           align-self: flex-start;
         }

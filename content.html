@@ -25,14 +25,14 @@
     <section class="content__maincont">
       <p>土日祝を除く3営業日以内に担当者よりご連絡させていただきます。お問い合わせ内容により、ご回答までにお時間をいただく場合または、ご回答が出来ない場合がございます。</p>
       <form class="container" action="content_confirm.html">
-        <div class="did-floating-label-content">
-          <input class="did-floating-input" type="text" placeholder=" " required>
-          <label class="did-floating-label">お名前 *</label>
+        <div class="input__box">
+          <input class="input__text" type="text" placeholder=" " required>
+          <label class="input__label">お名前 *</label>
           <div class="error-message">お名前を入力してください</div>
         </div>
-          <div class="did-floating-label-content">
-          <input class="did-floating-input" type="text" placeholder=" " required>
-          <label class="did-floating-label">メールアドレス *</label>
+          <div class="input__box">
+          <input class="input__text" type="text" placeholder=" " required>
+          <label class="input__label">メールアドレス *</label>
           <div class="error-message">メールアドレスを入力してください</div>
         </div>
         <div class="radio__wrapper">
@@ -50,32 +50,31 @@
             <label for="other">その他</label>
           </div>
         </div>
-        <div class="did-floating-label-content">
-          <textarea class="did-floating-textarea" placeholder="" name="content" id="text" cols="30" rows="8" required></textarea>
-          <label class="did-floating-label">お問い合わせ内容 *</label>
+        <div class="input__box">
+          <textarea class="input__textarea" placeholder="" name="content" id="text" cols="30" rows="8" required></textarea>
+          <label class="input__label">お問い合わせ内容 *</label>
         </div>
-        <input class="content__submit-button" type="submit" value="内容確認" />
+        <input class="submit__button" type="submit" value="内容確認" />
       </form>
     </section>
   </main>
   <footer>
-    <div class="footer__content">
+    <div class="footer">
       <div class="footer__left">
         <img src="/images/nav_title_footer.svg" alt="essential workware" />
       </div>
       <div class="footer__right">
-        <div class="footer__link">
-          <a href="index.html">ホーム</a>
-          <a href="usage-example.html">活用例</a>
-          <a href="features.html">特徴・機能</a>
-        </div>
-        <div class="footer__link">
-          <a href="blog.html">ブログ</a>
-          <a href="content.html">お問い合わせ</a>
-          <a href="profile.html">会社情報</a>
-        </div>
+      <div class="footer__link">
+        <a href="index.html">ホーム</a>
+        <a href="usage-example.html">活用例</a>
+        <a href="features.html">特徴・機能</a>
       </div>
+      <div class="footer__link">
+        <a href="blog.html">ブログ</a>
+        <a href="content.html">お問い合わせ</a>
+        <a href="profile.html">会社情報</a>
+      </div>
+    </div>
   </footer>
 </body>
-
 </html>

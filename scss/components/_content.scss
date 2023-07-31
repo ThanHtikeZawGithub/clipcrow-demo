@@ -7,11 +7,12 @@
   @media screen and (max-width: 767px) {
     gap: 16px;
 }
+
 }
-.did-floating-label-content { 
+.input__box { 
   position:relative; 
 }
-.did-floating-label {
+.input__label {
   color:$c-neutral-020; 
   font-size: 16px;
   font-weight: 400;
@@ -32,7 +33,7 @@
     letter-spacing: 0.25px; 
   }
 }
-.did-floating-input {
+.input__text {
   font-size: 16px;
   display:block;
   width:100%;
@@ -44,7 +45,7 @@
   border-radius: 4px;
   &:focus{
     outline:none;
-    ~ .did-floating-label{
+    ~ .input__label {
       top:-8px;
       font-size:12px;
       @media screen and (max-with: 767px) {
@@ -74,7 +75,7 @@
 }
 
 
-.did-floating-textarea {
+.input__textarea {
   font-size: 16px;
   display:block;
   width:100%;
@@ -86,7 +87,7 @@
   box-sizing: border-box;
   &:focus{
     outline:none;
-    ~ .did-floating-label{
+    ~ .input__label{
       top:-8px;
       font-size:13px;
       @media screen and (max-with: 767px) {
@@ -118,29 +119,24 @@
   }
 }
 
-.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+.input__text:not(:placeholder-shown) ~ .input__label {
   top:-8px;
   font-size:13px;
 }
 
-.did-floating-textarea:not(:placeholder-shown) ~ .did-floating-label {
+.input__textarea:not(:placeholder-shown) ~ .input__label {
   top:-8px;
   font-size:13px;
 }
 
-.did-floating-select[value=""]:focus ~ .did-floating-label {
-  top:11px;
-  font-size:13px;
-}
-
-.did-floating-textarea[value=""]:focus ~ .did-floating-label {
+.input__textarea[value=""]:focus ~ .input__label {
   top: 11px;
   font-size: 13px;
 }
 
 
 
-.content__submit-button {
+.submit__button {
   margin: 0 auto;
   width: 160px;
   height: 64px;
@@ -166,25 +162,27 @@
 }
 }
 
+//content page title
+
 .content__page-title {
-  padding: 48px 0 64px;
-  h1 {
-    font-size: 45px;
-    font-weight: 700;
-    color: $c-neutral-020;
-    text-align: center;
-    line-height: 52px;
+  @include page__title();
+  &::before {
+    top: -530px;
+  }
+  @media screen and (max-width: 1199px) {
+    &::before {
+      top: -470px;
+    }
   }
   @media screen and (max-width: 767px) {
-    h1 {
-      font-size: 32px;
-      line-height: 40px;
+    padding: 64px 0;
+    &::before {
+      top: -490px;
     }
   }
 }
 
 //content page main content
-
 .content__maincont {
   display: flex;
   flex-direction: column;
@@ -193,16 +191,6 @@
   max-width: 613px;
   padding: 0 0 128px;
   position: relative;
-  &::before {
-    @include bg-deco(600px, 130vw, $c-primary-050);
-    top: -800px;
-    @media screen and (max-width: 1200px) {
-      top: -770px;
-    }
-    @media screen and (max-width: 768px) {
-      top: -735px;
-    }
-  }
   @media screen and (max-width: 768px) {
     padding: 0 32px 64px;
     gap: 32px;
@@ -213,17 +201,13 @@
     flex-direction: column;
     gap: 32px;
     h4 {
-      color: $c-neutral-020;
-      font-size: 28px;
       font-weight: 400;
-      line-height: 36px;
+      text-align: center;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         gap: 16px;
         h4 {
-        font-size: 22px;
         font-weight: 500;
-        line-height: 28px;
         }
     }
   }

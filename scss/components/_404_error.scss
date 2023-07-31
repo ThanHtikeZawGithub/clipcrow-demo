@@ -15,9 +15,13 @@
   }
   &::before {
     @include bg-deco(500px, 120vw, $c-primary-050);
-    top: -550px;
+    top: -520px;
+    @media screen and (max-width: 1199px) {
+      width: 120vw;
+      top: -490px;
+    }
     @media screen and (max-width: 767px) {
-      top: -500px;
+      top: -480px;
     }
   }
   .error__image {
@@ -30,9 +34,8 @@
   }
   .error__404 {
     padding: 0 32px;
-    color: var(--ew-primary, #F9D73A);
+    color: $c-primary-040;
     text-align: center;
-    font-family: Noto Sans JP;
     font-size: 57px;
     font-style: normal;
     font-weight: 700;
@@ -47,8 +50,6 @@
     }
   }
   .error__text {
-    color:#5B5B55;
-    font-family: Noto Sans JP;
     font-size: 22px;
     font-style: normal;
     font-weight: 500;
@@ -77,18 +78,21 @@
     align-items: center;
     justify-content: center;
     border-radius: 60px;
-    border: 1px solid var(--ew-on-surface, #5B5B55);
-    background: var(--ew-surface, #FFF);
+    color: $c-neutral-020;
+    border: 1px solid $c-neutral-020;
+    background-color: $c-neutral-100;
     padding: 16px 32px;
     height: 56px;
     width: 241px;
     cursor: pointer;
     gap: 4px;
-    color:#5B5B55;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px; 
     letter-spacing: 0.15px;
+    &:hover {
+      opacity: 0.7;
+    }
     @media screen and (max-width: 767px) {
       height: 34px;
       width: 192px;

@@ -19,11 +19,11 @@
       </nav>
     </header>
     <main>
-      <section class="kv">
+      <section class="top__kv">
         <div class="hero">
-          <div class="hero__content text-justify">
-            <h1>キャッチコピー</h1>
-            <p>
+          <div class="hero__content">
+            <div class="hero__content-title">キャッチコピー</div>
+            <p class="hero__content-text">
               労働人口が減少している日本ならびに先進各国では、
               現在もこれからも労働力の確保が難しく、
               特に生活必需産業では労働力不足が顕著となっています。
@@ -38,14 +38,14 @@
               います。
             </p>
           </div>
-          <div class="hero__visual">
+          <div class="hero__image">
             <img src="/images/kv.png" alt="hero cover" />
           </div>
         </div>
-        <div class="section__download" id="download_section">
+        <div class="download" id="download_section">
           <h4>アプリをダウンロード</h4>
-          <div class="app-download__btn">
-            <div class="google__btn">
+          <div class="download__btn">
+            <div class="download__btn-google">
               <a
                 href="https://play.google.com/store/apps/details?id=com.clipcrow.ewware"
                 target="_blank"
@@ -56,7 +56,7 @@
                 />
               </a>
             </div>
-            <div class="app-store__btn">
+            <div class="download__btn-appstore">
               <a
                 href="https://apps.apple.com/us/app/essential-workware/id6446253088"
                 target="_blank"
@@ -67,7 +67,7 @@
           </div>
         </div>
       </section>
-      <section class="maincont text-justify">
+      <section class="maincont">
         <h1>こんな問題を抱えていませんか</h1>
         <div class="maincont__card">
           <div class="card">
@@ -84,10 +84,10 @@
                 >業務見直しやDXにはなかなか手が付かない。</span
               >
             </p>
-            <div class="card__img-wrapper">
+            <div class="card__image">
               <img src="/images/ex_step03-1.png" alt="step3-1" />
             </div>
-            <a class="btn blue text-center" href="404_error.html">
+            <a class="btn__blue" href="404_error.html">
               ワーク管理を行い、<br />標準化を実現するには…
             </a>
           </div>
@@ -99,10 +99,10 @@
               >
               離職率が高く、特にリーダー的ポジションは常に人材難。
             </p>
-            <div class="card__img-wrapper">
+            <div class="card__image">
               <img src="/images/ex_step03-2.png" alt="step3-2" />
             </div>
-            <a class="btn pink text-center" href="usage-example.html">
+            <a class="btn__pink" href="usage-example.html">
               人材管理を行い、<br />組織を活性化するには...
             </a>
           </div>
@@ -114,18 +114,14 @@
           <div class="features__grid">
             <div class="features__card">
               <h4>業務負担を軽減できる</h4>
-              <div class="features__img-wrapper">
-                <img src="/images/ex_step03.png" alt="step 3" />
-              </div>
+              <img src="/images/ex_step03.png" alt="step 3" />
               <p>
                 事前の準備少なく、すぐに利用開始。スタッフの負担を減らし、ワーカーの手持ちをなくします。
               </p>
             </div>
             <div class="features__card">
               <h4>デジタルツインを実現する</h4>
-              <div class="features__img-wrapper">
-                <img src="/images/illust-04.png" alt="illust 4" />
-              </div>
+              <img src="/images/illust-04.png" alt="illust 4" />
               <p>
                 スタッフとワーカーの属性やリソース状況を常に最新の状態で把握できます。
               </p>
@@ -134,14 +130,14 @@
           <div class="features__grid">
             <div class="features__card">
               <h4>標準化サイクルが発生する</h4>
-              <div class="features__img-wrapper">
+              <div class="features__card-image">
                 <img src="/images/ex_step01-2.png" alt="step1-2" />
               </div>
               <p>使っているうちに、自然に業務が標準化されます。</p>
             </div>
             <div class="features__card">
               <h4>既存のしくみと連携できる</h4>
-              <div class="features__img-wrapper">
+              <div class="features__card-image">
                 <img src="/images/illust-06.png" alt="illust 6" />
               </div>
               <p>
@@ -150,12 +146,12 @@
             </div>
           </div>
         </div>
-        <a class="btn yellow-dark" href="history.html">特徴・機能の詳細 </a>
+        <a class="btn__yellow-dark" href="history.html">特徴・機能の詳細 </a>
       </section>
       <section class="point">
         <h1>Essential Workwareのポイント</h1>
         <div class="point__top-grid">
-          <div class="point__text text-justify">
+          <div class="point__text">
             <h4>連絡・引き継ぎ</h4>
             <p>
               基本的な勤怠管理機能として、執務時間を正確に記録しトラッキング可能に。組織全体の労務状態をリアルタイム把握します。
@@ -190,7 +186,7 @@
           <p>記事タイトル見出し見出し</p>
         </div>
       </div>
-        <a class="btn yellow-light" href="">ブログ記事の一覧 </a>
+        <a class="btn__yellow-light" href="">ブログ記事の一覧 </a>
       </section>
       <section class="info">
         <div class="info__text">
@@ -203,12 +199,12 @@
             生活必需サービス産業の従業者間コミュニケーションを円滑にするグループウェア製品を提案することで、
             データに基づく医療最適化と個人健康管理の実現を推進します。
           </p>
-          <a class="btn yellow-light" href="profile.html"> 会社情報 </a>
+          <a class="btn__yellow-light" href="profile.html"> 会社情報 </a>
         </div>
       </section>
     </main>
     <footer>
-      <div class="footer__content">
+      <div class="footer">
         <div class="footer__left">
           <img src="/images/nav_title_footer.svg" alt="essential workware" />
         </div>

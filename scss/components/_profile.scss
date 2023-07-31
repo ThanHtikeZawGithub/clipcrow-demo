@@ -1,27 +1,9 @@
-body {
-  color: $c-neutral-020;
-}
-
 
 //===============================================================
 // profile page title 
 
-.page__title {
-  padding: 48px 0 64px;
-  h1 {
-    font-size: 45px;
-    font-weight: 700;
-    color: $c-neutral-020;
-    text-align: center;
-    line-height: 52px;
-  }
-  @media screen and (max-width: 767px) {
-    padding: 16px 0 64px;
-    h1 {
-      font-size: 32px;
-      line-height: 40px;
-    }
-  }
+.profile__page-title {
+  @include page__title();
 }
 
 //===============================================================
@@ -33,7 +15,6 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 64px 0 64px;
   &::before {
     @include bg-deco(600px, 120vw, $c-primary-050);
     top: -800px;
@@ -44,38 +25,19 @@ body {
       top: -680px;
     }
   }
-  .profile__content {
+  &-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    p {
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 400;
-      letter-spacing: 0.15px;
-      color: $c-neutral-020;
-    }
   }
-  .logo {
-    img {
+  img {
       height: 150px;
       width: auto;
-    }
-  }
-  @media screen and (max-width: 1199px) {
-    padding: 76px 77px 64px;
-    max-width: 968px;
-  }
-  @media screen and (max-width: 767px) {
-    padding: 0 32px;
-    .logo {
-      img {
+      @media screen and (max-width: 767px) {
         height: 90px;
-        width: auto;
       }
     }
-  }
 }
 
 //===============================================================
@@ -86,17 +48,19 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 64px;
-  padding: 64px 0;
   position: relative;
-  h4 {
-    color: $c-neutral-020;
+  @media screen and (max-width: 1199px) {
+    padding: 64px 16px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 32px;
+    gap: 32px;
+  }
+  h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 36px;
-    line-height: 44px;
     font-weight: 700;
-    padding: 0 32px;
     position: relative;
     &::before {
       top: -65px;
@@ -114,30 +78,17 @@ body {
   .teams {
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
-    align-items: stretch;
-    padding: 0;
     gap: 32px;
-    li {
-      color: $c-neutral-010;
-      margin-bottom: 0;
-      margin-left: 0;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.15px;
-      font-weight: 400;
-      &:before {
-        content: "\2022"; // Unicode for the disc bullet (•)
-        color: inherit; // Example: black bullet color
-        font-size: 20px; // Adjust the font-size to make the bullet smaller
-        margin: 0 5px;
-      }
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 967px) {
+      flex-direction: column;
     }
-    .teambox {
+    &__box {
       border: 1px solid $c-secondary-030;
       overflow: hidden;
       flex: 1 1 auto;
-      .teamname {
+      &-name {
         margin: 0;
         padding: 0.5rem;
         background-color: $c-primary-060;
@@ -145,101 +96,59 @@ body {
         font-size: 22px;
         line-height: 28px;
         font-weight: 500;
-        color: $c-neutral-020;
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.15px;
+        }
       }
-      .inner {
+      &-inner {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         padding: 16px 32px 26px;
         gap: 32px;
-        li {
-          color: $c-neutral-020;
-        }
-        .image {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        img {
           height: 100px;
           width: 100px;
-          .dev__img {
-            height: 50px;
-          }
-          .cc__img {
-            height: 87.5px;
-            width: auto;
+        }
+        @media screen and (max-width: 767px) {
+          padding: 8px 16px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          img {
+            margin: 0 auto;
+            height: 70px;
+            width: 70px;
           }
         }
       }
-      .note {
+      &-note {
         padding: 0 32px 16px;
         line-height: 20px;
         font-weight: 400;
         font-size: 14px;
         letter-spacing: 0.25px;
         text-align: center;
-        color: $c-neutral-020;
-      }
-    }
-  }
-  @media screen and (max-width: 1199px) {
-    max-width: 968px;
-    padding: 64px 0;
-  }
-  @media screen and (max-width: 967px) {
-    padding: 64px 77px;
-    .teams {
-      flex-direction: column;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    padding: 64px 32px;
-    gap: 32px;
-    h4 {
-      font-size: 28px;
-      line-height: 36px;
-      padding: 0 32px;
-    }
-    .teams {
-      padding: 0;
-      .teambox {
-        .note {
+        @media screen and (max-width: 767px) {
           font-size: 12px;
           line-height: 16px;
           letter-spacing: 0.4px;
           padding: 0 16px 8px;
           text-align: start;
         }
-        .teamname {
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 0.15px;
-        }
-        .inner {
-          padding: 8px 16px;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 8px;
-          .image {
-            margin: 0 auto;
-            width: 70px;
-            height: 70px;
-            .dev__img {
-              height: 35px;
-            }
-            .cc__img {
-              height: 61px;
-              width: auto;
-            }
-          }
-        }
       }
-      ul,
-      li {
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.25px;
+    }
+    li {
+      margin: 0;
+      font-weight: 400;
+      &:before {
+        content: "\2022";
+        color: inherit;
+        font-size: 20px;
+        margin: 0 5px;
       }
     }
   }
@@ -256,6 +165,14 @@ body {
   border: 1px solid $c-secondary-030;
   margin: 64px auto 128px;
   padding: 32px;
+  @media screen and (max-width: 1199px) {
+    margin: 64px 16px 128px;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 32px 32px 64px;
+    padding: 16px;
+
+  }
   dl {
     dt {
       font-size: 22px;
@@ -294,7 +211,6 @@ body {
       }
   }
     dd {
-      color: $c-neutral-020;
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
@@ -309,56 +225,46 @@ body {
         list-style-type: disc;
         font-size: 16px;
         margin: 0 0 0.5rem 2rem;
-        color: $c-neutral-020;
         font-weight: 400;
       }
     }
-  }
-  @media screen and (max-width: 1199px) {
-    margin: 64px auto 128px;
-    max-width: 968px;
-  }
-  @media screen and (max-width: 968px) {
-    margin: 64px 77px 128px;
-  }
-  @media screen and (max-width: 767px) {
-    margin: 0 32px 64px;
-    padding: 16px;
-    dl {
-      dt {
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.1px;
-        margin-bottom: 0;
-      }
-      dd {
-        font-size: 12px;
-        line-height: 16px;
-        letter-spacing: 0.4px;
-        margin-bottom: 1rem;
-        + dt {
-          margin-top: 0.2rem;
+    @media screen and (max-width: 767px) {
+      dl {
+        dt {
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.1px;
+          margin-bottom: 0;
         }
-        li {
+        dd {
           font-size: 12px;
           line-height: 16px;
           letter-spacing: 0.4px;
-        }
-      }
-      .enclose__button {
-        gap: 8px;
-        .button {
-          height: 16px;
-          width: 52px;
-          padding: 0 13.5px;
-          a {
-            margin-bottom: 2px;
-            width: 25px;
-            height: 16px;
+          margin-bottom: 1rem;
+          + dt {
+            margin-top: 0.2rem;
+          }
+          li {
             font-size: 12px;
             line-height: 16px;
             letter-spacing: 0.4px;
-            }
+          }
+        }
+        .enclose__button {
+          gap: 8px;
+          .button {
+            height: 16px;
+            width: 52px;
+            padding: 0 13.5px;
+            a {
+              margin-bottom: 2px;
+              width: 25px;
+              height: 16px;
+              font-size: 12px;
+              line-height: 16px;
+              letter-spacing: 0.4px;
+              }
+          }
         }
       }
     }
