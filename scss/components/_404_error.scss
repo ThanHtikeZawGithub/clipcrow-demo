@@ -83,23 +83,22 @@
     background-color: $c-neutral-100;
     padding: 16px 32px;
     height: 56px;
-    width: 241px;
+    width: auto;
     cursor: pointer;
-    gap: 4px;
+    gap: 8px;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px; 
     letter-spacing: 0.15px;
+    box-sizing: border-box;
     &:hover {
       opacity: 0.7;
     }
     @media screen and (max-width: 767px) {
       height: 34px;
-      width: 192px;
+      width: auto;
       padding: 8px 16px;
       font-size: 14px;
-      font-style: normal;
-      font-weight: 700;
       line-height: 20px; 
       letter-spacing: 0.25px; 
     }
@@ -107,7 +106,6 @@
       content: "";
       width: 24px;
       height: 24px;
-      right: -40px;
       background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2225%22%20height%3D%2224%22%20viewBox%3D%220%200%2025%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M16.2049%207.41L14.7949%206L8.79492%2012L14.7949%2018L16.2049%2016.59L11.6249%2012L16.2049%207.41Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
       background-repeat: no-repeat;
       background-position: center;

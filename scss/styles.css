@@ -1698,7 +1698,7 @@ h6 {
 }
 
 .input__label {
-  color: #5B5B55;
+  color: #55585B;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px; /* 150% */
@@ -1744,6 +1744,12 @@ h6 {
     font-size: 11px;
   }
 }
+.input__text.error:invalid {
+  border: 1px solid #DC362E;
+}
+.input__text:invalid ~ .error-message {
+  display: block;
+}
 @media screen and (max-width: 767px) {
   .input__text {
     height: 44px;
@@ -1751,13 +1757,6 @@ h6 {
     line-height: 20px; /* 142.857% */
     letter-spacing: 0.25px;
   }
-}
-
-.error-example .input__text:invalid {
-  border: 1px solid #DC362E;
-}
-.error-example .input__text:invalid ~ .error-message {
-  display: block;
 }
 
 .error-message {
@@ -1805,6 +1804,7 @@ h6 {
   padding: 0 16px;
 }
 .radio__wrapper .radio__title {
+  color: #55585B;
   padding: 16px 0;
 }
 .radio__wrapper .radio__section {
@@ -2794,13 +2794,14 @@ h6 {
   background-color: #ffffff;
   padding: 16px 32px;
   height: 56px;
-  width: 241px;
+  width: auto;
   cursor: pointer;
-  gap: 4px;
+  gap: 8px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.15px;
+  box-sizing: border-box;
 }
 .error__navigation .error__navigation-text:hover {
   opacity: 0.7;
@@ -2808,11 +2809,9 @@ h6 {
 @media screen and (max-width: 767px) {
   .error__navigation .error__navigation-text {
     height: 34px;
-    width: 192px;
+    width: auto;
     padding: 8px 16px;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
     line-height: 20px;
     letter-spacing: 0.25px;
   }
@@ -2821,7 +2820,6 @@ h6 {
   content: "";
   width: 24px;
   height: 24px;
-  right: -40px;
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2225%22%20height%3D%2224%22%20viewBox%3D%220%200%2025%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M16.2049%207.41L14.7949%206L8.79492%2012L14.7949%2018L16.2049%2016.59L11.6249%2012L16.2049%207.41Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: center;

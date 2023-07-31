@@ -13,7 +13,7 @@
   position:relative; 
 }
 .input__label {
-  color:$c-neutral-020; 
+  color:$c-neutral-010; 
   font-size: 16px;
   font-weight: 400;
   line-height: 24px; /* 150% */
@@ -53,13 +53,14 @@
       }
     }
   }
-  
-  // &:invalid {
-  //   border: 1px solid $input-error-message;
-  //   ~ .error-message {
-  //     display: block;
-  //   }
-  // }
+  &.error:invalid {
+    border: 1px solid $input-error-message;
+  }
+  &:invalid {
+    ~ .error-message {
+      display: block;
+    }
+  }
   @media screen and (max-width: 767px) {
     height: 44px;
     font-size: 14px;
@@ -68,14 +69,6 @@
   }
 }
 
-.error-example {
-  .input__text:invalid {
-    border: 1px solid $input-error-message;
-    ~ .error-message {
-      display: block;
-    }
-  }
-}
 
 .error-message {
   display: none;
@@ -118,6 +111,7 @@
   gap: 0;
   padding: 0 16px;
   .radio__title {
+    color: $c-neutral-010;
     padding: 16px 0;
   }
   .radio__section {
