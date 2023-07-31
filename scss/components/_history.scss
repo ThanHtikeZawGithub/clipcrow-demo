@@ -3,7 +3,7 @@
     padding: 128px 0 64px;
     @include page__title();
     @media screen and (max-width: 767px) {
-        padding: 64px 0;
+        padding: 64px 0 32px;
         &::before {
             top: -490px;
         }

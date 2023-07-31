@@ -1744,12 +1744,6 @@ h6 {
     font-size: 11px;
   }
 }
-.input__text:invalid {
-  border: 1px solid #DC362E;
-}
-.input__text:invalid ~ .error-message {
-  display: block;
-}
 @media screen and (max-width: 767px) {
   .input__text {
     height: 44px;
@@ -1757,6 +1751,13 @@ h6 {
     line-height: 20px; /* 142.857% */
     letter-spacing: 0.25px;
   }
+}
+
+.error-example .input__text:invalid {
+  border: 1px solid #DC362E;
+}
+.error-example .input__text:invalid ~ .error-message {
+  display: block;
 }
 
 .error-message {
@@ -2871,7 +2872,7 @@ h6 {
 }
 @media screen and (max-width: 767px) {
   .history__page-title {
-    padding: 64px 0;
+    padding: 64px 0 32px;
   }
   .history__page-title::before {
     top: -490px;
