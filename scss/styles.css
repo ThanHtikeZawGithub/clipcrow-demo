@@ -141,10 +141,8 @@ h6 {
 }
 /* button in top page */
 /* background decoration in top page */
-/* step header background in features/functions page */
 /* button in top page */
 /* background decoration in top page */
-/* step header background in features/functions page */
 a {
   text-decoration: none;
   padding: 0;
@@ -784,7 +782,6 @@ h6 {
 
 /* button in top page */
 /* background decoration in top page */
-/* step header background in features/functions page */
 .example__page-title {
   display: flex;
   flex-direction: column;
