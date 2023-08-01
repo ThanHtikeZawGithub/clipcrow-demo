@@ -37,6 +37,7 @@
   font-size: 16px;
   display:block;
   width:100%;
+  font-family: "Noto Sans JP", sans-serif;
   height: 48px;
   padding: 0 20px;
   background: $c-neutral-100;
@@ -83,6 +84,7 @@
   display:block;
   width:100%;
   padding: 20px 20px;
+  font-family: "Noto Sans JP", sans-serif;
   background: $c-neutral-100;
   color: $c-neutral-020;
   border: 1px solid $input-outline;
@@ -195,9 +197,14 @@
   max-width: 613px;
   padding: 0 0 128px;
   position: relative;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding: 0 32px 64px;
     gap: 32px;
+    .content__form-title {
+      font-size: 1rem;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+    }
   }
 
   .confirm__title {
@@ -222,9 +229,11 @@
     .confirm__info {
       display: flex;
       flex-direction: column;
+      color: $c-neutral-010;
       gap: 16px;
       .customer__info {
         padding: 0 8px;
+        color: $c-neutral-020;
       }
     }
     @media screen and (max-width: 768px) {
@@ -256,17 +265,18 @@
         opacity: 0.7;
       }
       &.next {
+        color: $c-neutral-020;
         background-color: $c-primary-040;
         border: none;
       }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         gap: 64px;
         .confirm__button {
             height: 40px;
             width: 77px;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 20px; /* 142.857% */
             letter-spacing: 0.1px; 
         }

@@ -1725,6 +1725,7 @@ h6 {
   font-size: 16px;
   display: block;
   width: 100%;
+  font-family: "Noto Sans JP", sans-serif;
   height: 48px;
   padding: 0 20px;
   background: #ffffff;
@@ -1771,6 +1772,7 @@ h6 {
   display: block;
   width: 100%;
   padding: 20px 20px;
+  font-family: "Noto Sans JP", sans-serif;
   background: #ffffff;
   color: #5B5B55;
   border: 1px solid #76797D;
@@ -1946,10 +1948,15 @@ h6 {
   padding: 0 0 128px;
   position: relative;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .content__maincont {
     padding: 0 32px 64px;
     gap: 32px;
+  }
+  .content__maincont .content__form-title {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: 0.15px;
   }
 }
 .content__maincont .confirm__title {
@@ -1977,10 +1984,12 @@ h6 {
 .content__maincont .confirm__section .confirm__info {
   display: flex;
   flex-direction: column;
+  color: #55585B;
   gap: 16px;
 }
 .content__maincont .confirm__section .confirm__info .customer__info {
   padding: 0 8px;
+  color: #5B5B55;
 }
 @media screen and (max-width: 768px) {
   .content__maincont .confirm__section {
@@ -2014,10 +2023,11 @@ h6 {
   opacity: 0.7;
 }
 .content__maincont .confirm__button-section .confirm__button.next {
+  color: #5B5B55;
   background-color: #f9d73a;
   border: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .content__maincont .confirm__button-section {
     gap: 64px;
   }
@@ -2025,7 +2035,7 @@ h6 {
     height: 40px;
     width: 77px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 20px; /* 142.857% */
     letter-spacing: 0.1px;
   }
