@@ -2724,12 +2724,13 @@ h6 {
 }
 @media screen and (max-width: 1200px) {
   .error__cont::before {
-    width: 120vw;
+    width: 150vw;
     top: -890px;
   }
 }
 @media screen and (max-width: 767px) {
   .error__cont::before {
+    width: 150vw;
     top: -880px;
   }
 }
