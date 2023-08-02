@@ -1,10 +1,11 @@
+
 .error__cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 64px;
-  width: 438px;
+  max-width: 438px;
   height: auto;
   padding: 128px 0;
   position: relative;
@@ -14,14 +15,14 @@
     padding: 64px 0;
   }
   &::before {
-    @include bg-deco(500px, 120vw, $c-primary-050);
-    top: -520px;
+    @include bg-deco(900px, 120vw, $c-primary-050);
+    top: -920px;
     @media screen and (max-width: 1200px) {
       width: 120vw;
-      top: -490px;
+      top: -890px;
     }
     @media screen and (max-width: 767px) {
-      top: -480px;
+      top: -880px;
     }
   }
   .error__image {
@@ -51,7 +52,6 @@
   }
   .error__text {
     font-size: 22px;
-    font-style: normal;
     font-weight: 500;
     line-height: 28px; 
     @media screen and (max-width: 767px) {
@@ -69,6 +69,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   @media screen and (max-width: 767px) {
     padding: 0 32px 64px;
   }

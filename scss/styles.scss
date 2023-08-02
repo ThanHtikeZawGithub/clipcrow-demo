@@ -22,6 +22,7 @@
 
 html {
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
@@ -29,8 +30,10 @@ body {
   background-color: $c-neutral-100;
   overflow: hidden;
   color: $c-neutral-020;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
-
 //===============================================
 //screen
 
@@ -92,26 +95,26 @@ section {
 //==============================================================================
 // header
 header {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-nav {
-  padding: 1rem 0 0;
-}
-
-.nav__title {
-  padding: 1rem;
-  img {
-    width: auto;
-    height: 153px;
-  }
-  @media screen and (max-width: 767px) {
-    padding: 0 1rem;
-    img {
-      height: 82px;
+  width: 100%;
+  nav {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1rem 0 0;
+    .nav__title {
+      padding: 1rem;
+      img {
+        width: auto;
+        height: 153px;
+      }
+      @media screen and (max-width: 767px) {
+        padding: 0 1rem;
+        img {
+          height: 82px;
+        }
+      }
     }
   }
+  
 }
 
 //=================================================================
@@ -185,6 +188,7 @@ features-page */
 footer {
   background-color: $c-primary-000;
   color: $c-neutral-099;
+  margin-top: auto;
   .footer {
     max-width: 1200px;
     margin: 0 auto;
@@ -280,7 +284,7 @@ footer {
   }
   &::before {
     @include bg-deco(900px, 120vw, $c-primary-050);
-    top: -960px;
+    top: -950px;
     @media screen and (max-width: 1199px) {
       top: -900px;
     }
