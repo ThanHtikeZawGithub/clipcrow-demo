@@ -97,8 +97,8 @@ dd:not(:last-child) {
 
 @media screen and (max-width: 1000px) {
   p,
-span,
-label {
+  span,
+  label {
     font-size: 14px;
     letter-spacing: 0.25px;
     font-weight: 400;
@@ -121,7 +121,7 @@ label {
     line-height: 28px;
   }
   h5,
-h6 {
+  h6 {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.15px;
@@ -240,8 +240,8 @@ dd:not(:last-child) {
 
 @media screen and (max-width: 1000px) {
   p,
-span,
-label {
+  span,
+  label {
     font-size: 14px;
     letter-spacing: 0.25px;
     font-weight: 400;
@@ -264,7 +264,7 @@ label {
     line-height: 28px;
   }
   h5,
-h6 {
+  h6 {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.15px;
@@ -1819,22 +1819,12 @@ h6 {
   font-size: 13px;
 }
 
-.input__text:not(:-ms-input-placeholder) ~ .input__label {
-  top: -8px;
-  font-size: 13px;
-}
-
 .input__text:not(:placeholder-shown) ~ .input__label {
   top: -8px;
   font-size: 13px;
 }
 
 .input__textarea:not(:-moz-placeholder-shown) ~ .input__label {
-  top: -8px;
-  font-size: 13px;
-}
-
-.input__textarea:not(:-ms-input-placeholder) ~ .input__label {
   top: -8px;
   font-size: 13px;
 }
@@ -2174,7 +2164,7 @@ h6 {
 }
 @media screen and (max-width: 767px) {
   .blog__link .blog__monthly-title,
-.blog__link .blog__latest-title {
+  .blog__link .blog__latest-title {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px; /* 150% */
@@ -3776,6 +3766,7 @@ footer .footer__link a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 32px;
   gap: 10px;
@@ -3784,8 +3775,7 @@ footer .footer__link a:hover {
   border-radius: 10px;
 }
 .blog .blog__card span {
-  width: 75px;
-  height: 20px;
+  width: 100%;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -3793,8 +3783,7 @@ footer .footer__link a:hover {
   color: #55585B;
 }
 .blog .blog__card p {
-  width: 194px;
-  height: 24px;
+  width: 100%;
   font-weight: 500;
   color: #55585B;
 }
