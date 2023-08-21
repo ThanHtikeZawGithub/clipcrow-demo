@@ -724,3 +724,40 @@ footer {
     }
   }
 }
+
+
+.test1 {
+  .toggle-label {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #toggleButton {
+    display: none;
+  }
+  
+  .content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    width: 300px;
+  
+    p {
+      margin: 0;
+    }
+  
+    a {
+      display: block;
+      margin-top: 10px;
+      color: #3498db;
+      text-decoration: none;
+    }
+  }
+  
+  #toggleButton:checked ~ .content {
+    display: block;
+  }
+}

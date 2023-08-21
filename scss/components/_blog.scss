@@ -95,6 +95,9 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      .toggleButton {
+        display: none;
+      }
       .blog__monthly-year {
         display: flex;
         flex-direction: row;
@@ -102,11 +105,6 @@
         align-items: center;
         cursor: pointer;
         gap: 8px;
-        &:focus {
-          .monthly__dropdown-icon {
-            background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.75%2011.875L15%2018.125L21.25%2011.875H8.75Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
-          }
-        }
         .monthly__dropdown-icon {
           width: 30px;
           height: 30px;
@@ -140,12 +138,24 @@
           }
         }
       }
-      .blog__monthly-year:focus + .monthly__dropdown-content {
+      // .blog__monthly-year[open] ~ .monthly__dropdown-content {
+      //     display: flex;
+      //     flex-direction: column;
+      //   .monthly__dropdown-icon {
+      //     background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+      //   }
+      // }
+      .toggleButton:checked ~ .monthly__dropdown-content {
         display: flex;
         flex-direction: column;
         .monthly__dropdown-icon {
           background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
         }
+      }
+    }
+    .toggleButton:checked + .blog__monthly-year {
+      .monthly__dropdown-icon {
+        background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
       }
     }
   }

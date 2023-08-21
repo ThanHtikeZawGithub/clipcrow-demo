@@ -2269,6 +2269,9 @@ dd:not(:last-child) {
   flex-direction: column;
   position: relative;
 }
+.blog__link .blog__monthly .blog-monthly-section .toggleButton {
+  display: none;
+}
 .blog__link .blog__monthly .blog-monthly-section .blog__monthly-year {
   display: flex;
   flex-direction: row;
@@ -2276,9 +2279,6 @@ dd:not(:last-child) {
   align-items: center;
   cursor: pointer;
   gap: 8px;
-}
-.blog__link .blog__monthly .blog-monthly-section .blog__monthly-year:focus .monthly__dropdown-icon {
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.75%2011.875L15%2018.125L21.25%2011.875H8.75Z%22%20fill%3D%22%235B5B55%22%2F%3E%3C%2Fsvg%3E");
 }
 .blog__link .blog__monthly .blog-monthly-section .blog__monthly-year .monthly__dropdown-icon {
   width: 30px;
@@ -2318,11 +2318,14 @@ dd:not(:last-child) {
     letter-spacing: 0.25px;
   }
 }
-.blog__link .blog__monthly .blog-monthly-section .blog__monthly-year:focus + .monthly__dropdown-content {
+.blog__link .blog__monthly .blog-monthly-section .toggleButton:checked ~ .monthly__dropdown-content {
   display: flex;
   flex-direction: column;
 }
-.blog__link .blog__monthly .blog-monthly-section .blog__monthly-year:focus + .monthly__dropdown-content .monthly__dropdown-icon {
+.blog__link .blog__monthly .blog-monthly-section .toggleButton:checked ~ .monthly__dropdown-content .monthly__dropdown-icon {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.blog__link .blog__monthly .toggleButton:checked + .blog__monthly-year .monthly__dropdown-icon {
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%228%22%20viewBox%3D%220%200%206%208%22%20fill%3D%22%23504100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.47003%200L0.530029%200.94L3.58336%204L0.530029%207.06L1.47003%208L5.47003%204L1.47003%200Z%22%20fill%3D%22%23504100%22%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
@@ -3959,4 +3962,33 @@ footer .footer__link a:hover {
     height: 77px;
     width: 212px;
   }
+}
+
+.test1 .toggle-label {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+.test1 #toggleButton {
+  display: none;
+}
+.test1 .content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  width: 300px;
+}
+.test1 .content p {
+  margin: 0;
+}
+.test1 .content a {
+  display: block;
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+}
+.test1 #toggleButton:checked ~ .content {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
