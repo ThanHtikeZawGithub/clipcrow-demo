@@ -2366,7 +2366,6 @@ dd:not(:last-child) {
 @media screen and (max-width: 767px) {
   .blog__card-wrapper .blog__card__date {
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.4px;
